@@ -1,8 +1,6 @@
 // base
 	$base: 8px;
-	$css-path: "..";
-
-	$footer-bg:#302f31;
+	$css-path: ".";
 
 // colour
 	// basic colour
@@ -12,19 +10,19 @@
 		$black-sec: #616161;
 		$black-text: #212121;
 
-		$palette-blue: #6aa6d9;
-		$palette-blue-dark: #3090B1;
-		$palette-blue-dark-m: #29A1CB;
-		$palette-blue-light: #6DD3F6;
-		$palette-blue-light-m: #29BDF0;
+		$palette-blue: #2196f3;
+		$palette-blue-dark: #0d47a1;
+		$palette-blue-dark-m: #1976d2;
+		$palette-blue-light: #bbdefb;
+		$palette-blue-light-m: #64b5f6;
 
-		$palette-green: #31a66b;
-		$palette-green-dark: #80A20F;
-		$palette-green-dark-m: #73AB0E;
-		$palette-green-light: #D8E6C8;
-		$palette-green-light-m: #AFD279;
+		$palette-green: #4caf50;
+		$palette-green-dark: #1b5e20;
+		$palette-green-dark-m: #388e3c;
+		$palette-green-light: #c8e6c9;
+		$palette-green-light-m: #81c784;
 
-		$palette-purple: #B253CB;
+		$palette-purple: #9c27b0;
 		$palette-purple-dark: #4a148c;
 		$palette-purple-dark-m: #7b1fa2;
 		$palette-purple-light: #e1bee7;
@@ -48,16 +46,12 @@
 		$white-bg-light: #fafafa;
 
 	// brand colour
-		$brand-color: $palette-blue;
-		$brand-color-dark: $palette-blue-dark;
-		$brand-color-dark-m: $palette-blue-dark-m;
-		$brand-color-light: $palette-blue-light;
-		$brand-color-light-m: $palette-blue-light-m;
-	//other colour
-		$color-dark:#5266a5;
-		$color-warning:#ed7a57;
-		$color-danger:#e16d6d;
-		$color-success:#04c189;
+		$brand-color: $palette-green;
+		$brand-color-dark: $palette-green-dark;
+		$brand-color-dark-m: $palette-green-dark-m;
+		$brand-color-light: $palette-green-light;
+		$brand-color-light-m: $palette-green-light-m;
+
 	// list
 		$palette-color: $brand-color, $palette-blue, $palette-green, $palette-purple, $palette-red, $palette-yellow;
 		$palette-color-dark: $brand-color-dark, $palette-blue-dark, $palette-green-dark, $palette-purple-dark, $palette-red-dark, $palette-yellow-dark;
@@ -67,7 +61,7 @@
 		$palette-list: "alt", "blue", "green", "purple", "red", "yellow";
 
 // font
-	$font-fam: "Helvetica Neue", Helvetica, Arial, Microsoft Yahei ,sans-serif;
+	$font-fam: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
 	$font-fam-mono: Monaco, Menlo, Consolas, "Courier New", monospace;
 	$font-fam-serif: Georgia, serif;
 

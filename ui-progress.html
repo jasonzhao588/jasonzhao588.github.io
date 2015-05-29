@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta content="IE=edge" http-equiv="X-UA-Compatible">
 	<meta content="initial-scale=1.0, width=device-width" name="viewport">
-	<title>Material</title>
+	<title>Progress Bars - Material</title>
 
 	<!-- css -->
 	<link href="css/base.min.css" rel="stylesheet">
@@ -64,7 +64,7 @@
 						<li>
 							<a href="ui-modal.html">Modals &amp; Toasts</a>
 						</li>
-						<li>
+						<li class="active">
 							<a href="ui-progress.html">Progress Bars</a>
 						</li>
 						<li>
@@ -192,116 +192,62 @@
 	<div class="content">
 		<div class="content-heading">
 			<div class="container">
-				<div class="row">
-					<div class="col-lg-6 col-lg-push-3 col-sm-10 col-sm-push-1">
-						<h1 class="heading">Material</h1>
-					</div>
-				</div>
+				<h1 class="heading">Progress Bars</h1>
 			</div>
 		</div>
 		<div class="content-inner">
 			<div class="container">
 				<div class="row">
-					<div class="col-lg-6 col-lg-push-3 col-sm-10 col-sm-push-1">
-						<p>Material is an HTML5 UI design based on Google Material.</p>
-						<blockquote>
-							<p>A visual language for our users that synthesizes the classic principles of good design with the innovation and possibility of technology and science. This is material design.</p>
-							<p><a class="text-break" href="http://www.google.com/design/spec/material-design/introduction.html">http://www.google.com/design/spec/material-design/introduction.html</a></p>
-						</blockquote>
-						<p>Have a play with a <a href="http://daemonite.github.io/material/">working prototype of Material</a>, let us know what you think at the <a href="http://labs.daemon.com.au">Daemon Labs</a> forum.</p>
-						<h2 class="content-sub-heading">Components</h2>
-						<div class="tile-wrap tile-wrap-animation">
-							<a class="tile" href="ui-card.html">
-								<div class="tile-inner">
-									<span>Cards</span>
-								</div>
-							</a>
-							<a class="tile" href="ui-collapse.html">
-								<div class="tile-inner">
-									<span>Collapsible Regions</span>
-								</div>
-							</a>
-							<a class="tile" href="ui-dropdown.html">
-								<div class="tile-inner">
-									<span>Dropdowns</span>
-								</div>
-							</a>
-							<a class="tile" href="ui-modal.html">
-								<div class="tile-inner">
-									<span>Modal &amp; Toasts</span>
-								</div>
-							</a>
-							<a class="tile" href="ui-progress.html">
-								<div class="tile-inner">
-									<span>Progress Bars</span>
-								</div>
-							</a>
-							<a class="tile" href="ui-tab.html">
-								<div class="tile-inner">
-									<span>Tabs</span>
-								</div>
-							</a>
-							<a class="tile" href="ui-tile.html">
-								<div class="tile-inner">
-									<span>Tiles</span>
-								</div>
-							</a>
+					<div class="col-lg-6 col-md-8">
+						<h2 class="content-sub-heading">Determinate Progress Bars</h2>
+						<p>Default progress bar inherits link colour (<code>$link-color</code>):</p>
+						<div class="progress">
+							<div class="progress-bar" style="width: 25%"></div>
 						</div>
-						<h2 class="content-sub-heading">Elements</h2>
-						<div class="tile-wrap tile-wrap-animation">
-							<a class="tile" href="ui-button.html">
-								<div class="tile-inner">
-									<span>Button</span>
-								</div>
-							</a>
-							<a class="tile" href="ui-form.html">
-								<div class="tile-inner">
-									<span>Form Elements <small>(basic)</small></span>
-								</div>
-							</a>
-							<a class="tile" href="ui-form-adv.html">
-								<div class="tile-inner">
-									<span>Form Elements <small>(materialised)</small></span>
-								</div>
-							</a>
-							<a class="tile" href="ui-icon.html">
-								<div class="tile-inner">
-									<span>Icons</span>
-								</div>
-							</a>
-							<a class="tile" href="ui-table.html">
-								<div class="tile-inner">
-									<span>Tables</span>
-								</div>
-							</a>
+						<p>Progress bar with different colour options:</p>
+						<div class="progress progress-blue">
+							<div class="progress-bar" style="width: 35%"></div>
 						</div>
-						<h2 class="content-sub-heading">Sample Pages</h2>
-						<div class="tile-wrap tile-wrap-animation">
-							<a class="tile" href="page-404.html">
-								<div class="tile-inner">
-									<span>404 Error Page</span>
+						<div class="progress progress-green">
+							<div class="progress-bar" style="width: 45%"></div>
+						</div>
+						<div class="progress progress-purple">
+							<div class="progress-bar" style="width: 55%"></div>
+						</div>
+						<div class="progress progress-red">
+							<div class="progress-bar" style="width: 65%"></div>
+						</div>
+						<div class="progress progress-yellow">
+							<div class="progress-bar" style="width: 75%"></div>
+						</div>
+						<h2 class="content-sub-heading">Indeterminate Progress Bars</h2>
+						<div class="progress">
+							<div class="progress-bar-indeterminate"></div>
+						</div>
+						<h2 class="content-sub-heading">Load Bars</h2>
+						<p>A <code>.load-bar</code> requires four different colours (i.e. four <code>&lt;div class="load-bar-progress"&gt;</code> with different colour classes) to achieve the best visual effect. By default, a <code>.load-bar-progress</code> inherits link colour (<code>$link-color</code>).</p>
+						<p>A complete load bar consists of two separate <code>.load-bar</code>s, and the order of <code>.load-bar-progress</code>s in each of the two <code>.load-bar</code>s will be different.</p>
+						<div class="progress">
+							<div class="load-bar">
+								<div class="load-bar-base">
+									<div class="load-bar-content">
+										<div class="load-bar-progress"></div>
+										<div class="load-bar-progress load-bar-progress-green"></div>
+										<div class="load-bar-progress load-bar-progress-purple"></div>
+										<div class="load-bar-progress load-bar-progress-red"></div>
+									</div>
 								</div>
-							</a>
-							<a class="tile" href="page-500.html">
-								<div class="tile-inner">
-									<span>500 Error Page</span>
+							</div>
+							<div class="load-bar">
+								<div class="load-bar-base">
+									<div class="load-bar-content">
+										<div class="load-bar-progress"></div>
+										<div class="load-bar-progress load-bar-progress-red"></div>
+										<div class="load-bar-progress load-bar-progress-purple"></div>
+										<div class="load-bar-progress load-bar-progress-green"></div>
+									</div>
 								</div>
-							</a>
-							<a class="tile" href="page-affix.html">
-								<div class="tile-inner">
-									<span>Full-Width Page <small>(with fixed LHC/RHC)</small></span>
-								</div>
-							</a>
-							<a class="tile" href="page-login.html">
-								<div class="tile-inner">
-									<span>Login Page</span>
-								</div>
-							</a>
-							<a class="tile" href="page-palette.html">
-								<div class="tile-inner">
-									<span>Page Palettes</span>
-								</div>
-							</a>
+							</div>
 						</div>
 					</div>
 				</div>

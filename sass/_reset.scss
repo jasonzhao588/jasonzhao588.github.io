@@ -1,4 +1,4 @@
-
+@import url(http://fonts.googleapis.com/css?family=Roboto:300,300italic,400,400italic,700,700italic);
 
 *,
 *:after,
@@ -26,7 +26,7 @@
 		max-width: 100%;
 		vertical-align: baseline;
 	}
- 
+
 	body {
 		background-color: $white-bg-light;
 		background-image: none;
@@ -298,10 +298,9 @@
 	.h6 {
 		color: inherit;
 		font-family: $font-fam;
-		margin: 0;
-		// font-weight: 700;
-		// margin-top: ($line-height * 2);
-		// margin-bottom: $line-height;
+		font-weight: 700;
+		margin-top: ($line-height * 2);
+		margin-bottom: $line-height;
 	}
 
 	h1,
@@ -372,7 +371,6 @@
 
 	ol,
 	ul {
-		list-style: none;
 		margin: $line-height 0;
 		padding: 0 0 0 ($grid-gutter * 2);
 		ol,
@@ -383,7 +381,7 @@
 	}
 
 	p {
-		margin: 0;
+		margin: $line-height 0;
 	}
 
 	small {
@@ -422,13 +420,3 @@
 	th {
 		text-align: left;
 	}
-
-
-.nav{
-	li{
-		a{
-			font-weight: normal;
-			font-size: 14px;
-		}
-	}
-}

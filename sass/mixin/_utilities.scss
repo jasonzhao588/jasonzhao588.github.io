@@ -9,12 +9,7 @@
 		clear: both;
 	}
 }
-@mixin right-middle($right) {
-	position: absolute;
-	right: $right;
-	top: 50%;
-	@include translate(0,-50%);
-}
+
 @mixin form-label() {
 	line-height: $line-height;
 	margin-top: 0;
@@ -38,48 +33,3 @@
 	text-overflow: ellipsis;
 	white-space: nowrap;
 }
-
-@mixin line-bottom($color,$height,$left:0,$right:0,$bottom:0){
-	&:after{
-		content: "";
-		position: absolute;
-		display: block;
-		left: $left;
-		right: $right;
-		bottom: $bottom;
-		background: $color;
-		height: $height;
-		@include transition(.3s);
-	}
-}
-
-@mixin line-top($color,$height,$left:0,$right:0,$top:0){
-	&:after{
-		content: "";
-		position: absolute;
-		display: block;
-		left: $left;
-		right: $right;
-		top: $top;
-		background: $color;
-		height: $height;
-		@include transition(.3s);
-	}
-}
-
-@mixin circular($size){
-	width: $size;
-	height: $size;
-	border-radius: 50%;
-	line-height: $size;
-	text-align: center;
-}
-@mixin full-box($top:0 ,$right:0,$bottom:0,$left:0){
-	position: absolute;
-	top: $top;
-	right: $right;
-	bottom: $bottom;
-	left: $left;
-}
-
-
