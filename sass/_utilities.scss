@@ -252,6 +252,13 @@
 		color: $white;
 	}
 
+	.text-left{
+		text-align: left !important;
+	}
+	.text-right{
+		text-align: right !important
+	}
+
 	@each $color in $palette-list {
 		$i: index($palette-list, $color);
 		
@@ -259,3 +266,17 @@
 			color: nth($palette-color, $i);
 		}
 	}
+
+	.bg-dark {background: $color-dark}
+	.bg-purple {background: $palette-purple}
+	.bg-blue {background: $palette-blue}
+	.bg-warning {background: $color-warning}
+	.bg-danger {background: $palette-red}
+	.bg-success {background: $palette-green}
+
+	.text-dark {color: $color-dark}
+	.text-purple {color: $palette-purple}
+	.text-blue {color: $palette-blue}
+	.text-warning {color: $color-warning}
+	.text-danger {color: $color-danger}
+	.text-success {color: $color-success}

@@ -1,0 +1,36 @@
+<h1>adb</h1>
+<nav class="tab-nav tab-nav-red">
+    <ul class="nav nav-justified" ng-init="activeTab=1">
+        <li ng-class="{active: activeTab == 1}">
+            <a class="waves-color-red waves-effect" ng-click="activeTab=1">全部</a>
+        </li>
+        <li ng-class="{active: activeTab == 2"> 
+            <a class="waves-color-red waves-effect" ng-click="activeTab=2">微信摇一摇</a>
+        </li>
+        <li ng-class="{active: activeTab == 3}">
+            <a class="waves-color-red waves-effect" ng-click="activeTab=3">商场购物</a>
+        </li>
+        <li ng-class="{active: activeTab == 4}">
+            <a class="waves-color-red waves-effect" ng-click="activeTab=4">会展</a>
+        </li>
+        <li ng-class="{active: activeTab == 5}">
+            <a class="waves-color-red waves-effect" ng-click="activeTab=5">休闲娱乐</a>
+        </li>
+        <li ng-class="{active: activeTab == 6}">
+            <a class="waves-color-red waves-effect" ng-click="activeTab=6">酒店</a>
+        </li>
+        <li ng-class="{active: activeTab == 7}">
+            <a class="waves-color-red waves-effect" ng-click="activeTab=7">餐饮</a>
+        </li>
+    </ul>
+</nav>
+
+<ul class="tab-content">
+    <li ng-show="activeTab == 1" ng-include="'views/tabs/tab-1.html'"></li>
+    <li ng-show="activeTab == 2" ng-include="'views/tabs/tab-2.html'"></li>
+    <li ng-show="activeTab == 3" ng-include="'views/tabs/tab-3.html'"></li>
+    <li ng-show="activeTab == 4" ng-include="'views/tabs/tab-4.html'"></li>
+    <li ng-show="activeTab == 5" ng-include="'views/tabs/tab-5.html'"></li>
+    <li ng-show="activeTab == 6" ng-include="'views/tabs/tab-6.html'"></li>
+    <li ng-show="activeTab == 7" ng-include="'views/tabs/tab-7.html'"></li>
+</ul>

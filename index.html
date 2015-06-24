@@ -1,324 +1,186 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta content="IE=edge" http-equiv="X-UA-Compatible">
-	<meta content="initial-scale=1.0, width=device-width" name="viewport">
-	<title>Material</title>
+<!doctype html>
+<html ng-app="ryApp">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-	<!-- css -->
-	<link href="css/base.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/app.css">
 
-	<!-- favicon -->
-	<!-- ... -->
+  </head>
+  <body>
+     
+    <header class="header">
+        <div class="container">
+            <ul class="nav nav-list pull-right main-nav-btn">
+                <li>
+                    <a class="menu-toggle" href="#menu">
+                        <span class="access-hide">Menu</span>
+                        <span class="fa fa-bars"></span>
+                        <span class="header-close icon icon-close"></span>
+                    </a>
+                </li>
+            </ul>
+            <a class="header-logo" href="index.html"></a>
 
-	<!-- ie -->
-		<!--[if lt IE 9]>
-			<script src="js/html5shiv.js" type="text/javascript"></script>
-			<script src="js/respond.js" type="text/javascript"></script>
-		<![endif]-->
-</head>
-<body>
-	<header class="header">
-		<ul class="nav nav-list pull-left">
-			<li>
-				<a class="menu-toggle" href="#menu">
-					<span class="access-hide">Menu</span>
-					<span class="icon icon-menu"></span>
-					<span class="header-close icon icon-close"></span>
-				</a>
-			</li>
-		</ul>
-		<a class="header-logo" href="index.html">Material</a>
-		<ul class="nav nav-list pull-right">
-			<li>
-				<a class="menu-toggle" href="#search">
-					<span class="access-hide">Search</span>
-					<span class="icon icon-search"></span>
-					<span class="header-close icon icon-close"></span>
-				</a>
-			</li>
-			<li>
-				<a class="menu-toggle" href="#profile">
-					<span class="access-hide">John Smith</span>
-					<span class="avatar avatar-sm"><img alt="alt text for John Smith avatar" src="images/users/avatar-001.jpg"></span>
-					<span class="header-close icon icon-close"></span>
-				</a>
-			</li>
-		</ul>
-	</header>
-	<nav class="menu" id="menu">
-		<div class="menu-scroll">
-			<div class="menu-wrap">
-				<div class="menu-content">
-					<ul class="nav">
-						<li>
-							<a href="ui-card.html">Cards</a>
-						</li>
-						<li>
-							<a href="ui-collapse.html">Collapsible Regions</a>
-						</li>
-						<li>
-							<a href="ui-dropdown.html">Dropdowns</a>
-						</li>
-						<li>
-							<a href="ui-modal.html">Modals &amp; Toasts</a>
-						</li>
-						<li>
-							<a href="ui-progress.html">Progress Bars</a>
-						</li>
-						<li>
-							<a href="ui-tab.html">Tabs</a>
-						</li>
-						<li>
-							<a href="ui-tile.html">Tiles</a>
-						</li>
-					</ul>
-					<hr>
-					<ul class="nav">
-						<li>
-							<a href="ui-button.html">Buttons</a>
-						</li>
-						<li>
-							<a href="ui-form.html">Form Elements</a>
-							<span class="menu-collapse-toggle collapsed" data-target="#form-elements" data-toggle="collapse"><i class="icon icon-close menu-collapse-toggle-close"></i><i class="icon icon-add menu-collapse-toggle-default"></i></span>
-							<ul class="menu-collapse collapse" id="form-elements">
-								<li>
-									<a href="ui-form-adv.html">Form Elements <small>(materialised)</small></a>
-								</li>
-							</ul>
-						</li>
-						<li>
-							<a href="ui-icon.html">Icons</a>
-						</li>
-						<li>
-							<a href="ui-table.html">Tables</a>
-						</li>
-					</ul>
-					<hr>
-					<ul class="nav">
-						<li>
-							<a href="page-affix.html">Full-Width Page <small>(with fixed LHC/RHC)</small></a>
-						</li>
-						<li>
-							<a href="page-palette.html">Page Palettes</a>
-							<span class="menu-collapse-toggle collapsed" data-target="#page-palettes" data-toggle="collapse"><i class="icon icon-close menu-collapse-toggle-close"></i><i class="icon icon-add menu-collapse-toggle-default"></i></span>
-							<ul class="menu-collapse collapse" id="page-palettes">
-								<li>
-									<a href="page-palette-blue.html">Blue Palette</a>
-								</li>
-								<li>
-									<a href="page-palette-green.html">Green Palette</a>
-								</li>
-								<li>
-									<a href="page-palette-purple.html">Purple Palette</a>
-								</li>
-								<li>
-									<a href="page-palette-red.html">Red Palette</a>
-								</li>
-								<li>
-									<a href="page-palette-yellow.html">Yellow Palette</a>
-								</li>
-							</ul>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</nav>
-	<nav class="menu menu-right" id="profile">
-		<div class="menu-scroll">
-			<div class="menu-wrap">
-				<div class="menu-top">
-					<div class="menu-top-img">
-						<img alt="John Smith" src="images/samples/landscape.jpg">
-					</div>
-					<div class="menu-top-info">
-						<a class="menu-top-user" href="javascript:void(0)"><span class="avatar pull-left"><img alt="alt text for John Smith avatar" src="images/users/avatar-001.jpg"></span>John Smith</a>
-					</div>
-				</div>
-				<div class="menu-content">
-					<ul class="nav">
-						<li>
-							<a href="javascript:void(0)"><span class="icon icon-account-box"></span>Profile Settings</a>
-						</li>
-						<li>
-							<a href="javascript:void(0)"><span class="icon icon-add-to-photos"></span>Upload Photo</a>
-						</li>
-						<li>
-							<a href="page-login.html"><span class="icon icon-exit-to-app"></span>Logout</a>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</nav>
-	<div class="menu menu-right menu-search" id="search">
-		<div class="menu-scroll">
-			<div class="menu-wrap">
-				<div class="menu-top">
-					<div class="menu-top-info">
-						<form class="menu-top-form">
-							<label class="access-hide" for="menu-search">Search</label>
-							<input class="form-control form-control-inverse menu-search-focus" id="menu-search" placeholder="Search" type="search">
-							<button class="access-hide" type="submit">Search</button>
-						</form>
-					</div>
-				</div>
-				<div class="menu-content">
-					<div class="menu-content-inner">
-						<p><strong>Saved Search Queries:</strong></p>
-						<ul>
-							<li><a href="javascript:void(0)">lorem ipsum dolor sit amet</a></li>
-							<li><a href="javascript:void(0)">consectetur adipiscing elit</a></li>
-							<li><a href="javascript:void(0)">sed ornare orci lorem</a></li>
-							<li><a href="javascript:void(0)">vel eleifend elit tempor eleifend</a></li>
-							<li><a href="javascript:void(0)">morbi feugiat aliquet justo</a></li>
-						</ul>
-						<hr>
-						<p><strong>Popular Search Queries:</strong></p>
-						<ul>
-							<li><a href="javascript:void(0)">id ullamcorper tortor lobortis eu</a></li>
-							<li><a href="javascript:void(0)">aliquam ut tellus arcu</a></li>
-							<li><a href="javascript:void(0)">cestibulum tortor purus</a></li>
-							<li><a href="javascript:void(0)">pretium ac dolor id</a></li>
-							<li><a href="javascript:void(0)">gravida molestie libero</a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="content">
-		<div class="content-heading">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-6 col-lg-push-3 col-sm-10 col-sm-push-1">
-						<h1 class="heading">Material</h1>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="content-inner">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-6 col-lg-push-3 col-sm-10 col-sm-push-1">
-						<p>Material is an HTML5 UI design based on Google Material.</p>
-						<blockquote>
-							<p>A visual language for our users that synthesizes the classic principles of good design with the innovation and possibility of technology and science. This is material design.</p>
-							<p><a class="text-break" href="http://www.google.com/design/spec/material-design/introduction.html">http://www.google.com/design/spec/material-design/introduction.html</a></p>
-						</blockquote>
-						<p>Have a play with a <a href="http://daemonite.github.io/material/">working prototype of Material</a>, let us know what you think at the <a href="http://labs.daemon.com.au">Daemon Labs</a> forum.</p>
-						<h2 class="content-sub-heading">Components</h2>
-						<div class="tile-wrap tile-wrap-animation">
-							<a class="tile" href="ui-card.html">
-								<div class="tile-inner">
-									<span>Cards</span>
-								</div>
-							</a>
-							<a class="tile" href="ui-collapse.html">
-								<div class="tile-inner">
-									<span>Collapsible Regions</span>
-								</div>
-							</a>
-							<a class="tile" href="ui-dropdown.html">
-								<div class="tile-inner">
-									<span>Dropdowns</span>
-								</div>
-							</a>
-							<a class="tile" href="ui-modal.html">
-								<div class="tile-inner">
-									<span>Modal &amp; Toasts</span>
-								</div>
-							</a>
-							<a class="tile" href="ui-progress.html">
-								<div class="tile-inner">
-									<span>Progress Bars</span>
-								</div>
-							</a>
-							<a class="tile" href="ui-tab.html">
-								<div class="tile-inner">
-									<span>Tabs</span>
-								</div>
-							</a>
-							<a class="tile" href="ui-tile.html">
-								<div class="tile-inner">
-									<span>Tiles</span>
-								</div>
-							</a>
-						</div>
-						<h2 class="content-sub-heading">Elements</h2>
-						<div class="tile-wrap tile-wrap-animation">
-							<a class="tile" href="ui-button.html">
-								<div class="tile-inner">
-									<span>Button</span>
-								</div>
-							</a>
-							<a class="tile" href="ui-form.html">
-								<div class="tile-inner">
-									<span>Form Elements <small>(basic)</small></span>
-								</div>
-							</a>
-							<a class="tile" href="ui-form-adv.html">
-								<div class="tile-inner">
-									<span>Form Elements <small>(materialised)</small></span>
-								</div>
-							</a>
-							<a class="tile" href="ui-icon.html">
-								<div class="tile-inner">
-									<span>Icons</span>
-								</div>
-							</a>
-							<a class="tile" href="ui-table.html">
-								<div class="tile-inner">
-									<span>Tables</span>
-								</div>
-							</a>
-						</div>
-						<h2 class="content-sub-heading">Sample Pages</h2>
-						<div class="tile-wrap tile-wrap-animation">
-							<a class="tile" href="page-404.html">
-								<div class="tile-inner">
-									<span>404 Error Page</span>
-								</div>
-							</a>
-							<a class="tile" href="page-500.html">
-								<div class="tile-inner">
-									<span>500 Error Page</span>
-								</div>
-							</a>
-							<a class="tile" href="page-affix.html">
-								<div class="tile-inner">
-									<span>Full-Width Page <small>(with fixed LHC/RHC)</small></span>
-								</div>
-							</a>
-							<a class="tile" href="page-login.html">
-								<div class="tile-inner">
-									<span>Login Page</span>
-								</div>
-							</a>
-							<a class="tile" href="page-palette.html">
-								<div class="tile-inner">
-									<span>Page Palettes</span>
-								</div>
-							</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<footer class="footer">
-		<div class="container">
-			<p>Material</p>
-		</div>
-	</footer>
-	<div class="fbtn-container">
-		<div class="fbtn-inner">
-			<a class="fbtn fbtn-red" href="https://github.com/Daemonite/material"><span class="fbtn-text">Fork me on GitHub</span><span class="fa fa-github"></span></a>
-		</div>
-	</div>
+            <ul class="nav nav-list pull-right">
+                <li>
+                    <a class="menu-toggle" href="#profile">
+                        <span class="access-hide">张涵予</span>
+                        <span class="avatar avatar-sm"><img alt="alt text for John Smith avatar" src="images/users/avatar-001.jpg"></span>
+                        <span class="header-close icon icon-close"></span>
+                    </a>
+                </li>
+            </ul>
+            <ul class="nav nav-list pull-right main-nav" ng-init="activeTab=1">
+                <li ng-class="{active: activeTab == 1}">
+                    <a ui-sref="index" class="top-nav" ng-click="activeTab=1">首页</a>
+                </li>
+                <li ng-class="{active: activeTab == 2}">
+                    <a ui-sref="pmall" class="top-nav" ng-click="activeTab=2">产品商城</a>
+                </li>
+                <li ng-class="{active: activeTab == 3}">
+                    <a ui-sref="case" class="top-nav" ng-click="activeTab=3">开发者案例</a>
+                </li>
+                <li ng-class="{active: activeTab == 4}">
+                    <a ui-sref="download" class="top-nav" ng-click="activeTab=4">下载中心</a>
+                </li>
+            </ul>
+            
+        </div>
+    </header>
 
-	<script src="js/base.min.js" type="text/javascript"></script>
+    <nav class="menu menu-right" id="menu">
+        <div class="menu-scroll">
+            <div class="menu-wrap">
+                <div class="menu-content">
+                    <ul class="nav">
+                        <li><a ui-sref="index" class="top-nav">首页</a></li>
+                        <li><a ui-sref="pmall" class="top-nav">产品商城</a></li>
+                        <li><a ui-sref="case" class="top-nav">开发者案例</a></li>
+                        <li><a ui-sref="download" class="top-nav">下载中心</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <nav class="menu menu-right" id="profile">
+        <div class="menu-scroll">
+            <div class="menu-wrap">
+                <div class="menu-top">
+                    <div class="menu-top-img">
+                        <img alt="John Smith" src="images/samples/landscape.jpg">
+                    </div>
+                    <div class="menu-top-info">
+                        <a class="menu-top-user" href="javascript:void(0)"><span class="avatar pull-left"><img alt="alt text for John Smith avatar" src="images/users/avatar-001.jpg"></span>张馨予</a>
+                    </div>
+                </div>
+                <div class="menu-content">
+                    <ul class="nav">
+                        <li>
+                            <a href="javascript:void(0)"><span class="icon icon-account-box"></span>基本信息</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)"><span class="icon icon-add-to-photos"></span>我的空间</a>
+                        </li>
+                        <li>
+                            <a href="page-login.html"><span class="icon icon-exit-to-app"></span>退出登录</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="content" ui-view></div>
+
+                    
+                            
+                                            
+    <!--页脚 start-->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3">
+                    <h3>官方账号</h3>
+                    <p>关注我们获得最新产品动态</p>
+                    <div class="icon-row">
+                        <a href="#" class="bg-success waves-effect"><i class="fa fa-weixin"></i></a>
+                        <a href="#" class="bg-danger waves-effect"><i class="fa fa-weibo"></i></a>
+                    </div>
+                    
+                </div>
+                <div class="col-sm-2">
+                    <h3>帮助中心</h3>
+                    <ul class="links">
+                        <li><a href="#">购物指南 </a></li>
+                        <li><a href="#">配送方式 </a></li>
+                        <li><a href="#">支付方式 </a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-2">
+                    <h3>服务支持</h3>
+                    <ul class="links">
+                        <li><a href="#">售后服务 </a></li>
+                        <li><a href="#">常见问题 </a></li>
+                        <li><a href="#">产品说明 </a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-2">
+                    <h3></i>关于我们</h3>
+                    <ul class="links">
+                        <li><a href="#">公司简介 </a></li>
+                        <li><a href="#">加入我们 </a></li>
+                        <li><a href="#">联系我们 </a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-3">
+                    <h3>热线电话</h3>
+                    <div class="contact co-danger">400-500-7890</div>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            沪ICP备13039009号，版权所有 © 2011-2014 520公司版权所有
+        </div>
+    </footer>
+    <!--页脚 end-->
+
+    <div class="fbtn-container">
+        <div class="fbtn-inner">
+            <a class="fbtn fbtn-red" href="#">
+                <span class="fbtn-text">to top</span>
+                <span class="fa fa-arrow-up"></span>
+            </a>
+        </div>
+    </div>
+
+ 
+
+
+
+<!--   第三方 框架与库 -->
+    <script src="framework/jquery/jquery.min.js"></script>
+    <script src="framework/angular/angular.min.js"></script>
+    <script src="framework/angular/angular-animate.min.js"></script>
+    <script src="framework/angular/angular-ui-router.min.js"></script>
+    <!-- script src="framework/angular/ui-bootstrap-tpls.js"></script -->
+    <script src="framework/material/base.min.js"></script>
+    <script src="framework/others/owl.carousel.min.js"></script>
+    <script src="framework/others/wow.min.js"></script>
+
+<!-- 本应用脚本 -->
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers.js"></script>
+    <script src="scripts/services.js"></script>
+
+
 </body>
 </html>
