@@ -1,185 +1,346 @@
-<!doctype html>
-<html ng-app="ryApp">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>赵宏亮 | 个人简历</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width">
+  <!-- CSS -->
+  <link href="css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/normalize.min.css">
+  <link rel="stylesheet" href="css/main.css">
 
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/app.css">
+  <!--  依赖JS  -->
+  <script src="js/vendor/jquery-1.10.1.min.js"></script>
+  <script src="js/vendor/jquery.hashchange.min.js"></script>
+  <script src="js/vendor/jquery.easytabs.min.js"></script>
 
-  </head>
-  <body>
-     
-    <header class="header">
-        <div class="container">
-            <ul class="nav nav-list pull-right main-nav-btn">
-                <li>
-                    <a class="menu-toggle" href="#menu">
-                        <span class="access-hide">Menu</span>
-                        <span class="fa fa-bars"></span>
-                        <span class="header-close icon icon-close"></span>
-                    </a>
+  <script src="js/main.js"></script>
+    <!--[if lt IE 9]>
+      <script src="js/vendor/html5shiv.js"></script>
+    <![endif]-->
+</head>
+  <body class="bg-fixed bg-1">
+    <!--[if lt IE 7]>
+        <p class="chromeframe">您使用的浏览器有些老. 请 <a href="http://browsehappy.com/">升级浏览器</a> 或 <a href="#google.com/chromeframe/?redirect=true">使用谷歌浏览器</a></p>
+    <![endif]-->
+   <div class="main-container">
+    <div class="main wrapper clearfix">
+      <!-- Header Start -->
+        <header id="header">
+            <div id="logo">
+                <h2>
+                    赵宏亮
+                </h2>
+                <h4>
+                    前端工程师  /  UI & UX设计师
+                </h4>
+            </div>
+        </header>
+        <!-- Header End -->
+        <!-- Main Tab Container -->
+        <div id="tab-container" class="tab-container">
+          <!-- Tab List -->
+            <ul class='etabs'>
+                <li class='tab' id="tab-about">
+                  <a href="#about"><i class="fa fa-user"></i><span> 基本信息</span></a>
+                </li>
+                <li class='tab'>
+                  <a href="#resume"><i class="fa fa-file-text"></i><span> 工作经验</span></a>
+                </li>
+                <li class='tab'>
+                  <a href="#portfolio"><i class="fa fa-heart"></i><span> 案例</span></a>
                 </li>
             </ul>
-            <a class="header-logo" href="index.html"></a>
-
-            <ul class="nav nav-list pull-right">
-                <li>
-                    <a class="menu-toggle" href="#profile">
-                        <span class="access-hide">张涵予</span>
-                        <span class="avatar avatar-sm"><img alt="alt text for John Smith avatar" src="images/users/avatar-001.jpg"></span>
-                        <span class="header-close icon icon-close"></span>
-                    </a>
-                </li>
-            </ul>
-            <ul class="nav nav-list pull-right main-nav" ng-init="activeTab=1">
-                <li ng-class="{active: activeTab == 1}">
-                    <a ui-sref="index" class="top-nav" ng-click="activeTab=1">首页</a>
-                </li>
-                <li ng-class="{active: activeTab == 2}">
-                    <a ui-sref="pmall" class="top-nav" ng-click="activeTab=2">产品商城</a>
-                </li>
-                <li ng-class="{active: activeTab == 3}">
-                    <a ui-sref="case" class="top-nav" ng-click="activeTab=3">开发者案例</a>
-                </li>
-                <li ng-class="{active: activeTab == 4}">
-                    <a ui-sref="download" class="top-nav" ng-click="activeTab=4">下载中心</a>
-                </li>
-            </ul>
-            
-        </div>
-    </header>
-
-    <nav class="menu menu-right" id="menu">
-        <div class="menu-scroll">
-            <div class="menu-wrap">
-                <div class="menu-content">
-                    <ul class="nav">
-                        <li><a ui-sref="index" class="top-nav">首页</a></li>
-                        <li><a ui-sref="pmall" class="top-nav">产品商城</a></li>
-                        <li><a ui-sref="case" class="top-nav">开发者案例</a></li>
-                        <li><a ui-sref="download" class="top-nav">下载中心</a></li>
-                    </ul>
+            <div class="copyrights">Collect from <a href="http://www.cssmoban.com/" >网页模板</a></div>
+          <!-- End Tab List -->
+            <div id="tab-data-wrap">
+              <!-- About Tab Data -->
+                <div id="about">
+                    <section class="clearfix">
+                        <div class="g2">
+                            <div class="photo">
+                                <img src="images/avatar.jpg" />
+                            </div>
+                            <div class="info">
+                                <h2>
+                                    赵宏亮
+                                </h2>
+                                <h4>
+                                    前端工程师  /  UI & UX设计师
+                                </h4>
+                                <p>
+                                    我是一个致力于用户体验设计的前端工程师，对用户界面设计和用户体验设计有着极其浓厚的兴趣，同时对一切新的技术和设计有着强烈的求知欲，
+                                    独立完成过很多互联网产品的构思、线框图、UI设计、前端开发等工作。7年来一直坚守于这个领域，从开始的无人重视，到现在的风靡互联网，我相信，
+                                    互联网产品的用户体验一定会成为将来的重要竞争点...
+                                </p>
+                            </div>
+                        </div>
+                        <div class="g1">
+                            <div class="main-links sidebar">
+                                <ul>
+                                    <li>
+                                        出生年月：1985年9月9日
+                                    </li>
+                                    <li>
+                                        籍贯：陕西.宝鸡
+                                    </li>
+                                    <li>
+                                        学历/专业：大专/电子信息工程
+                                    </li>
+                                    <li>
+                                        毕业院校：湘潭大学
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="break"></div>
+                        <div class="contact-info">
+                          <div class="g1">
+                            <div class="item-box clearfix">
+                              <i class="fa fa-envelope"></i>
+                              <div class="item-data">
+                                <h3><a href="mailto:sunny@mrova.com">beyondgm5@163.com</a></h3>
+                                <p>Email地址</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="g1">
+                            <div class="item-box clearfix">
+                              <i class="fa fa-wechat"></i>
+                              <div class="item-data">
+                                <h3><a href="#">QQ:290370566</a></h3>
+                                <p>我的微信</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="g1">
+                            <div class="item-box clearfix">
+                              <i class="fa fa-weibo"></i>
+                              <div class="item-data">
+                                <h3><a href="http://twitter.com/mRovaSolutions">beyondgm5@sina.com</a></h3>
+                                <p>我的微博</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                    </section><!-- content -->
                 </div>
+              <!-- End About Tab Data -->
+              <!-- Resume Tab Data -->
+                <div id="resume">
+                    <section class="clearfix">
+                        <div class="g2">
+
+                            <ul class="no-list work">
+                                <li>
+                                    <h4>
+                                        PE-电子工程师
+
+                                    </h4>
+                                    <span class="label label-info">2008.7-2009.7</span>
+                                    <div class="complay">广达电脑</div>
+                                    <p>
+                                        毕业后第一个对口专业的工作，负责手机制造部不良产品的线路图分析、产线测试段系统的维护、手机固件的界面测试等工作，以降低手机产品的不良率，
+                                        被刚刚起步的智能手机的用户界面吸引，开始自学设计，重拾儿时的梦想。
+                                    </p>
+                                </li>
+                                <li>
+                                    <h4>网页设计 & 前端开发</h4>
+                                    <div class="complay">上海天律信息技术有限公司</div>
+                                    <span class="label label-info">2009.7-2010.7</span>
+                                    <p>
+                                        负责公司宣传册、网页的设计和BS软件界面的设计和静态页面的编写，经过一年时间的学习和项目实践，熟练掌握了HTML和CSS，能轻松解决公司一切前端问题，
+                                        同时，设计能力也有了质的飞跃，熟练掌握了各种设计软件，如Photoshop、AI、Flash、Dreamweaver、3Dmax等，因为智能手机的普及，UI设计这个新的
+                                        职业引起了我的浓厚兴趣，于是，借用业余时间临摹各种漂亮的移动端UI，认为这个职业将来一定会火.
+                                    </p>
+                                </li>
+                                <li>
+                                    <h4>UI&UX设计师</h4>
+                                    <div class="complay">Wind资讯</div>
+                                    <span class="label label-danger">2010.7-2013.7</span>
+                                    <p>
+                                        这是一家规模相对较大的公司，主要业务是为金融行业提供软件和数据服务，我在UED部门主要负责用户调研、
+                                        移动APP的UI设计、Web项目前端开发、公司网站SEO的技术支持等工作，参加了公司很多重要产品和OEM的设计工作，团队中不乏高等美院的大牛，
+                                        对我的审美能力、观察能力、分析思维有着重要的影响。
+                                    </p>
+                                </li>
+                                <li>
+                                    <h4>前端工程师/UI设计师</h4>
+                                    <div class="complay">海能科技</div>
+                                    <span class="label label-danger">2013.7-至今</span>
+                                    <p>
+                                        主要负责公司Web软件的界面设计和前端开发，新产品需要进行前期的需求分析、构思图、线框图、UI设计以及前端开发，最后配合后端完成数据接入，老产品进行前端代码的
+                                        重构、优化前端性能、界面主题的统一化等工作。同时担任了三个项目的项目经理，负责项目策划、成员协调、进度跟进、版本管理等工作，进一步提高了项目的整体管理
+                                        能力。此外，我的业余特长深受领导的重用，如视频编辑、图像处理、室内设计等。
+                                    </p>
+                                </li>
+                            </ul>
+
+                        </div>
+                        <div class="g1">
+                            <div class="sidebar">
+                                <h3>
+                                    技能
+                                </h3>
+                                <h4>
+                                    软件
+                                </h4>
+                                <div class="meter emerald">
+                                    <span style="width: 90%"><span>Photoshop</span></span>
+                                </div>
+                                <div class="meter asbestos">
+                                    <span style="width: 50%"><span>Illustrator</span></span>
+                                </div>
+                                <div class="meter carrot">
+                                    <span style="width: 85%"><span>Affinity Photo/Designer(Mac)</span></span>
+                                </div>
+                                <div class="meter wisteria">
+                                    <span style="width: 60%"><span>Sketch (Mac)</span></span>
+                                </div>
+                                <div class="meter sunflower">
+                                    <span style="width: 40%"><span>3Dmax</span></span>
+                                </div>
+                                <div class="meter midnight">
+                                    <span style="width: 90%"><span>Sublime text</span></span>
+                                </div>
+                                <div class="meter pomengrate">
+                                    <span style="width: 60%"><span>Microsoft Office</span></span>
+                                </div>
+
+                                <div class="meter emerald">
+                                    <span style="width: 54%"><span>视频编辑/AE</span></span>
+                                </div>
+                                <div class="break"></div>
+                                <h4>
+                                    设计
+                                </h4>
+                                <div class="meter emerald">
+                                    <span style="width: 80.3%"><span>用户界面</span></span>
+                                </div>
+                                <div class="meter carrot">
+                                    <span style="width: 36%"><span>排版</span></span>
+                                </div>
+                                <div class="meter pomengrate">
+                                    <span style="width: 86%"><span>图像处理</span></span>
+                                </div>
+                                <div class="meter wisteria">
+                                    <span style="width: 70%"><span>Web/App原型</span></span>
+                                </div>
+                                <div class="meter midnight">
+                                    <span style="width: 50%"><span>动画</span></span>
+                                </div>
+                                <div class="break"></div>
+                                <h4>
+                                    前端技能
+                                </h4>
+                                <div class="meter emerald">
+                                    <span style="width: 89.3%"><span>HTML5/CSS3</span></span>
+                                </div>
+                                <div class="meter carrot">
+                                    <span style="width: 80%"><span>Sass/Less/stylus</span></span>
+                                </div>
+                                <div class="meter wisteria">
+                                    <span style="width: 55%"><span>jQuery/JavaScript</span></span>
+                                </div>
+                                <div class="meter pomengrate">
+                                    <span style="width: 76%"><span>Angular/JavaScript</span></span>
+                                </div>
+                                <div class="meter sunflower">
+                                    <span style="width: 65%"><span>Grunt/Gulp</span></span>
+                                </div>
+                                <div class="meter asbestos">
+                                    <span style="width: 68%"><span>Meteor/ionic</span></span>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+              <!-- End Resume Tab Data -->
+              <!-- Portfolio Tab Data -->
+                <div id="portfolio">
+                    <section class="clearfix">
+                        <div class="g1">
+                            <div class="image">
+                                <img src="http://lorempixel.com/306/306/sports/1" alt="">
+                                <div class="image-overlay">
+                                    <div class="image-link">
+                                        <a href="http://lorempixel.com/606/606/sports/1" class="btn">Full View</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="g1">
+                            <div class="image">
+                                <img src="http://lorempixel.com/306/306/sports/2" alt="">
+                                <div class="image-overlay">
+                                    <div class="image-link">
+                                        <a href="http://lorempixel.com/606/606/sports/2" class="btn">Full View</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="g1">
+                            <div class="image">
+                                <img src="http://lorempixel.com/306/306/sports/3" alt="">
+                                <div class="image-overlay">
+                                    <div class="image-link">
+                                        <a href="http://lorempixel.com/606/606/sports/3" class="btn">Full View</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="break"></div>
+                        <div class="g1">
+                            <div class="image">
+                                <img src="http://lorempixel.com/306/306/sports/4" alt="">
+                                <div class="image-overlay">
+                                    <div class="image-link">
+                                        <a href="http://lorempixel.com/606/606/sports/4" class="btn">Full View</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="g1">
+                            <div class="image">
+                                <img src="http://lorempixel.com/306/306/sports/5" alt="">
+                                <div class="image-overlay">
+                                    <div class="image-link">
+                                        <a href="http://lorempixel.com/606/606/sports/5" class="btn">Full View</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="g1">
+                            <div class="image">
+                                <img src="http://lorempixel.com/306/306/business/2" alt="">
+                                <div class="image-overlay">
+                                    <div class="image-link">
+                                        <a href="http://lorempixel.com/606/606/business/2" class="btn">Full View</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </section>
+                </div>
+              <!-- End Portfolio Data -->
+
             </div>
         </div>
-    </nav>
+        <!-- End Tab Container -->
+        <footer>
+            <p>
+                让我们携手，一起给互联网用户创造极致的体验吧！
+            </p>
+        </footer>
+    </div><!-- #main -->
+</div><!-- #main-container -->
 
-    <nav class="menu menu-right" id="profile">
-        <div class="menu-scroll">
-            <div class="menu-wrap">
-                <div class="menu-top">
-                    <div class="menu-top-img">
-                        <img alt="John Smith" src="images/samples/landscape.jpg">
-                    </div>
-                    <div class="menu-top-info">
-                        <a class="menu-top-user" href="javascript:void(0)"><span class="avatar pull-left"><img alt="alt text for John Smith avatar" src="images/users/avatar-001.jpg"></span>张馨予</a>
-                    </div>
-                </div>
-                <div class="menu-content">
-                    <ul class="nav">
-                        <li>
-                            <a href="javascript:void(0)"><span class="icon icon-account-box"></span>基本信息</a>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0)"><span class="icon icon-add-to-photos"></span>我的空间</a>
-                        </li>
-                        <li>
-                            <a href="page-login.html"><span class="icon icon-exit-to-app"></span>退出登录</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </nav>
-    
-    <div class="content" ui-view></div>
-
-                    
-                            
-                                            
-    <!--页脚 start-->
-    <footer class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-3">
-                    <h3>官方账号</h3>
-                    <p>关注我们获得最新产品动态</p>
-                    <div class="icon-row">
-                        <a href="#" class="bg-success waves-effect"><i class="fa fa-weixin"></i></a>
-                        <a href="#" class="bg-danger waves-effect"><i class="fa fa-weibo"></i></a>
-                    </div>
-                    
-                </div>
-                <div class="col-sm-2">
-                    <h3>帮助中心</h3>
-                    <ul class="links">
-                        <li><a href="#">购物指南 </a></li>
-                        <li><a href="#">配送方式 </a></li>
-                        <li><a href="#">支付方式 </a></li>
-                    </ul>
-                </div>
-                <div class="col-sm-2">
-                    <h3>服务支持</h3>
-                    <ul class="links">
-                        <li><a href="#">售后服务 </a></li>
-                        <li><a href="#">常见问题 </a></li>
-                        <li><a href="#">产品说明 </a></li>
-                    </ul>
-                </div>
-                <div class="col-sm-2">
-                    <h3></i>关于我们</h3>
-                    <ul class="links">
-                        <li><a href="#">公司简介 </a></li>
-                        <li><a href="#">加入我们 </a></li>
-                        <li><a href="#">联系我们 </a></li>
-                    </ul>
-                </div>
-                <div class="col-sm-3">
-                    <h3>热线电话</h3>
-                    <div class="contact co-danger">400-500-7890</div>
-                    
-                </div>
-            </div>
-        </div>
-        <div class="copyright">
-            沪ICP备13039009号，版权所有 © 2011-2014 520公司版权所有
-        </div>
-    </footer>
-    <!--页脚 end-->
-
-    <div class="fbtn-container">
-        <div class="fbtn-inner">
-            <a class="fbtn fbtn-red" href="#">
-                <span class="fbtn-text">to top</span>
-                <span class="fa fa-arrow-up"></span>
-            </a>
-        </div>
-    </div>
-
- 
-
-
-
-<!--   第三方 框架与库 -->
-    <script src="framework/jquery/jquery.min.js"></script>
-    <script src="framework/angular/angular.min.js"></script>
-    <script src="framework/angular/angular-animate.min.js"></script>
-    <script src="framework/angular/angular-ui-router.min.js"></script>
-    <!-- script src="framework/angular/ui-bootstrap-tpls.js"></script -->
-    <script src="framework/material/base.min.js"></script>
-    <script src="framework/others/owl.carousel.min.js"></script>
-    <script src="framework/others/wow.min.js"></script>
-
-<!-- 本应用脚本 -->
-    <script src="scripts/app.js"></script>
-    <script src="scripts/controllers.js"></script>
-    <script src="scripts/services.js"></script>
 
 
 </body>
