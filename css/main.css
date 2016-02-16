@@ -370,8 +370,8 @@ span.amp{font-family:Adobe Caslon Pro,Baskerville,"Goudy Old Style","Palatino","
 /* WorkExperience */
 .work li{
   position: relative;
-  padding-bottom: 30px;
-  padding-left: 20px;
+  padding-bottom: 15px;
+  padding-left: 15px;
   border-left: 4px solid #E8DFD8;
 }
 .work li:before,
