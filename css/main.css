@@ -455,6 +455,12 @@ body {width: 92%; margin: 0 auto} /* Center page without wrapper */
 .image-overlay .image-link .btn{
   color: #fff !important;
 }
+.text-center{
+  text-align: center;
+}
+.mt-md{
+  margin-top: 20px
+}
 /* Icon Box */
 .sny-icon{
   display: block;
