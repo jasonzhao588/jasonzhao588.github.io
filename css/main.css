@@ -759,6 +759,12 @@ Change widths as necessary
   .bg-2{
     background-image: url(../images/bg-m.jpg)
   }
+  #header h2{
+    color: #fff;
+  }
+  #header h4{
+    color: rgba(255,255,255,.8)
+  }
  }
 @media only screen and (min-width: 768px) {
   body {
