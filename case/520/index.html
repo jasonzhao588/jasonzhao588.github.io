@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="app, web app, responsive, admin dashboard, admin, flat, flat ui, ui kit, off screen nav" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+        <title>首页——520微购相应式网页</title>   
+        <!-- Bootstrap -->
+        <link href="css/bootstrap.css" rel="stylesheet">
+        <!--你自己的样式文件 -->
+        <link rel="stylesheet" href="css/animate.css" >        
+        <link rel="stylesheet" href="css/font-awesome.css">             
+        <link rel="stylesheet" href="css/assembly.css">        
+        <link rel="stylesheet" href="css/plugs.css">        
+        <link rel="stylesheet" href="less/style.css">
+        <link rel="stylesheet" href="less/phone-style.css">
+
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body data-spy="scroll">
+		<!--    header start-->
+		<div id="header" class="navbar navbar-white navbar-fixed-top hide-from-print" role="banner">
+		  <div class="container">
+
+			<div class="navbar-header">
+			  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapse-menu">
+				<span class="sr-only">可折叠导航</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			  </button>
+			  <a class="navbar-brand scrollto" href="#slider"></a>
+			</div>
+
+			<!--  以下内容将在手机上折叠 -->
+			<div class="collapse navbar-collapse" id="collapse-menu">
+                  <ul class="nav navbar-nav navbar-right main_nav">
+                    <li class="active">
+                        <a href="index.html">首页</a>
+                        <ul class="sub_menu animated fadeInUp" >
+                            <li><a class="scrollto" href="index.html#news">新闻动态</a></li>
+                            <li><a class="scrollto" href="index.html#timeline">历史轨迹</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="project.html">项目介绍</a>
+                        <ul class="sub_menu animated fadeInUp" >
+                            <li><a class="scrollto" href="project.html#pro_1">项目介绍</a></li>
+                            <li><a class="scrollto" href="project.html#pro_2">项目总规</a></li>
+                            <li><a class="scrollto" href="project.html#pro_3">项目图片</a></li>
+                            <li><a class="scrollto" href="project.html#pro_4">区位及交通</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="company.html">企业介绍</a>
+                        <ul class="sub_menu animated fadeInUp" >
+                            <li><a class="scrollto" href="company.html#com_1">公司简介</a></li>
+                            <li><a class="scrollto" href="company.html#cul_1">企业宗旨</a></li>
+                            <li><a class="scrollto" href="company.html#cul_2">经营理念</a></li>
+                            <li><a class="scrollto" href="company.html#cul_3">企业形象</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="news.html">新闻动态</a>
+                    </li>
+
+                    <li>
+                        <a href="server.html">客户服务</a>
+                        <ul class="sub_menu animated fadeInUp" >
+                            <li><a class="scrollto" href="server.html#ser_1">商户申请</a></li>
+                            <li><a class="scrollto" href="server.html#ser_2">常见问题</a></li>
+                        </ul>
+                    </li>
+                    <li class="usernumber">
+						<a href="#">
+							签约用户数
+							<span>302</span>
+						</a>
+                    </li>
+                  </ul>
+
+			</div><!-- /.navbar-collapse -->
+		  </div><!-- /.container-fluid -->
+		</div>
+		<!--    header end-->
+
+		<!-- 轮播图 -->
+		<div class="slider offset-header" id="slider">
+			<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+				<!-- Indicators -->
+				<ol class="carousel-indicators">
+					<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+					<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+					<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+					<li data-target="#carousel-example-generic" data-slide-to="3"></li>
+					<li data-target="#carousel-example-generic" data-slide-to="4"></li>
+				</ol>
+
+				<!-- Wrapper for slides -->
+				<div class="carousel-inner">
+					<div class="item">
+						<img src="http://placehold.it/1920x800" class="img-responsive" alt="">
+						<div class="carousel-caption wow fadeInUp">
+							<h2 class="img-h2">我们的产品</h2>
+							<p>在大家的不写努力下我们终于完成了这个改变世界的产品</p>
+						</div>
+					</div>
+					<div class="item active">
+						<img src="http://placehold.it/1920x800" class="img-responsive" alt="">
+						<div class="carousel-caption wow fadeInUp">
+							<h2 class="img-h2">成功再次一举了！</h2>
+							<p>大家都打起精神准备最后背水一战了！</p>
+						</div>
+					</div>
+					<div class="item">
+						<img src="http://placehold.it/1920x800" class="img-responsive" alt="">
+						<div class="carousel-caption wow fadeInUp">
+							<h2 class="img-h2">随便写写的</h2>
+							<p>没什么写的就随便写点什么了</p>
+						</div>
+					</div>
+					<div class="item">
+						<img src="http://placehold.it/1920x800" class="img-responsive" alt="">
+						<div class="carousel-caption wow fadeInUp">
+							<h2 class="img-h2">还有东西吗</h2>
+							<p>这是对这个图片的表述，可以随便写</p>
+						</div>
+					</div>
+					<div class="item">
+						<img src="http://placehold.it/1920x800" class="img-responsive" alt="">
+						<div class="carousel-caption wow fadeInUp">
+							<h2 class="img-h2">视觉设计的影响力</h2>
+							<p>国人开始慢慢重视视觉设计了，这是好事</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- Controls -->
+				<a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+					<span class="fa fa-chevron-left wow fadeInLeft"></span>
+				</a>
+				<a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+					<span class="fa fa-chevron-right wow fadeInRight"></span>
+				</a>
+			</div>		
+		</div>
+		<!--轮播图end-->
+		
+
+		<!--时间轴 start-->
+		<div class="anchor-d">
+				<h1 class="wow fadeInDown">时间轨迹</h1>
+				<div id="timeline">
+
+                
+                    <ul id="issues">
+                        <li class="row" id="01-10">
+                            <div class="col-xs-4">
+                                <img class="img-responsive" src="http://placehold.it/300x300" alt="">
+                            </div>
+                            <div class="col-xs-8">
+                                <h3>公司整体借壳上市</h3>
+                                <p>可喜可贺，2014年4月15日，公司在纳斯达克正是上市，公司总算是上市了，感谢各界的支持。</p>
+                            </div>
+                        </li>
+                        <li class="row" id="01-22">
+                            <div class="col-xs-4">
+                                <img class="img-responsive" src="http://placehold.it/300x300" alt="">
+                            </div>
+                            <div class="col-xs-8">
+                                <h3>公司首轮融资成功了</h3>
+                                <p>再上市以后，公司受到了各界人士的关注，股价首日就涨停，可谓是百年难见的好势头，这次的成功离不开各位的努力，希望大家再接再厉，再取辉煌！</p>
+                            </div>
+                        </li>
+                        <li class="row" id="03-12">
+                            <div class="col-xs-4">
+                                <img class="img-responsive" src="http://placehold.it/300x300" alt="">
+                            </div>
+                            <div class="col-xs-8">
+                                <h3>公司获得国家1个亿赞助</h3>
+                                <p>好事真是一个接着一个的来，我们科技成果为中国亿万家庭送去了温暖，国家为了奖励我们，资助一个亿，虽然有点少，毕竟是天朝的一次壮举，感谢人民感谢党。</p>
+                            </div>
+                        </li>
+                        <li class="row selected" id="04-15">
+                            <div class="col-xs-4">
+                                <img class="img-responsive" src="http://placehold.it/300x300" alt="">
+                            </div>
+                            <div class="col-xs-8">
+                                <h3>公司整体借壳上市</h3>
+                                <p>再上市以后，公司受到了各界人士的关注，股价首日就涨停，可谓是百年难见的好势头，这次的成功离不开各位的努力，希望大家再接再厉，再取辉煌！</p>
+                            </div>
+                        </li>
+                        <li class="row" id="05-21">
+                            <div class="col-xs-4">
+                                <img class="img-responsive" src="http://placehold.it/300x300" alt="">
+                            </div>
+                            <div class="col-xs-8">
+                                <h3>我们的春天来了</h3>
+                                <p>好事真是一个接着一个的来，我们科技成果为中国亿万家庭送去了温暖，国家为了奖励我们，资助一个亿，虽然有点少，毕竟是天朝的一次壮举，感谢人民感谢党。</p>
+                            </div>
+                        </li>
+                        <li class="row" id="06-12">
+                            <div class="col-xs-4">
+                                <img class="img-responsive" src="http://placehold.it/300x300" alt="">
+                            </div>
+                            <div class="col-xs-8">
+                                <h3>百花齐放，百家争鸣</h3>
+                                <p>百花齐放2014年，百花齐放。引入众多国民级应用，其中最出名的QQ农场，给了好多人一个深夜上网的理由，也为拉近老爸老妈老婆老公的关系做出了卓越的贡献。</p>
+                            
+                            </div>
+                        </li>
+                        <li class="row" id="07-10">
+                            <div class="col-xs-4">
+                                <img class="img-responsive" src="http://placehold.it/300x300" alt="">
+                            </div>
+                            <div class="col-xs-8">
+                                <h3>让我们杨帆起航吧</h3>
+                                <p>2006年，咿呀学语。面对每天千万级的用户访问，技术GG帮我优化了架构，设计师MM帮我设计了欢迎动画等个性化装扮，“妈妈再也不担心我404了”！</p>
+                            </div>
+                        </li>
+                        <li class="row" id="08-17">
+                            <div class="col-xs-4">
+                                <img class="img-responsive" src="http://placehold.it/300x300" alt="">
+                            </div>
+                            <div class="col-xs-8">
+                                <h3>我们的梦想即将成真</h3>
+                                <p>面对每天千万级的用户访问，技术GG帮我优化了架构，设计师MM帮我设计了欢迎动画等个性化装扮，“妈妈再也不担心我404了”！</p>
+                            </div>
+                        </li>
+                        <li class="row" id="08-28">
+                            <div class="col-xs-4">
+                                <img class="img-responsive" src="http://placehold.it/300x300" alt="">
+                            </div>
+                            <div class="col-xs-8">
+                                <h3>成功来的太突然，来不及准备</h3>
+                                <p>短短一年时间，我们就成长为全球瞩目的公司。面对每天千万级的用户访问，技术GG帮我优化了架构，设计师MM帮我设计了欢迎动画等个性化装扮，“妈妈再也不担心我404了”！</p>
+                            </div>
+                        </li>
+                        <li class="row" id="09-14">
+                            <div class="col-xs-4">
+                                <img class="img-responsive" src="http://placehold.it/300x300" alt="">
+                            </div>
+                            <div class="col-xs-8">
+                                <h3>让我们的市值图片千亿大关吧</h3>
+                                <p>我们的股价节节攀升，马上突破千亿大关，成为世界上最值钱的公司。面对每天千万级的用户访问，技术GG帮我优化了架构，设计师MM帮我设计了欢迎动画等个性化装扮，“妈妈再也不担心我404了”！</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul id="dates">
+                        <li class="date"><a href="#01-10">01/10</a><span>公司正式成立</span></li>
+                        <li class="date"><a href="#01-22">01/22</a><span>公司第一个产品诞生</span></li>
+                        <li class="date"><a href="#03-12">03/12</a><span>公司规模图片1000人</span></li>
+                        <li class="date"><a href="#04-15">04/15</a><span>正式进军国际市场</span></li>
+                        <li class="date"><a href="#05-21">05/21</a><span>纳斯达克上市</span></li>
+                        <li class="date"><a href="#06-12">06/12</a><span>首轮融资1000亿</span></li>
+                        <li class="date"><a href="#07-10">07/10</a><span>收购苹果公司</span></li>
+                        <li class="date"><a href="#08-17">08/17</a><span>收购谷歌</span></li>
+                        <li class="date"><a href="#08-28">08/28</a><span>收购Facebook</span></li>
+                        <li class="date"><a href="#09-14">09/14</a><span>收购微软</span></li>
+                    </ul>
+                    <div class="line"></div>
+   
+                
+                
+                
+                
+					
+				</div>
+		</div>
+		<!--时间轴 end-->
+		
+
+		
+		<!--新闻动态 start-->
+		<div class="anchor-l" id="news">
+			<div class="container">
+				<h1 class="wow fadeInDown">新闻动态</h1>
+				<div class="row home-news">
+					<div class="col-xs-12 col-md-4">
+						<div class="icon-news ic-o wow fadeInUp delayp1"><i class="fa fa-bullhorn"></i></div>
+						<h2 class="wow fadeInDown">公司新闻</h2>
+						<ul class="new-list">
+							<li class="wow fadeInLeft delayp1"><a href="#">热烈欢迎习总书记参观我公司</a><span class="timing">8-25 14:30</span></li>
+							<li class="wow fadeInLeft delayp2"><a href="#">公司今年营收过3亿</a><span class="timing">8-21 12:10</span></li>
+							<li class="wow fadeInLeft delayp3"><a href="#">我公司正计划年底上市</a><span class="timing">8-12 11:11</span></li>
+							<li class="wow fadeInLeft delayp4"><a href="#">关于员工放假的最新通知</a><span class="timing">8-11 15:22</span></li>
+							<li class="wow fadeInLeft delayp5"><a href="#">总经理会见美国总统</a><span class="timing">8-11 15:22</span></li>
+							<li class="wow fadeInLeft delayp6"><a href="#">预祝公司产品发布会圆满</a><span class="timing">8-11 15:22</span></li>
+						</ul>
+						<div class="more wow fadeInRight" data-wow-delay="0s"><a href="" class="btn btn-primary btn-sm">查看更多</a></div>
+					</div>
+					<div class="col-xs-12 col-md-4">
+						<div class="icon-news ic-b wow fadeInUp delayp3"><i class="fa fa-video-camera"></i></div>
+						<h2 class="wow fadeInDown">媒体报道</h2>
+						<ul class="new-list">
+							<li class="wow fadeInLeft delayp1"><a href="#">热烈欢迎习总书记参观我公司</a><span class="timing">8-25 14:30</span></li>
+							<li class="wow fadeInLeft delayp2"><a href="#">公司今年营收过3亿</a><span class="timing">8-21 12:10</span></li>
+							<li class="wow fadeInLeft delayp3"><a href="#">我公司正计划年底上市</a><span class="timing">8-12 11:11</span></li>
+							<li class="wow fadeInLeft delayp4"><a href="#">关于员工放假的最新通知</a><span class="timing">8-11 15:22</span></li>
+							<li class="wow fadeInLeft delayp5"><a href="#">总经理会见美国总统</a><span class="timing">8-11 15:22</span></li>
+							<li class="wow fadeInLeft delayp6"><a href="#">预祝公司产品发布会圆满</a><span class="timing">8-11 15:22</span></li>
+						</ul>
+						<div class="more wow fadeInUp delayp7"><a href="" class="btn btn-primary btn-sm">查看更多</a></div>
+					</div>
+					<div class="col-xs-12 col-md-4">
+						<div class="icon-news ic-g wow fadeInUp delayp5"><i class="fa fa-rocket"></i></div>
+						<h2 class="wow fadeInDown">最新动态</h2>
+						<ul class="new-list">
+							<li class="wow fadeInLeft delayp1"><a href="#">热烈欢迎习总书记参观我公司</a><span class="timing">8-25 14:30</span></li>
+							<li class="wow fadeInLeft delayp2"><a href="#">公司今年营收过3亿</a><span class="timing">8-21 12:10</span></li>
+							<li class="wow fadeInLeft delayp3"><a href="#">我公司正计划年底上市</a><span class="timing">8-12 11:11</span></li>
+							<li class="wow fadeInLeft delayp4"><a href="#">关于员工放假的最新通知</a><span class="timing">8-11 15:22</span></li>
+							<li class="wow fadeInLeft delayp5"><a href="#">总经理会见美国总统</a><span class="timing">8-11 15:22</span></li>
+							<li class="wow fadeInLeft delayp6"><a href="#">预祝公司产品发布会圆满</a><span class="timing">8-11 15:22</span></li>
+						</ul>
+						<div class="more wow fadeInUp delayp7"><a href="" class="btn btn-primary btn-sm">查看更多</a></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--新闻动态 end-->
+		
+				
+						
+										
+		<!--页脚 start-->
+		<div class="footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 col-md-3">
+						<h3 class="wow fadeInDown delayp1"><i class="fa fa-phone"></i>联系我们</h3>
+						<dl class="dl-horizontal">
+							<dt>电话  :</dt>
+							<dd>400-490-4546 </dd>
+							<dt>传真  :</dt>
+							<dd> 021-36125362 </dd>
+							<dt>邮箱  :</dt>
+							<dd>520wg@wg.com </dd>
+							<dt>网址  :</dt>
+							<dd>www.520wg.com  </dd>
+							<dt>地址  :</dt>
+							<dd>上海市南京西路49号</dd>
+						</dl>
+						<div class="contact">
+						    <a href="" class="weixin"><i class="fa fa-weixin"></i></a>
+						    <a href="" class="weibo"><i class="fa fa-weibo"></i></a>
+						    <a href="" class="renren"><i class="fa fa-renren"></i></a>
+						    <a href="" class="t-qq"><i class="fa fa-qq"></i></a>
+						</div>
+					</div>
+					<div class="col-xs-12 col-md-3">
+						<h3 class="wow fadeInDown delayp2"><i class="fa fa-qrcode"></i>二维码</h3>
+						<div class="qrcode">
+                            <img src="images/code.png" class="img-responsive" alt="">
+						</div>
+					</div>
+					<div class="col-xs-12 col-md-3">
+						<h3 class="wow fadeInDown delayp3"><i class="fa fa-shield"></i>法律声明</h3>
+                        <ul class="law">
+                            <li><a href="#">信息网络传播许可证 </a></li>
+                            <li><a href="#">互联网信息服务许可证</a></li>
+                            <li><a href="#"> 江西网站联合辟谣平台 </a></li>
+                            <li><a href="#">互联网出版许可证</a></li>
+                            <li><a href="#">工信部特许运营商执照</a></li>
+                            <li><a href="#">公司声明</a></li>
+                        </ul>
+					</div>
+					<div class="col-xs-12 col-md-3">
+						<h3 class="wow fadeInDown delayp4"><i class="fa fa-comments"></i>交流咨询</h3>
+                        <form role="form" class="msg">
+                            <div class="form-group">
+                                <label for="email">邮箱地址</label>
+                                <input type="email" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">留言内容</label>
+                                <textarea  rows="3" class="form-control">Hello！</textarea>
+                            </div>
+                            <div class="submit">
+                                <a href="" class="btn btn-primary btn-sm"><i class="fa fa-paper-plane" ></i>发送</a>
+                            </div>
+                        </form>
+					</div>
+				</div>
+			</div>
+            <div class="copyright">
+                沪ICP备13039009号，版权所有 © 2011-2014 520公司版权所有
+            </div>
+		</div>
+		<!--页脚 end-->
+	
+
+        <div class="login-btn">
+            <!-- Start Nav Structure -->
+            <a href="javascript:;" class="xs-btn">
+                <span class="plus horizontal"></span>
+                <span class="plus vertical"></span>
+            </a>
+            <ul class="cn-wrapper">
+                <li class="bg-primary"><a class="login" href="#"</i>商户</a></li>
+                <li class="bg-warning"><a class="login" href="#"</i>代理商</a></li>
+            </ul>
+            <!-- End Nav Structure -->
+        </div>
+		
+		
+		<div class="loginbox animated fadeInDown">
+			<h1>商户登录</h1>
+			<form action="" class="login-form">
+				<div class="input-group">
+					<i class="fa fa-user bg-primary"></i>
+					<input type="text" placeholder="请输入用户名">
+				</div>
+				<div class="input-group bg-warning">
+					<i class="fa fa-lock bg-warning"></i>
+					<input type="password" placeholder="请输入密码">
+				</div>
+				<div class="row">
+					<div class="col-sm-6">
+						<a href="javascript:;" class="btn btn-primary btn-block"><i class="fa fa-key"></i>登录</a>
+					</div>
+					<div class="col-sm-6">
+						<a href="javascript:;" class="btn btn-danger btn-block cancel"><i class="fa fa-close"></i>取消</a>
+					</div>
+				</div>
+				
+			</form>
+		</div>
+		<div class="dark-bg"></div>
+
+
+
+
+        
+        
+        <script src="js/jquery_1.10.2.js"></script>
+        <script src="js/bootstrap.js"></script>
+		<!--  插件-->
+        <script src="js/src/scrollTo.min.js"></script>
+        <script src="js/src/wow.js"></script>
+        <script src="js/src/Headroom.js"></script>
+        <script src="js/src/jquery.timelinr.js"></script>
+
+		<!-- 本应用脚本集合-->
+        <script src="js/app.js"></script>
+        
+
+   		
+    </body>
+</html>
+
+<script>
+	
+	
+
+$(function(){
+    $().timelinr({
+		autoPlay: 'true',
+		autoPlayDirection: 'forward',
+		startAt: 4
+	})
+});
+
+	
+	
+	
+
+    (function () {
+    var header = new Headroom(document.querySelector("#header"), {
+        tolerance: 5,
+        offset: 205,
+        classes: {
+            initial: "animated-s",
+            pinned: "slideDown",
+            unpinned: "slideUp"
+        }
+    });
+    header.init();
+
+    var bttHeadroom = new Headroom(document.getElementById("btt"), {
+        tolerance: 0,
+        offset: 500,
+        classes: {
+            initial: "slide",
+            pinned: "slide--reset",
+            unpinned: "slide--down"
+        }
+    });
+    bttHeadroom.init();
+}());
+
+
+</script>

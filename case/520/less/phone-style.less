@@ -1,0 +1,267 @@
+//颜色变量
+@body-bg:    #f5f2ee;
+@header-bg:		#fff;
+@black:  #000;
+@brand-primary: #1fae96;
+@brand-success: #2ecc71;
+@brand-info:    #1bafd9;
+@brand-warning: #f28c13;
+@brand-danger:  #e5605c;
+@footer-bg: 	#323a45;
+
+
+@media (min-width: 992px) and (max-width: 1200px){
+    .container {
+        width: 968px;
+    }
+}
+
+
+//平板
+@media (min-width: 768px) and (max-width: 992px) {
+    .container{
+        width: 768px;
+        .navbar-header{
+            margin-left: 0;
+        };
+    };
+    .footer ul > li > a{
+        padding: 10px 0;
+    };
+	#issues{
+		li{width: 600px};
+        .selected{
+			margin-left: -300px;
+        }
+	}
+}
+
+//手机端样式
+@media (min-width: 320px) and (max-width: 767px){
+	
+
+	.navbar-header{
+		height: 80px;
+	}
+	//折叠按钮
+	.navbar-toggle{
+		background:@brand-warning ;
+		margin-top: 20px;
+		transition: all .3s;
+        position: relative;
+		.icon-bar{background: lighten(@brand-warning,40%);}
+		&:hover{
+			background: darken(@brand-warning,10%); 
+			.icon-bar{background: #fff};
+		};
+	}
+	//标题
+    .navbar-header > .navbar-brand{
+        width: 120px !important;
+        height: 80px !important;
+        position: absolute;
+        left: 50%;
+        top:0;
+        margin-left: -60px !important;
+        background: url(../images/logo-big.png) no-repeat left center;
+        background-size: auto 100% ;
+    }
+	//菜单
+    .navbar-fixed-top .navbar-collapse{
+        max-height: 360px;
+    }
+    .navbar-collapse .main_nav > li{
+        padding: 5px 20px;
+        > a{
+            padding: 8px;
+            text-align: center;
+            border-radius: 3px;
+            border: 1px solid  @brand-primary;
+            color:  @brand-primary;
+            &:hover{
+                background: @brand-primary;
+                color: #fff;
+            }
+        };
+        .sub_menu{
+            display: none !important;
+        };
+		
+    }
+	
+	.navbar-collapse .main_nav > li.usernumber{
+		a{
+			border-color: @brand-warning;
+			color: @brand-warning;
+			position: relative;
+			span{
+				position: absolute;
+				color: #fff;
+				right: 10px;
+				top: 5px;
+				background: @brand-danger;
+				border-radius: 1em;
+				padding: 0px 5px;
+				border: 2px solid #fff;
+				font-size: 12px;
+			};
+			&:hover{
+				background: @brand-warning;
+				color: #fff;
+			}
+		}
+	}
+	//内容
+	.offset-header{
+		padding-top: 80px;
+	}
+	.slider{
+		.carousel-inner > .item{
+//			height: 360px;
+//			background-size: auto 100%;
+		};
+	}
+	.home-news > div{
+		margin-top: 25px;
+		.new-list > li{
+			padding: 5px 0;
+			border-bottom: 1px solid #eee;
+		};
+		.more > a{
+			width: 100%;
+			padding: 8px;
+			background: #fff;
+			border-color:  @brand-primary;
+			color: @brand-primary;
+			transition: all .3s;
+			&:hover{
+				color: #fff;
+				background: @brand-primary
+			};
+		};
+	}
+	
+	#issues{
+		li{
+			width: 90% !important;
+			height: 230px !important;
+		};
+        .selected{
+			margin-left: -240px !important;
+        }
+		
+	}
+    
+    .footer{
+        background: @footer-bg;
+        @lg:40px;
+        @f_color: lighten(@footer-bg, 40%);
+        .contact{
+            margin: 15px 0;
+            a{
+                border-radius: 6px;
+                margin-right: 20px;
+                color: #fff;
+                transition: all .3s;
+                &:hover{background: darken(@footer-bg, 8%)}
+            };
+            .weixin{background: @brand-success};
+            .weibo{background: @brand-danger};
+            .renren{background: @brand-info};
+            .t-qq{background: @brand-warning};
+        };
+        ul.law > li > a{
+            padding: 10px 0;
+            &:before{
+                vertical-align: 5%;
+            }
+        }
+        .msg > .submit{margin-bottom: 15px;}
+        .msg > .submit .btn{
+            padding: 8px;
+            width: 100%;
+        };
+        .dl-horizontal > dd{margin-left: 0px}
+        
+    }
+	
+    /*项目介绍*/
+    
+    #pro_1{
+        .img-box{
+            overflow: hidden;
+            img{
+                width: 100%;
+                height: auto;
+                overflow: hidden;
+            };
+        };
+    };
+    #pro_4{
+        .dl-horizontal{
+            dt{
+                line-height: 1; 
+                color: @brand-success;
+                margin-top: 15px;
+            };
+            dd{margin-left: 0};
+        }
+    }
+    
+    
+    
+    /*企业文化*/
+    
+    #cul_2{
+        .round-txt{
+            display: none;
+        };
+    }
+    
+    
+    /*新闻*/
+    #con-new{
+        .news-nav .nav{
+            padding-bottom: 0;
+        }
+        .imgtxt{
+            img{display: none}
+        };
+        .news-list{
+            padding-top: 0;
+        }
+    }
+	
+	.modal.news{
+		.modal-dialog{
+			top: 5%;
+			bottom: 5%;
+			left: 5%;
+			right: 5%;
+		};
+	}
+
+
+	/*人力资源*/
+	#hr_1{
+        .btnbox>.btn{
+            display: block;
+            margin:10px 15px;
+        };
+    }
+	
+	
+	
+	.loginbox{
+		width: auto;
+		height: auto;
+		margin: 0;
+		padding: 0;
+		left: 0;
+		top: 0;
+		right: 0;
+		bottom: 0;
+	}
+	
+}
+ 

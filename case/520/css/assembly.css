@@ -1,0 +1,273 @@
+/*form表单*/
+
+
+
+.form-control {
+    background-color: #FFFFFF;
+    background-image: none;
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    box-shadow: none;
+    color: inherit;
+    display: block;
+    padding: 6px 12px;
+    transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+    width: 100%;
+    font-family:"open sans", "微软雅黑"
+}
+.form-control:focus{
+    border-color: #16b77f;
+/*    box-shadow: 0 0 8px #16b77f;*/
+}
+::-webkit-input-placeholder { /* WebKit browsers */
+    color:    rgba(0,0,0,.5) !important;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:    rgba(0,0,0,.5) !important;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:    rgba(0,0,0,.5) !important;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color:    rgba(0,0,0,.5) !important;
+}
+.control-label{
+    padding-right: 10px !important;
+}
+
+
+
+
+
+
+/*按钮样式=======================*/
+
+
+
+.btn {
+    border-radius: 3px;
+    font-size: 14px;
+    font-family:"open sans", "微软雅黑"
+}
+
+.float-e-margins .btn {
+    margin-bottom: 5px;
+}
+
+.btn-w-m {
+    min-width: 120px;
+}
+
+.btn-primary.btn-outline {
+    color: #1AB394;
+}
+
+.btn-success.btn-outline {
+    color: #1C84C6;
+}
+
+.btn-info.btn-outline {
+    color: #23C6C8;
+}
+
+.btn-warning.btn-outline {
+    color: #f0ad4e;
+}
+
+.btn-danger.btn-outline {
+    color: #d9534f;
+}
+
+.input-group .btn-sm{
+    height: 30px;
+    line-height: 13px;
+}
+
+
+.btn-primary.btn-outline:hover,
+.btn-success.btn-outline:hover,
+.btn-info.btn-outline:hover,
+.btn-warning.btn-outline:hover,
+.btn-danger.btn-outline:hover {
+    color: #fff;
+}
+
+.btn-primary {
+    background-color: #1AB394;
+    border-color: #17a589;
+    color: #FFFFFF ;
+}
+.btn-primary:hover, 
+.btn-primary:focus, 
+.btn-primary:active, 
+.btn-primary.active, 
+.open .dropdown-toggle.btn-primary {
+    background-color: #18a78a;
+    border-color: #18a78a;
+    color: #FFFFFF ;
+}
+
+
+
+/*动画延迟时间*/
+
+
+.delayp1 {
+  animation-delay: .1s;
+  -moz-animation-delay: .1s;
+  -webkit-animation-delay: .1s;
+  -o-animation-delay: .1s;
+  transition-delay: .1s;
+  -webkit-transition-delay: .1s;
+  -moz-transition-delay: .1s;
+  -o-transition-delay: .1s;
+}
+.delayp2 {
+  animation-delay: .2s;
+  -moz-animation-delay: .2s;
+  -webkit-animation-delay: .2s;
+  -o-animation-delay: .2s;
+  transition-delay: .2s;
+  -webkit-transition-delay: .2s;
+  -moz-transition-delay: .2s;
+  -o-transition-delay: .2s;
+}
+.delayp3 {
+  animation-delay: .3s;
+  -moz-animation-delay: .3s;
+  -webkit-animation-delay: .3s;
+  -o-animation-delay: .3s;
+  transition-delay: .3s;
+  -webkit-transition-delay: .3s;
+  -moz-transition-delay: .3s;
+  -o-transition-delay: .3s;
+}
+.delayp4 {
+  animation-delay: .4s;
+  -moz-animation-delay: .4s;
+  -webkit-animation-delay: .4s;
+  -o-animation-delay: .4s;
+  transition-delay: .4s;
+  -webkit-transition-delay: .4s;
+  -moz-transition-delay: .4s;
+  -o-transition-delay: .4s;
+}
+.delayp5 {
+  animation-delay: .5s;
+  -moz-animation-delay: .5s;
+  -webkit-animation-delay: .5s;
+  -o-animation-delay: .5s;
+  transition-delay: .5s;
+  -webkit-transition-delay: .5s;
+  -moz-transition-delay: .5s;
+  -o-transition-delay: .5s;
+}
+.delayp6 {
+  animation-delay: .6s;
+  -moz-animation-delay: .6s;
+  -webkit-animation-delay: .6s;
+  -o-animation-delay: .6s;
+  transition-delay: .6s;
+  -webkit-transition-delay: .6s;
+  -moz-transition-delay: .6s;
+  -o-transition-delay: .6s;
+}
+.delayp7 {
+  animation-delay: .7s;
+  -moz-animation-delay: .7s;
+  -webkit-animation-delay: .7s;
+  -o-animation-delay: .7s;
+  transition-delay: .7s;
+  -webkit-transition-delay: .7s;
+  -moz-transition-delay: .7s;
+  -o-transition-delay: .7s;
+}
+.delayp8 {
+  animation-delay: .8s;
+  -moz-animation-delay: .8s;
+  -webkit-animation-delay: .8s;
+  -o-animation-delay: .8s;
+  transition-delay: .8s;
+  -webkit-transition-delay: .8s;
+  -moz-transition-delay: .8s;
+  -o-transition-delay: .8s;
+}
+.delayp9 {
+  animation-delay: .9s;
+  -moz-animation-delay: .9s;
+  -webkit-animation-delay: .9s;
+  -o-animation-delay: .9s;
+  transition-delay: .9s;
+  -webkit-transition-delay: .9s;
+  -moz-transition-delay: .9s;
+  -o-transition-delay: .9s;
+}
+.delay1s {
+  animation-delay: 1s;
+  -moz-animation-delay: 1s;
+  -webkit-animation-delay: 1s;
+  -o-animation-delay: 1s;
+  transition-delay: 1s;
+  -webkit-transition-delay: 1s;
+  -moz-transition-delay: 1s;
+  -o-transition-delay: 1s;
+}
+
+
+
+.animated-s {
+    -webkit-animation-duration: .5s;
+    -moz-animation-duration: .5s;
+    -o-animation-duration: .5s;
+    animation-duration: .5s;
+    -webkit-animation-fill-mode: both;
+    -moz-animation-fill-mode: both;
+    -o-animation-fill-mode: both;
+    animation-fill-mode: both
+}
+
+@-webkit-keyframes slideDown {
+    0% {-webkit-transform: translateY(-120px)}
+    100% { -webkit-transform: translateY(0)}
+}
+@-moz-keyframes slideDown {
+    0% {-moz-transform: translateY(-120px)}
+    100% {-moz-transform: translateY(0)}
+}
+@-o-keyframes slideDown {
+    0% {-o-transform: translateY(-120px)}
+    100% {-o-transform: translateY(0)}
+}
+@keyframes slideDown {
+    0% {transform: translateY(-120px)}
+    100% {transform: translateY(0)}
+}
+.animated-s.slideDown {
+    -webkit-animation-name: slideDown;
+    -moz-animation-name: slideDown;
+    -o-animation-name: slideDown;
+    animation-name: slideDown
+}
+@-webkit-keyframes slideUp {
+    0% {-webkit-transform: translateY(0)}
+    100% {-webkit-transform: translateY(-120px)}
+}
+@-moz-keyframes slideUp {
+    0% {-moz-transform: translateY(0)}
+    100% {-moz-transform: translateY(-120px)}
+}
+@-o-keyframes slideUp {
+    0% {-o-transform: translateY(0)}
+    100% {-o-transform: translateY(-120px)}
+}
+@keyframes slideUp {
+    0% {transform: translateY(0)}
+    100% {transform: translateY(-120px)}
+}
+.animated-s.slideUp {
+    -webkit-animation-name: slideUp;
+    -moz-animation-name: slideUp;
+    -o-animation-name: slideUp;
+    animation-name: slideUp
+}
+

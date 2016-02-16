@@ -1,0 +1,490 @@
+<!doctype html>
+<html class="no-js" ng-app="CupApp">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <link rel="stylesheet" href="css/main.min.css">
+    <link rel="stylesheet" href="css/app.min.css">
+
+  </head>
+  <body>
+     
+    <header class="header">
+        <div class="container">
+            <ul class="nav nav-list pull-right main-nav-btn">
+                <li>
+                    <a class="menu-toggle" href="#menu">
+                        <span class="access-hide">Menu</span>
+                        <span class="icon icon-menu"></span>
+                        <span class="header-close icon icon-close"></span>
+                    </a>
+                </li>
+            </ul>
+            <a class="header-logo" href="index.html"></a>
+
+            <ul class="nav nav-list pull-right">
+                <li>
+                    <a class="menu-toggle" href="#profile">
+                        <span class="access-hide">张涵予</span>
+                        <span class="avatar avatar-sm"><img alt="alt text for John Smith avatar" src="images/users/avatar-001.jpg"></span>
+                        <span class="header-close icon icon-close"></span>
+                    </a>
+                </li>
+            </ul>
+            <ul class="nav nav-list pull-right main-nav">
+                <li class="active"><a href="index.html" class="top-nav">首页</a></li>
+                <li><a href="pmall.html" class="top-nav">产品商城</a></li>
+                <li><a href="case.html" class="top-nav">开发者案例</a></li>
+                <li><a href="download.html" class="top-nav">下载中心</a></li>
+            </ul>
+            
+        </div>
+        
+    </header>
+    <nav class="menu menu-right" id="menu">
+        <div class="menu-scroll">
+            <div class="menu-wrap">
+                <div class="menu-content">
+                    <ul class="nav">
+                        <li><a href="index.html" class="top-nav">首页</a></li>
+                        <li><a href="pmall.html" class="top-nav">产品商城</a></li>
+                        <li><a href="case.html" class="top-nav">开发者案例</a></li>
+                        <li><a href="download.html" class="top-nav">下载中心</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <nav class="menu menu-right" id="profile">
+        <div class="menu-scroll">
+            <div class="menu-wrap">
+                <div class="menu-top">
+                    <div class="menu-top-img">
+                        <img alt="John Smith" src="images/samples/landscape.jpg">
+                    </div>
+                    <div class="menu-top-info">
+                        <a class="menu-top-user" href="javascript:void(0)"><span class="avatar pull-left"><img alt="alt text for John Smith avatar" src="images/users/avatar-001.jpg"></span>张馨予</a>
+                    </div>
+                </div>
+                <div class="menu-content">
+                    <ul class="nav">
+                        <li>
+                            <a href="javascript:void(0)"><span class="icon icon-account-box"></span>基本信息</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)"><span class="icon icon-add-to-photos"></span>我的空间</a>
+                        </li>
+                        <li>
+                            <a href="page-login.html"><span class="icon icon-exit-to-app"></span>退出登录</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="content">
+        <div class="slider slide-1 text-center">
+            <h1 class="slogan-lg text-white">一次颠覆性的互联网体验</h1>
+            <h2 class="slogan-md text-white">打造属于自己的O2O平台</h2>
+            <img src="images/device.png" alt="" class="device">
+        </div>
+        <div class="light-bg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 text-center">
+                        <h2>我们专注于您的互联网体验</h2>
+                        <p>无论您是一个卖家，还是一个买家，我们会为您定制适合您的产品</p>
+                    </div>
+                </div>
+                <div class="row icon-text">
+                    <div class="col-sm-4">
+                        <div class="cir-icon"><i class="mdi mdi-database"></i></div>
+                        <h4>大数据服务</h4>
+                        <p>大数据时代已经到来</p>
+                        <p>所有个互联网产品都离不开大数据的支持</p>
+                        <p>线上与线下个性化精准营销</p>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="cir-icon"><i class="mdi mdi-desktop-mac"></i></div>
+                        <h4>大数据服务</h4>
+                        <p>大数据时代已经到来</p>
+                        <p>所有个互联网产品都离不开大数据的支持</p>
+                        <p>线上与线下个性化精准营销</p>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="cir-icon"><i class="mdi mdi-cloud"></i></div>
+                        <h4>大数据服务</h4>
+                        <p>大数据时代已经到来</p>
+                        <p>所有个互联网产品都离不开大数据的支持</p>
+                        <p>线上与线下个性化精准营销</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="dark-bg">
+            <div class="container" wow>
+                <div class="row" >
+                    <div class="col-sm-6">
+                        <img src="images/phone01.png" class="wow fadeInLeft">
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="left-title wow fadeInRight">
+                            <h2>多元化商业模式指引</h2>
+                            <p>
+                                我们提供的不只是软件产品，更重要的是为您提供个性化服务，满足各类人群的特殊需求，为您指引适合的营销方向...
+                            </p>
+                        </div>
+                        
+                        <ul class="icon-text-list">
+                            <li class="wow fadeInRight">
+                                <i class="mdi mdi-rocket bg-warning"></i>
+                                <h5>智能推荐</h5>
+                                <p>通过大数据分析，为您提取推荐您最想要的</p>
+                            </li>
+                            <li class="wow fadeInRight dy1">
+                                <i class="mdi mdi-puzzle bg-blue"></i>
+                                <h5>随心组合</h5>
+                                <p>我们为您提供了最贴心的服务，让您轻轻松松组合组合项目</p>
+                            </li>
+                            <li class="wow fadeInRight dy2">
+                                <i class="mdi mdi-ruler bg-dark"></i>
+                                <h5>量身设计</h5>
+                                <p>我们不做最好的，只做最适合您的，相信最适合的才是最好的</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="light-bg">
+            <div class="container">
+                <div class="row">
+                    
+                    <div class="col-sm-7">
+                        <div class="left-title">
+                            <h2>移动PC全覆盖，流程标准易维护！</h2>
+                            <p>
+                                我们提供的不只是软件产品，更重要的是为您提供个性化服务，
+                                满足各类人群的特殊需求，为您指引适合的营销方向...
+                            </p>
+                        </div>
+                        
+                        <ul class="icon-text-list wow fadeInLeft">
+                            <li class="wow fadeInUp">
+                                <i class="mdi mdi-cellphone-link bg-purple"></i>
+                                <h5>响应式设计</h5>
+                                <p>通过大数据分析，为您提取推荐您最想要的</p>
+                            </li>
+                            <li class="wow fadeInUp dy1">
+                                <i class="mdi mdi-android bg-success"></i>
+                                <h5>接近原生的WebApp开发</h5>
+                                <p>采用最新的AngularJS大家标准MVC框架，配合当下最流行的框架，让Webapp秒杀原生App</p>
+                            </li>
+                            <li class="wow fadeInUp dy2">
+                                <i class="mdi mdi-android-studio bg-danger"></i>
+                                <h5>标准化开发流程</h5>
+                                <p>项目的前后端均采用了最流行的集成解决方案，确保了代码风格的统一，提升了运行效率和性能</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-5 text-right wow fadeInRight">
+                        <img src="images/phone02.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="dark-bg">
+            <div class="container">
+                <h2>产品案例</h2>
+                <p>精美的UI设计 + 强大的前后端技术 = 极致的用户体验</p>
+                <div id="carousel-gallery" class="owl-carousel owl-theme case-list">
+                                                                
+                   <!-- Item -->
+                   <div class="wow fadeIn" data-wow-offset="300">
+                      <a href="#">
+                        <img class="img-responsive" src="images/case/screen1.jpg" alt="">
+                      </a>
+                   </div>
+                   
+                   <!-- Item -->
+                   <div class="wow fadeIn" data-wow-delay="0.5s" data-wow-offset="300">
+                      <a href="#">
+                        <img class="img-responsive" src="images/case/screen2.jpg" alt="">
+                      </a>
+                   </div>
+                   
+                   <!-- Item -->
+                   <div class="wow fadeIn" data-wow-delay="1s" data-wow-offset="300">
+                      <a href="#">
+                        <img class="img-responsive" src="images/case/screen3.jpg" alt="">
+                      </a>
+                   </div>
+                   
+                   <!-- Item -->
+                   <div class="wow fadeIn" data-wow-delay="1.5s" data-wow-offset="300">
+                      <a href="#">
+                        <img class="img-responsive" src="images/case/screen4.jpg" alt="">
+                      </a>
+                   </div>
+                   
+                   <!-- Item -->
+                   <div>
+                      <a href="#">
+                        <img class="img-responsive" src="images/case/screen1.jpg" alt="">
+                      </a>
+                   </div>
+                   
+                   <!-- Item -->
+                   <div>
+                      <a href="#">
+                        <img class="img-responsive" src="images/case/screen2.jpg" alt="">
+                      </a>
+                   </div>
+                   
+                   <!-- Item -->
+                   <div>
+                      <a href="#">
+                        <img class="img-responsive" src="images/case/screen3.jpg" alt="">
+                      </a>
+                   </div>
+                   
+                   <!-- Item -->
+                   <div>
+                      <a href="#">
+                        <img class="img-responsive" src="images/case/screen4.jpg" alt="">
+                      </a>
+                   </div>
+             
+                </div>
+            </div>
+        </div>
+        <div class="light-bg">
+            <div class="container">
+                <h2>新闻动态</h2>
+                <div class="row news">
+                    <div class="col-sm-6">
+                        <div class="panle panle-warning">
+                            <div class="panle-header">
+                                <h4><i class="fa fa-rocket"></i>最新动态</h4>
+                            </div>
+                            <div class="panle-body">
+                                <div class="tile-wrap tile-wrap-animation">
+                                    <a class="tile" href="ui-card.html">
+                                        <div class="tile-inner">
+                                            <span>软营科技以全新的面貌正式进军互联网行业</span>
+                                            <div class="time">2015-04-15</div>
+                                        </div>
+                                    </a>
+                                    <a class="tile" href="ui-collapse.html">
+                                        <div class="tile-inner">
+                                            <span>公司正式在A股上市，瞬间进入涨停板</span>
+                                            <div class="time">2015-04-15</div>
+                                        </div>
+                                    </a>
+                                    <a class="tile" href="ui-dropdown.html">
+                                        <div class="tile-inner">
+                                            <span>新产品全面上线各大应用商店</span>
+                                            <div class="time">2015-04-15</div>
+                                        </div>
+                                    </a>
+                                    <a class="tile" href="ui-modal.html">
+                                        <div class="tile-inner">
+                                            <span>公司正式在A股上市，瞬间进入涨停板</span>
+                                            <div class="time">2015-04-15</div>
+                                        </div>
+                                    </a>
+                                    <a class="tile" href="ui-progress.html">
+                                        <div class="tile-inner">
+                                            <span>软营科技以全新的面貌正式进军互联网行业</span>
+                                            <div class="time">2015-04-15</div>
+                                        </div>
+                                    </a>
+                                    <a class="tile" href="ui-tab.html">
+                                        <div class="tile-inner">
+                                            <span>公司正式在A股上市，瞬间进入涨停板</span>
+                                            <div class="time">2015-04-15</div>
+                                        </div>
+                                    </a>
+                                    <a class="tile" href="ui-tile.html">
+                                        <div class="tile-inner">
+                                            <span>软营科技以全新的面貌正式进军互联网行业</span>
+                                            <div class="time">2015-04-15</div>
+                                        </div>
+                                    </a>
+                                    <a class="tile" href="ui-tile.html">
+                                        <div class="tile-inner">
+                                            <span>公司正式在A股上市，瞬间进入涨停板</span>
+                                            <div class="time">2015-04-15</div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="panle panle-blue">
+                            <div class="panle-header">
+                                <h4><i class="icon icon-assistant-photo"></i>最新动态</h4>
+                            </div>
+                            <div class="panle-body">
+                                <div class="tile-wrap tile-wrap-animation">
+                                    <a class="tile" href="ui-card.html">
+                                        <div class="tile-inner">
+                                            <span>软营科技以全新的面貌正式进军互联网行业</span>
+                                            <div class="time">2015-04-15</div>
+                                        </div>
+                                    </a>
+                                    <a class="tile" href="ui-collapse.html">
+                                        <div class="tile-inner">
+                                            <span>公司正式在A股上市，瞬间进入涨停板</span>
+                                            <div class="time">2015-04-15</div>
+                                        </div>
+                                    </a>
+                                    <a class="tile" href="ui-dropdown.html">
+                                        <div class="tile-inner">
+                                            <span>新产品全面上线各大应用商店</span>
+                                            <div class="time">2015-04-15</div>
+                                        </div>
+                                    </a>
+                                    <a class="tile" href="ui-modal.html">
+                                        <div class="tile-inner">
+                                            <span>公司正式在A股上市，瞬间进入涨停板</span>
+                                            <div class="time">2015-04-15</div>
+                                        </div>
+                                    </a>
+                                    <a class="tile" href="ui-progress.html">
+                                        <div class="tile-inner">
+                                            <span>软营科技以全新的面貌正式进军互联网行业</span>
+                                            <div class="time">2015-04-15</div>
+                                        </div>
+                                    </a>
+                                    <a class="tile" href="ui-tab.html">
+                                        <div class="tile-inner">
+                                            <span>公司正式在A股上市，瞬间进入涨停板</span>
+                                            <div class="time">2015-04-15</div>
+                                        </div>
+                                    </a>
+                                    <a class="tile" href="ui-tile.html">
+                                        <div class="tile-inner">
+                                            <span>软营科技以全新的面貌正式进军互联网行业</span>
+                                            <div class="time">2015-04-15</div>
+                                        </div>
+                                    </a>
+                                    <a class="tile" href="ui-tile.html">
+                                        <div class="tile-inner">
+                                            <span>公司正式在A股上市，瞬间进入涨停板</span>
+                                            <div class="time">2015-04-15</div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="gradual-bg">
+            <div class="container">
+                <h2>合作伙伴</h2>
+                <p>会为您提供更优质的服务及长期战略合作关系，期待您的入驻。</p>
+                <ul class="row">
+                    <li class="col-sm-2 col-xs-6"><img src="images/logos/logo-1.png"></li>
+                    <li class="col-sm-2 col-xs-6"><img src="images/logos/logo-2.png"></li>
+                    <li class="col-sm-2 col-xs-6"><img src="images/logos/logo-3.png"></li>
+                    <li class="col-sm-2 col-xs-6"><img src="images/logos/logo-4.png"></li>
+                    <li class="col-sm-2 col-xs-6"><img src="images/logos/logo-5.png"></li>
+                    <li class="col-sm-2 col-xs-6"><img src="images/logos/logo-6.png"></li>
+                </ul>
+            </div>
+        </div>
+        <div class="img-bg">
+            <div class="cover"></div>
+            <div class="container">
+                <h2>小伙伴们还等什么，加入我们吧！</h2>
+                <div class="btn-row">
+                    <a class="btn btn-yellow waves-button waves-effect waves-light">我要加入</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                            
+                                            
+    <!--页脚 start-->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3">
+                    <h3>官方账号</h3>
+                    <p>关注我们获得最新产品动态</p>
+                    <div class="icon-row">
+                        <a href="#" class="bg-success waves-effect"><i class="fa fa-weixin"></i></a>
+                        <a href="#" class="bg-danger waves-effect"><i class="fa fa-weibo"></i></a>
+                    </div>
+                    
+                </div>
+                <div class="col-sm-2">
+                    <h3>帮助中心</h3>
+                    <ul class="links">
+                        <li><a href="#">购物指南 </a></li>
+                        <li><a href="#">配送方式 </a></li>
+                        <li><a href="#">支付方式 </a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-2">
+                    <h3>服务支持</h3>
+                    <ul class="links">
+                        <li><a href="#">售后服务 </a></li>
+                        <li><a href="#">常见问题 </a></li>
+                        <li><a href="#">产品说明 </a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-2">
+                    <h3></i>关于我们</h3>
+                    <ul class="links">
+                        <li><a href="#">公司简介 </a></li>
+                        <li><a href="#">加入我们 </a></li>
+                        <li><a href="#">联系我们 </a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-3">
+                    <h3>热线电话</h3>
+                    <div class="contact co-danger">400-500-7890</div>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            沪ICP备13039009号，版权所有 © 2011-2014 520公司版权所有
+        </div>
+    </footer>
+    <!--页脚 end-->
+
+    <div class="fbtn-container">
+        <div class="fbtn-inner">
+            <a class="fbtn fbtn-red" href="#">
+                <span class="fbtn-text">to top</span>
+                <span class="mdi mdi-arrow-up"></span>
+            </a>
+        </div>
+    </div>
+
+ 
+
+<!--   第三方 框架与库 -->
+    <script src="framework/jquery/jquery.min.js"></script>
+    <script src="framework/material/base.min.js"></script>
+    <script src="framework/others/owl.carousel.min.js"></script>
+    <script src="framework/others/wow.min.js"></script>
+<!-- 本应用脚本 -->
+
+    <script src="scripts/scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+body{
+	font-family: "Microsoft Yahei","微软雅黑"
+}
+
+@media (min-width: 768px){
+	.navbar {
+	border-radius: 0;
+	}	
+}
+.navbar-inverse .navbar-brand{
+	color: #ccc;
+	font-weight: bold;
+	font-size: 20px
+}
+.navbar-inverse .navbar-nav > li > a{
+	color: #bababa;
+}
