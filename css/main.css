@@ -163,10 +163,12 @@ body {width: 92%; margin: 0 auto} /* Center page without wrapper */
 /* Backgrounds */
 
 .bg-1{
+
   background-image: url('../images/floor.jpg');
 }
 
 .bg-2{
+  background-color: #E7E0DB;
   background-image: url('../images/bg.jpg');
 }
 
@@ -437,18 +439,12 @@ body {width: 92%; margin: 0 auto} /* Center page without wrapper */
   -moz-transition: all 450ms ease-out 0s;
   -o-transition: all 450ms ease-out 0s;
   transition: all 450ms ease-out 0s;
-  -webkit-transform: scale(1.5deg);
-  -moz-transform: scale(1.5deg);
-  -ms-transform: scale(1.5deg);
-  transform: scale(1.5deg);
+  
 }
 .image:hover .image-overlay{
   opacity: 1;
   filter: alpha(opacity=100);
-  -webkit-transform: scale(1);
-  -moz-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
+  
 }
 .image-overlay .image-link{
   position: relative;
