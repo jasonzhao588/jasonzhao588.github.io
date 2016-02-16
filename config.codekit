@@ -3089,7 +3089,7 @@
 		"outputAbbreviatedPath": "\/images\/avatar.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/images\/bg-m.jpg": {
 		"fileType": 16384,
@@ -3100,7 +3100,7 @@
 		"outputAbbreviatedPath": "\/images\/bg-m.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/images\/bg.jpg": {
 		"fileType": 16384,
@@ -3111,70 +3111,70 @@
 		"outputAbbreviatedPath": "\/images\/bg.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
-	"\/images\/case1.png": {
-		"fileType": 32768,
+	"\/images\/case1.jpg": {
+		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 235064,
-		"inputAbbreviatedPath": "\/images\/case1.png",
-		"outputAbbreviatedPath": "\/images\/case1.png",
+		"initialSize": 50248,
+		"inputAbbreviatedPath": "\/images\/case1.jpg",
+		"outputAbbreviatedPath": "\/images\/case1.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/images\/case2.png": {
-		"fileType": 32768,
+	"\/images\/case2.jpg": {
+		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 194204,
-		"inputAbbreviatedPath": "\/images\/case2.png",
-		"outputAbbreviatedPath": "\/images\/case2.png",
+		"initialSize": 44271,
+		"inputAbbreviatedPath": "\/images\/case2.jpg",
+		"outputAbbreviatedPath": "\/images\/case2.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/images\/case3.png": {
-		"fileType": 32768,
+	"\/images\/case3.jpg": {
+		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 291702,
-		"inputAbbreviatedPath": "\/images\/case3.png",
-		"outputAbbreviatedPath": "\/images\/case3.png",
+		"initialSize": 61014,
+		"inputAbbreviatedPath": "\/images\/case3.jpg",
+		"outputAbbreviatedPath": "\/images\/case3.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/images\/case4.png": {
-		"fileType": 32768,
+	"\/images\/case4.jpg": {
+		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 130366,
-		"inputAbbreviatedPath": "\/images\/case4.png",
-		"outputAbbreviatedPath": "\/images\/case4.png",
+		"initialSize": 50530,
+		"inputAbbreviatedPath": "\/images\/case4.jpg",
+		"outputAbbreviatedPath": "\/images\/case4.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/images\/case5.png": {
-		"fileType": 32768,
+	"\/images\/case5.jpg": {
+		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 63981,
-		"inputAbbreviatedPath": "\/images\/case5.png",
-		"outputAbbreviatedPath": "\/images\/case5.png",
+		"initialSize": 32089,
+		"inputAbbreviatedPath": "\/images\/case5.jpg",
+		"outputAbbreviatedPath": "\/images\/case5.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/images\/case6.png": {
-		"fileType": 32768,
+	"\/images\/case6.jpg": {
+		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 410366,
-		"inputAbbreviatedPath": "\/images\/case6.png",
-		"outputAbbreviatedPath": "\/images\/case6.png",
+		"initialSize": 89667,
+		"inputAbbreviatedPath": "\/images\/case6.jpg",
+		"outputAbbreviatedPath": "\/images\/case6.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -3188,7 +3188,7 @@
 		"outputAbbreviatedPath": "\/images\/floor.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/index.html": {
 		"fileType": 8192,
@@ -4503,7 +4503,7 @@
 		"useLibsass": 0
 		},
 	"\/sass\/style.scss": {
-		"createSourceMap": 0,
+		"createSourceMap": 1,
 		"debugStyle": 0,
 		"decimalPrecision": 10,
 		"fileType": 4,
@@ -4513,8 +4513,8 @@
 		"outputAbbreviatedPath": "\/css\/style.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"outputStyle": 0,
-		"shouldRunAutoprefixer": 0,
+		"outputStyle": 1,
+		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
 		"useLibsass": 0
 		}
