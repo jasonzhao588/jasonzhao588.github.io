@@ -17,31 +17,31 @@ $(function(){
 
 
 
-  var Teams = [
-    {
-      icon : "mdi-library",
-      bg   : "bg-green",
-      title: "直播室气氛活跃",
-      intro: "优势的简介内容优势的简介内容优势的简介内容优势的简介内容优势的简介内容"
-    },{
-      icon : "mdi-emoticon",
-      bg   : "bg-deep-orange",
-      title: "优势二名称",
-      intro: "优势的简介内容优势的简介内容优势的简介内容优势的简介内容优势的简介内容"
-    },{
-      icon : "mdi-book-multiple",
-      bg   : "bg-blue",
-      title: "老师喊单准",
-      intro: "我们拥有一个优秀的技术团队，个个都是有着多年研发经验的业内精英"
-    },{
-      icon : "mdi-thumb-up-outline",
-      bg   : "bg-red",
-      title: "售后健全",
-      intro: "企业文化售后介绍简介内容企业文化售后介绍简介内容企业文化售后介绍简介内容"
-    }
-  ];
-  var teamItem = Handlebars.compile($('#teamItem').html());
-  $('#teamWrap').append( teamItem(Teams) );
+  // var Teams = [
+  //   {
+  //     icon : "mdi-library",
+  //     bg   : "bg-green",
+  //     title: "直播室气氛活跃",
+  //     intro: "优势的简介内容优势的简介内容优势的简介内容优势的简介内容优势的简介内容"
+  //   },{
+  //     icon : "mdi-emoticon",
+  //     bg   : "bg-deep-orange",
+  //     title: "优势二名称",
+  //     intro: "优势的简介内容优势的简介内容优势的简介内容优势的简介内容优势的简介内容"
+  //   },{
+  //     icon : "mdi-book-multiple",
+  //     bg   : "bg-blue",
+  //     title: "老师喊单准",
+  //     intro: "我们拥有一个优秀的技术团队，个个都是有着多年研发经验的业内精英"
+  //   },{
+  //     icon : "mdi-thumb-up-outline",
+  //     bg   : "bg-red",
+  //     title: "售后健全",
+  //     intro: "企业文化售后介绍简介内容企业文化售后介绍简介内容企业文化售后介绍简介内容"
+  //   }
+  // ];
+  // var teamItem = Handlebars.compile($('#teamItem').html());
+  // $('#teamWrap').append( teamItem(Teams) );
 
 
 
@@ -50,35 +50,35 @@ $(function(){
 
   var cases = [
     {
-      caseImg   : "images/case/c1.jpg",
+      caseImg   : "images/sw-1.jpg",
       caseTitle : "企业文化照片",
     },
     {
-      caseImg   : "images/case/c2.jpg",
+      caseImg   : "images/sw-2.jpg",
       caseTitle : "企业文化照片",
     },
     {
-      caseImg   : "images/case/c3.jpg",
+      caseImg   : "images/sw-3.jpg",
       caseTitle : "企业文化照片",
     },
     {
-      caseImg   : "images/case/c4.jpg",
+      caseImg   : "images/sw-4.jpg",
       caseTitle : "企业文化照片",
     },
     {
-      caseImg   : "images/case/c2.jpg",
+      caseImg   : "images/sw-1.jpg",
       caseTitle : "企业文化照片",
     },
     {
-      caseImg   : "images/case/c3.jpg",
+      caseImg   : "images/sw-2.jpg",
       caseTitle : "企业文化照片",
     },
     {
-      caseImg   : "images/case/c4.jpg",
+      caseImg   : "images/sw-3.jpg",
       caseTitle : "企业文化照片",
     },
     {
-      caseImg   : "images/case/c1.jpg",
+      caseImg   : "images/sw-4.jpg",
       caseTitle : "企业文化照片",
     }
   ];
