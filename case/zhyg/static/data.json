@@ -1,0 +1,68 @@
+{
+  
+  "goodsList":[
+    {
+      "imgSrc" : "static/thum/p1.jpg",
+      "label"    : "Automobile"
+    },{
+      "imgSrc" : "static/thum/p2.jpg",
+      "label"    : "House"
+    },{
+      "imgSrc" : "static/thum/p3.jpg",
+      "label"    : "Business super"
+    }
+  ],
+  "Lifes":[
+    {
+      "imgSrc" : "static/thum/service_1.png",
+      "title"  : "送蛋糕"
+    },{
+      "imgSrc" : "static/thum/service_2.png",
+      "title"  : "送鲜花"
+    },{
+      "imgSrc" : "static/thum/service_3.png",
+      "title"  : "买美食"
+    },{
+      "imgSrc" : "static/thum/service_4.jpg",
+      "title"  : "找月嫂"
+    },{
+      "imgSrc" : "static/thum/service_5.png",
+      "title"  : "修电脑"
+    },{
+      "imgSrc" : "static/thum/service_6.png",
+      "title"  : "修手机"
+    },{
+      "imgSrc" : "static/thum/service_7.png",
+      "title"  : "修管道"
+    },{
+      "imgSrc" : "static/thum/service_8.png",
+      "title"  : "修马桶"
+    }
+  ],
+  "slides": [
+      { "title": "Banner1", "imgSrc": "static/slides/s1.jpg" },
+      { "title": "Banner2", "imgSrc": "static/slides/s2.jpg" },
+      { "title": "Banner3", "imgSrc": "static/slides/s3.jpg" },
+      { "title": "Banner3", "imgSrc": "static/slides/s4.jpg" }
+  ],
+  "aboutUs":[
+    {
+      "imgSrc"  : "static/thum/u1.jpg",
+      "title" : "企业简介",
+      "label" : "summary",
+      "centent" : "  智惠易购注册资金100000000元人民币， 公司坚持以人为本,充分发挥管理优势，使公司在市场同行业竞争中始终保持行业领先地位 ；公司发展到今天,已经成为创新化的互联网公司!"
+    },
+    {
+      "imgSrc"  : "static/thum/u2.jpg",
+      "title" : "企业文化",
+      "label" : "culture",
+      "centent" : "  创新务实  Innovative And Pragmatic <br/> 创新务实  Innovative And Pragmatic <br/> 超越自我  Beyond Self <br> 追求卓越  Pursuit Of Excellence <br/> 日新月异 Change Rapidly <br/> 领先一步  One Step Ahead " 
+    },
+    {
+      "imgSrc"  : "static/thum/u3.jpg",
+      "title" : "公司地址",
+      "label" : "address",
+      "centent" : "  陕西省西安市雁塔区曲江文化产业聚集区"
+    }
+  ]
+}
