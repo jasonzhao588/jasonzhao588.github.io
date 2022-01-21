@@ -118,14 +118,14 @@
   </url>
   
   <url>
-    <loc>http://example.com/tags/flutter/</loc>
+    <loc>http://example.com/tags/%E7%BC%96%E8%BE%91%E5%99%A8-Vim/</loc>
     <lastmod>2022-01-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://example.com/tags/%E7%BC%96%E8%BE%91%E5%99%A8-Vim/</loc>
+    <loc>http://example.com/tags/flutter/</loc>
     <lastmod>2022-01-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
