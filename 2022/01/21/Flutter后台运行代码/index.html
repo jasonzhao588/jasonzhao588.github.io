@@ -1,0 +1,464 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>Flutter后台运行代码 | 亮哥的博客</title><meta name="keywords" content="flutter"><meta name="author" content="Jason.Z"><meta name="copyright" content="Jason.Z"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="Flutter后台运行代码  原文 https:&#x2F;&#x2F;www.dltlabs.com&#x2F;blog&#x2F;flutter-run-code-in-the-background-513940  参考 https:&#x2F;&#x2F;pub.dev&#x2F;packages&#x2F;background_fetch  正文今天，我将解释如何在 Flutter 创建一个后台任务。 在此之前，让我们理解什么是后台任务。后台任务是在后台运行的应用程序">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Flutter后台运行代码">
+<meta property="og:url" content="http://example.com/2022/01/21/Flutter%E5%90%8E%E5%8F%B0%E8%BF%90%E8%A1%8C%E4%BB%A3%E7%A0%81/index.html">
+<meta property="og:site_name" content="亮哥的博客">
+<meta property="og:description" content="Flutter后台运行代码  原文 https:&#x2F;&#x2F;www.dltlabs.com&#x2F;blog&#x2F;flutter-run-code-in-the-background-513940  参考 https:&#x2F;&#x2F;pub.dev&#x2F;packages&#x2F;background_fetch  正文今天，我将解释如何在 Flutter 创建一个后台任务。 在此之前，让我们理解什么是后台任务。后台任务是在后台运行的应用程序">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/jerryc127/CDN/img/material-9.png">
+<meta property="article:published_time" content="2022-01-21T10:59:28.000Z">
+<meta property="article:modified_time" content="2022-01-21T13:54:04.485Z">
+<meta property="article:author" content="Jason.Z">
+<meta property="article:tag" content="flutter">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/jerryc127/CDN/img/material-9.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/2022/01/21/Flutter%E5%90%8E%E5%8F%B0%E8%BF%90%E8%A1%8C%E4%BB%A3%E7%A0%81/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//fonts.googleapis.com" crossorigin=""/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta name="google-site-verification" content="NdIUXAOVyGnnBhcrip0ksCawbdAzT0hlBZDE9u4jx6k"/><meta name="msvalidate.01" content="567E47D75E8DCF1282B9623AD914701E"/><meta name="baidu-site-verification" content="code-pE5rnuxcfD"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" media="print" onload="this.media='all'"><script async="async" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web&amp;display=swap" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: {"defaultEncoding":1,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":400},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: true,
+    post: true
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":150,"languages":{"author":"作者: Jason.Z","link":"链接: ","source":"来源: 亮哥的博客","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Flutter后台运行代码',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-01-21 21:54:04'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+          if (t === undefined) {
+            if (isLightMode) activateLightMode()
+            else if (isDarkMode) activateDarkMode()
+            else if (isNotSpecified || hasNoSupport) {
+              const now = new Date()
+              const hour = now.getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><style type="text/css">.card-announcement .social-button{margin:.6rem 0 0 0;text-align:center}.card-announcement .social-button a{display:block;background-color:var(--btn-bg);color:var(--btn-color);text-align:center;line-height:2.4;margin:4px 0}.card-announcement .social-button a:hover{background-color:var(--btn-hover-color)}</style><meta name="generator" content="Hexo 6.0.0"><link rel="alternate" href="/atom.xml" title="亮哥的博客" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "/img/loading.gif" data-lazy-src="/img/avatar.webp" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data is-center"><div class="data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">5</div></a></div><div class="data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">7</div></a></div><div class="data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首頁</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);" rel="external nofollow noreferrer"><i class="fa-fw fas fa-compass"></i><span> 目錄</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 歸檔</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 標籤</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分類</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);" rel="external nofollow noreferrer"><i class="fa-fw fas fa-book"></i><span> 文檔</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/posts/21cfbf15/"><span> 🚀 快速開始</span></a></li><li><a class="site-page child" href="/posts/dc584b87/"><span> 📑 主題頁面</span></a></li><li><a class="site-page child" href="/posts/4aa8abbe/"><span> 🛠 主題配置-1</span></a></li><li><a class="site-page child" href="/posts/ceeb73f/"><span> ⚔️ 主題配置-2</span></a></li><li><a class="site-page child" href="/posts/98d20436/"><span> ❓ 主題問答</span></a></li><li><a class="site-page child" href="/posts/4073eda/"><span> ⚡️ 進階教程</span></a></li><li><a class="site-page child" href="/posts/198a4240/"><span> ✨ 更新日誌</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);" rel="external nofollow noreferrer"><i class="fa-fw fa fa-heartbeat"></i><span> 娛樂</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 圖庫</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 電影</span></a></li><li><a class="site-page child" href="/talking/"><i class="fa-fw fas fa-cubes"></i><span> 自言自語</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fas fa-comment-dots"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-thumbs-up"></i><span> 示例</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://cdn.jsdelivr.net/gh/jerryc127/CDN/img/material-9.png')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">亮哥的博客</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首頁</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);" rel="external nofollow noreferrer"><i class="fa-fw fas fa-compass"></i><span> 目錄</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 歸檔</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 標籤</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分類</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);" rel="external nofollow noreferrer"><i class="fa-fw fas fa-book"></i><span> 文檔</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/posts/21cfbf15/"><span> 🚀 快速開始</span></a></li><li><a class="site-page child" href="/posts/dc584b87/"><span> 📑 主題頁面</span></a></li><li><a class="site-page child" href="/posts/4aa8abbe/"><span> 🛠 主題配置-1</span></a></li><li><a class="site-page child" href="/posts/ceeb73f/"><span> ⚔️ 主題配置-2</span></a></li><li><a class="site-page child" href="/posts/98d20436/"><span> ❓ 主題問答</span></a></li><li><a class="site-page child" href="/posts/4073eda/"><span> ⚡️ 進階教程</span></a></li><li><a class="site-page child" href="/posts/198a4240/"><span> ✨ 更新日誌</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);" rel="external nofollow noreferrer"><i class="fa-fw fa fa-heartbeat"></i><span> 娛樂</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 圖庫</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 電影</span></a></li><li><a class="site-page child" href="/talking/"><i class="fa-fw fas fa-cubes"></i><span> 自言自語</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fas fa-comment-dots"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-thumbs-up"></i><span> 示例</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">Flutter后台运行代码<a class="post-edit-link" href="https://github.com/jerryc127/butterfly.js.org/edit/main/source/_posts/Flutter后台运行代码.md" rel="external nofollow noreferrer" title="编辑" target="_blank"><i class="fas fa-pencil-alt"></i></a></h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="fa-fw post-meta-icon far fa-calendar-alt"></i><span class="post-meta-label">发表于</span><time datetime="2022-01-21T10:59:28.000Z" title="发表于 2022-01-21 18:59:28">2022-01-21</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">954</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>3分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="Flutter后台运行代码"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="Flutter后台运行代码"><a href="#Flutter后台运行代码" class="headerlink" title="Flutter后台运行代码"></a>Flutter后台运行代码</h1><img src= "/img/loading.gif" data-lazy-src="https://ducafecat.tech/2022/01/20/2022/flutter-run-code-in-the-background/2022-01-20-07-24-43.png" alt="img" style="zoom:80%;" />
+
+<h2 id="原文"><a href="#原文" class="headerlink" title="原文"></a>原文</h2><blockquote>
+<p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.dltlabs.com/blog/flutter-run-code-in-the-background-513940">https://www.dltlabs.com/blog/flutter-run-code-in-the-background-513940</a></p>
+</blockquote>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://pub.dev/packages/background_fetch">https://pub.dev/packages/background_fetch</a></li>
+</ul>
+<h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><p>今天，我将解释如何在 Flutter 创建一个后台任务。</p>
+<p>在此之前，让我们理解什么是后台任务。后台任务是在后台运行的应用程序的辅助进程，即使应用程序没有运行或处于终止状态。</p>
+<p>这一功能对于需要在后台执行任务而不需要用户打开应用程序的应用程序来说是有益的ーー例如，每 15 分钟调用 api 获取数据。</p>
+<p>让我们在一个示例项目中实现一个后台任务，以便更好地理解这一操作的含义。</p>
+<h3 id="步骤"><a href="#步骤" class="headerlink" title="步骤:"></a>步骤:</h3><ul>
+<li>pubspec.yaml</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">flutter pub add background_fetch</span><br><span class="line">flutter pub get</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>在 main.dart 文件中导入后台包，并注册 HeadlessTask，以便在应用程序终止后接收 backgroundFetch 事件。</li>
+</ul>
+<p>例如:</p>
+<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">void</span> backgroundFetchHeadlessTask(HeadlessTask task) <span class="keyword">async</span> &#123;<span class="keyword">var</span> taskId = task.taskId;</span><br><span class="line"><span class="keyword">if</span>(taskId == ‘your_task_id’) &#123;</span><br><span class="line"><span class="built_in">print</span>(‘your_task_id’);</span><br><span class="line"><span class="built_in">print</span>(‘[BackgroundFetch] Headless event received.’);</span><br><span class="line">_<span class="comment">//<span class="doctag">TODO:</span> perform tasks like — call api, DB and local notification etc…</span></span><br><span class="line">_&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">void</span> main() &#123;</span><br><span class="line">runApp(MyApp());</span><br><span class="line">_<span class="comment">//Registering backgroundFetch to receive events after app is terminated.</span></span><br><span class="line"><span class="comment">// Requires &#123;stopOnTerminate: false, enableHeadless: true&#125;</span></span><br><span class="line">_BackgroundFetch._registerHeadlessTask_(backgroundFetchHeadlessTask);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这里我们必须传递一个顶级函数。让我们在 <code>registerHeadlessTask</code> 方法中给它命名为 <code>call back dispatcher</code>。然后我们定义需要在后台运行的任务:</p>
+<h3 id="配置-BackgroundFetch"><a href="#配置-BackgroundFetch" class="headerlink" title="配置 BackgroundFetch"></a>配置 BackgroundFetch</h3><figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">Future&lt;<span class="keyword">void</span>&gt; initPlatformState() <span class="keyword">async</span> &#123;</span><br><span class="line">_<span class="comment">// Configure BackgroundFetch.</span></span><br><span class="line">_<span class="keyword">var</span> status = <span class="keyword">await</span> BackgroundFetch._configure_(BackgroundFetchConfig(</span><br><span class="line">minimumFetchInterval: <span class="number">15</span>,</span><br><span class="line">forceAlarmManager: <span class="keyword">false</span>,</span><br><span class="line">stopOnTerminate: <span class="keyword">false</span>,</span><br><span class="line">startOnBoot: <span class="keyword">true</span>,</span><br><span class="line">enableHeadless: <span class="keyword">true</span>,</span><br><span class="line">requiresBatteryNotLow: <span class="keyword">false</span>,</span><br><span class="line">requiresCharging: <span class="keyword">false</span>,</span><br><span class="line">requiresStorageNotLow: <span class="keyword">false</span>,</span><br><span class="line">requiresDeviceIdle: <span class="keyword">false</span>,</span><br><span class="line">requiredNetworkType: NetworkType.NONE,</span><br><span class="line">), _onBackgroundFetch, _onBackgroundFetchTimeout);</span><br><span class="line"><span class="built_in">print</span>(‘[BackgroundFetch] configure success: $status’);</span><br><span class="line">_<span class="comment">// Schedule backgroundfetch for the 1st time it will execute with 1000ms delay.</span></span><br><span class="line"><span class="comment">// where device must be powered (and delay will be throttled by the OS).</span></span><br><span class="line">_BackgroundFetch.scheduleTask(TaskConfig(</span><br><span class="line">taskId: “com.dltlabs.task”,</span><br><span class="line">delay: <span class="number">1000</span>,</span><br><span class="line">periodic: <span class="keyword">false</span>,</span><br><span class="line">stopOnTerminate: <span class="keyword">false</span>,</span><br><span class="line">enableHeadless: <span class="keyword">true</span></span><br><span class="line">));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>调用 <code>initState</code> 中的 <code>initPlatformState</code> 方法并设置 <code>BackgroundFetchConfig</code> 类的配置。换句话说，在传递其他参数的同时，提供注册一次性任务或周期性任务的选项。</p>
+<p>在这里，如果存在多个任务，任务 id 可以帮助我们轻松地识别单个任务。输入数据可以是处理任务所需的任何信息。</p>
+<p>如果我们希望在应用程序处于终止状态时继续工作，请将 <code>stopOnTerminate</code> 参数的值设置为 <code>false</code> 。如果 <code>stopOnTerminate</code> 设置为 <code>true</code> ，后台服务将在应用程序终止时终止。</p>
+<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">void</span> _onBackgroundFetchTimeout(<span class="built_in">String</span> taskId) &#123;</span><br><span class="line"><span class="built_in">print</span>(“[BackgroundFetch] TIMEOUT: $taskId”);</span><br><span class="line">BackgroundFetch.finish(taskId);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>当操作系统没有执行后台任务或者任务无法在给定时间内运行时，将调用 <code>onBackgroundFetchTimeout</code> 方法。在这种方法中，我们可以用任务 Id 来处理任务。</p>
+<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">void</span> _onBackgroundFetch(<span class="built_in">String</span> taskId) <span class="keyword">async</span> &#123;</span><br><span class="line"><span class="keyword">if</span>(taskId == ‘your_task_id’) &#123;</span><br><span class="line"><span class="built_in">print</span>(‘[BackgroundFetch] Event received’);</span><br><span class="line"><span class="comment">//<span class="doctag">TODO:</span> perform your task like : call the API’s, call the DB and local notification.</span></span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>当后台服务执行事件时，将调用 <code>onBackgroundFetch</code> 方法。在这个方法中，我们将接收任务 id 作为一个参数，它可以用来处理任务。在需要调用 api 将数据保存到数据库或显示本地通知等情况下，这一点非常重要。</p>
+<p>默认情况下，调用任务之后的时间间隔的频率为 15 分钟。如果你想把它设置成其他的东西，你也可以在这里做。在 Android 上，后台进程的最小时间间隔为 15 分钟。如果该值小于 15，Android 默认使用 15 分钟。</p>
+<p>Also, we must also remember to make changes inside the info.plist and manifest.xml file for both iOS &amp; Android. We need to set some of the permissions, and we also need to copy and paste other settings. If you need these settings, you can get them at the following links: <a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/transistorsoft/flutter_background_fetch/blob/master/help/INSTALL-ANDROID.md">Android</a> <a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/transistorsoft/flutter_background_fetch/blob/master/help/INSTALL-IOS.md">, OS</a>.</p>
+<p>此外，我们还必须记住对 Android IOS 的 <code>info.plist</code> 和 <code>manifest.xml</code> 文件进行更改。我们需要设置一些权限，还需要复制和粘贴其他设置。如果你需要这些设置，你可以通过以下链接获得: <a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/transistorsoft/flutter_background_fetch/blob/master/help/INSTALL-IOS.md">IOS</a> , <a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/transistorsoft/flutter_background_fetch/blob/master/help/INSTALL-ANDROID.md">Android</a>。</p>
+<p>谢谢你的阅读！</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined" rel="external nofollow noreferrer">Jason.Z</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://example.com/2022/01/21/Flutter%E5%90%8E%E5%8F%B0%E8%BF%90%E8%A1%8C%E4%BB%A3%E7%A0%81/">http://example.com/2022/01/21/Flutter%E5%90%8E%E5%8F%B0%E8%BF%90%E8%A1%8C%E4%BB%A3%E7%A0%81/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow noreferrer" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://example.com" target="_blank">亮哥的博客</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/flutter/">flutter</a></div><div class="post_share"><div class="social-share" data-image="https://cdn.jsdelivr.net/gh/jerryc127/CDN/img/material-9.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i> 打赏</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="https://cdn.jsdelivr.net/gh/jerryc127/CDN/Photo/wechat.jpg" rel="external nofollow noreferrer" target="_blank"><img class="post-qr-code-img" src= "/img/loading.gif" data-lazy-src="https://cdn.jsdelivr.net/gh/jerryc127/CDN/Photo/wechat.jpg" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="https://cdn.jsdelivr.net/gh/jerryc127/CDN/Photo/alipay.jpg" rel="external nofollow noreferrer" target="_blank"><img class="post-qr-code-img" src= "/img/loading.gif" data-lazy-src="https://cdn.jsdelivr.net/gh/jerryc127/CDN/Photo/alipay.jpg" alt="支付寶"/></a><div class="post-qr-code-desc">支付寶</div></li><li class="reward-item"><a href="https://cdn.jsdelivr.net/gh/jerryc127/CDN/Photo/alipayhk.jpg" rel="external nofollow noreferrer" target="_blank"><img class="post-qr-code-img" src= "/img/loading.gif" data-lazy-src="https://cdn.jsdelivr.net/gh/jerryc127/CDN/Photo/alipayhk.jpg" alt="支付寶香港"/></a><div class="post-qr-code-desc">支付寶香港</div></li></ul></div></div><div class="ads-wrap"><ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-fb+5w+4e-db+86" data-ad-client="ca-pub-8919908724705274" data-ad-slot="5978969231"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2022/01/21/%E5%A6%82%E4%BD%95%E9%85%8D%E7%BD%AE%E4%B8%80%E4%B8%AA%E6%BC%82%E4%BA%AE%E7%9A%84Vim%E7%BC%96%E8%BE%91%E5%99%A8/"><img class="prev-cover" src= "/img/loading.gif" data-lazy-src="https://cdn.dribbble.com/users/15687/screenshots/17302148/media/99c5a5ec1cc72f04e2fcaaf7fc07c31f.png?compress=1&amp;resize=1600x1200&amp;vertical=top" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">如何配置一个漂亮的Vim编辑器</div></div></a></div><div class="next-post pull-right"><a href="/2022/01/21/Flutter%E5%88%9B%E5%BB%BA%E5%8A%A8%E7%94%BB%E5%B1%8F%E5%B9%95/"><img class="next-cover" src= "/img/loading.gif" data-lazy-src="https://ducafecat.tech/2022/01/21/2022/create-an-animation-screen-in-flutter/2022-01-20-07-40-53.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">如何创建Flutter动画屏幕</div></div></a></div></nav><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div><div id="comment-switch"><span class="first-comment">Twikoo</span><span class="switch-btn"></span><span class="second-comment">Disqus</span></div></div><div class="comment-wrap"><div><div id="twikoo-wrap"></div></div><div><div id="disqus_thread"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src= "/img/loading.gif" data-lazy-src="/img/avatar.webp" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Jason.Z</div><div class="author-info__description">把日常工作与学习中的各种踩过的坑记录下来...</div></div><div class="card-info-data is-center"><div class="card-info-data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">5</div></a></div><div class="card-info-data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">7</div></a></div><div class="card-info-data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div></div><a id="card-info-btn" target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/jerryc127/hexo-theme-butterfly"><i class="fab fa-github"></i><span>主題 GitHub</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="mailto:my@crazywong.com" rel="external nofollow noreferrer" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="/atom.xml" target="_blank" title="RSS"><i class="fas fa-rss"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">如果你在使用中遇到問題，請到 <a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/jerryc127/hexo-theme-butterfly/issues" style="color:#49b1f5">Github Issues</a> 或者 <a href="/messageboard/" style="color:#49b1f5">留言板</a> 進行反饋，你也可以加入 QQ 群（由於 QQ 群只能有 500 人，會定時清理潛水的人，不要同時申請 2 个 QQ 群）<div class="social-button"> <a class="button--animated" href="https://jq.qq.com/?_wv=1027&k=KU9105XR" rel="external nofollow noreferrer" target="_blank">QQ 1 群 👍</a> <a class="button--animated" href="https://jq.qq.com/?_wv=1027&k=r1nK0DQz" rel="external nofollow noreferrer" target="_blank">QQ 2 群 👍</a> <a class="button--animated" href="https://t.me/bu2fly" rel="external nofollow noreferrer" target="_blank">Telegram 👍</a> </div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content is-expand"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Flutter%E5%90%8E%E5%8F%B0%E8%BF%90%E8%A1%8C%E4%BB%A3%E7%A0%81"><span class="toc-number">1.</span> <span class="toc-text">Flutter后台运行代码</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8E%9F%E6%96%87"><span class="toc-number">1.1.</span> <span class="toc-text">原文</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%82%E8%80%83"><span class="toc-number">1.2.</span> <span class="toc-text">参考</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%AD%A3%E6%96%87"><span class="toc-number">1.3.</span> <span class="toc-text">正文</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%AD%A5%E9%AA%A4"><span class="toc-number">1.3.1.</span> <span class="toc-text">步骤:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE-BackgroundFetch"><span class="toc-number">1.3.2.</span> <span class="toc-text">配置 BackgroundFetch</span></a></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2022/01/21/Butterfly%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/" title="Butterfly 安裝文檔(二) 主題頁面"><img src= "/img/loading.gif" data-lazy-src="https://cdn.jsdelivr.net/gh/jerryc127/CDN/img/Butterfly-docs-02-cover.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Butterfly 安裝文檔(二) 主題頁面"/></a><div class="content"><a class="title" href="/2022/01/21/Butterfly%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/" title="Butterfly 安裝文檔(二) 主題頁面">Butterfly 安裝文檔(二) 主題頁面</a><time datetime="2022-01-21T14:30:12.000Z" title="发表于 2022-01-21 22:30:12">2022-01-21</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/01/21/%E5%A6%82%E4%BD%95%E9%85%8D%E7%BD%AE%E4%B8%80%E4%B8%AA%E6%BC%82%E4%BA%AE%E7%9A%84Vim%E7%BC%96%E8%BE%91%E5%99%A8/" title="如何配置一个漂亮的Vim编辑器"><img src= "/img/loading.gif" data-lazy-src="https://cdn.dribbble.com/users/15687/screenshots/17302148/media/99c5a5ec1cc72f04e2fcaaf7fc07c31f.png?compress=1&amp;resize=1600x1200&amp;vertical=top" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="如何配置一个漂亮的Vim编辑器"/></a><div class="content"><a class="title" href="/2022/01/21/%E5%A6%82%E4%BD%95%E9%85%8D%E7%BD%AE%E4%B8%80%E4%B8%AA%E6%BC%82%E4%BA%AE%E7%9A%84Vim%E7%BC%96%E8%BE%91%E5%99%A8/" title="如何配置一个漂亮的Vim编辑器">如何配置一个漂亮的Vim编辑器</a><time datetime="2022-01-21T11:30:12.000Z" title="发表于 2022-01-21 19:30:12">2022-01-21</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/01/21/Flutter%E5%90%8E%E5%8F%B0%E8%BF%90%E8%A1%8C%E4%BB%A3%E7%A0%81/" title="Flutter后台运行代码"><img src= "/img/loading.gif" data-lazy-src="https://cdn.jsdelivr.net/gh/jerryc127/CDN/img/material-9.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Flutter后台运行代码"/></a><div class="content"><a class="title" href="/2022/01/21/Flutter%E5%90%8E%E5%8F%B0%E8%BF%90%E8%A1%8C%E4%BB%A3%E7%A0%81/" title="Flutter后台运行代码">Flutter后台运行代码</a><time datetime="2022-01-21T10:59:28.000Z" title="发表于 2022-01-21 18:59:28">2022-01-21</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/01/21/Flutter%E5%88%9B%E5%BB%BA%E5%8A%A8%E7%94%BB%E5%B1%8F%E5%B9%95/" title="如何创建Flutter动画屏幕"><img src= "/img/loading.gif" data-lazy-src="https://ducafecat.tech/2022/01/21/2022/create-an-animation-screen-in-flutter/2022-01-20-07-40-53.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="如何创建Flutter动画屏幕"/></a><div class="content"><a class="title" href="/2022/01/21/Flutter%E5%88%9B%E5%BB%BA%E5%8A%A8%E7%94%BB%E5%B1%8F%E5%B9%95/" title="如何创建Flutter动画屏幕">如何创建Flutter动画屏幕</a><time datetime="2022-01-20T17:50:50.770Z" title="发表于 2022-01-21 01:50:50">2022-01-21</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/01/20/hello-world/" title="Hello World"><img src= "/img/loading.gif" data-lazy-src="https://cdn.jsdelivr.net/gh/jerryc127/CDN/img/material-2.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Hello World"/></a><div class="content"><a class="title" href="/2022/01/20/hello-world/" title="Hello World">Hello World</a><time datetime="2022-01-20T09:27:48.880Z" title="发表于 2022-01-20 17:27:48">2022-01-20</time></div></div></div></div><div class="card-widget ads-wrap"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8919908724705274" data-ad-slot="8108145410" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div></div></div></main><footer id="footer" style="background-image: url('https://cdn.jsdelivr.net/gh/jerryc127/CDN/img/material-9.png')"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2022 By Jason.Z</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener external nofollow noreferrer" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="translateLink" type="button" title="简繁转换">簡</button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">本地搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="https://cdn.jsdelivr.net/npm/hexo-theme-butterfly@4.0.1/source/js/utils.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-butterfly@4.0.1/source/js/main.min.js"></script><script src="https://cdn.jsdelivr.net/gh/jerryc127/butterfly.js.org/source/selfjs/tw_cn.min.js?ver=4.0.0"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><script src="https://cdn.jsdelivr.net/gh/jerryc127/butterfly.js.org/source/selfjs/localsearch.min.js?ver=4.0.0"></script><div class="js-pjax"><script>(() => {
+  const $mermaidWrap = document.querySelectorAll('#article-container .mermaid-wrap')
+  if ($mermaidWrap.length) {
+    window.runMermaid = () => {
+      window.loadMermaid = true
+      const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'default'
+
+      Array.from($mermaidWrap).forEach((item, index) => {
+        const mermaidSrc = item.firstElementChild
+        const mermaidThemeConfig = '%%{init:{ \'theme\':\'' + theme + '\'}}%%\n'
+        const mermaidID = 'mermaid-' + index
+        const mermaidDefinition = mermaidThemeConfig + mermaidSrc.textContent
+        mermaid.mermaidAPI.render(mermaidID, mermaidDefinition, (svgCode) => {
+          mermaidSrc.insertAdjacentHTML('afterend', svgCode)
+        })
+      })
+    }
+
+    const loadMermaid = () => {
+      window.loadMermaid ? runMermaid() : getScript('https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js').then(runMermaid)
+    }
+
+    window.pjax ? loadMermaid() : document.addEventListener('DOMContentLoaded', loadMermaid)
+  }
+})()</script><script>(()=>{
+  const init = () => {
+    twikoo.init(Object.assign({
+      el: '#twikoo-wrap',
+      envId: 'https://butterfly-twikoo.vercel.app',
+      region: '',
+      onCommentLoaded: function () {
+        btf.loadLightbox(document.querySelectorAll('#twikoo .tk-content img:not(.vemoji)'))
+      }
+    }, null))
+  }
+
+  const getCount = () => {
+    twikoo.getCommentsCount({
+      envId: 'https://butterfly-twikoo.vercel.app',
+      region: '',
+      urls: [window.location.pathname],
+      includeReply: false
+    }).then(function (res) {
+      document.getElementById('twikoo-count').innerText = res[0].count
+    }).catch(function (err) {
+      console.error(err);
+    });
+  }
+
+  const runFn = () => {
+    init()
+    GLOBAL_CONFIG_SITE.isPost && getCount()
+  }
+
+  const loadTwikoo = () => {
+    if (typeof twikoo === 'object') {
+      setTimeout(runFn,0)
+      return
+    } 
+    getScript('https://cdn.jsdelivr.net/npm/twikoo/dist/twikoo.all.min.js').then(runFn)
+  }
+
+  if ('Twikoo' === 'Twikoo' || !true) {
+    if (true) btf.loadComment(document.getElementById('twikoo-wrap'), loadTwikoo)
+    else loadTwikoo()
+  } else {
+    window.loadOtherComment = () => {
+      loadTwikoo()
+    }
+  }
+})()</script><script>function loadDisqus () {
+  var disqus_config = function () {
+    this.page.url = 'http://example.com/2022/01/21/Flutter%E5%90%8E%E5%8F%B0%E8%BF%90%E8%A1%8C%E4%BB%A3%E7%A0%81/'
+    this.page.identifier = '2022/01/21/Flutter后台运行代码/'
+    this.page.title = 'Flutter后台运行代码'
+  };
+
+  window.disqusReset = () => {
+    DISQUS.reset({
+      reload: true,
+      config: disqus_config
+    })
+  }
+
+  if (window.DISQUS) disqusReset()
+  else {
+    (function() { 
+      var d = document, s = d.createElement('script');
+      s.src = 'https://demo-jerryc-me.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  }
+}
+
+if ('Twikoo' === 'Disqus' || !true) {
+  if (true) btf.loadComment(document.getElementById('disqus_thread'), loadDisqus)
+  else loadDisqus()
+} else {
+  function loadOtherComment () {
+    loadDisqus()
+  }
+}
+</script></div><script>window.addEventListener('load', () => {
+  const changeContent = (content) => {
+    if (content === '') return content
+
+    content = content.replace(/<img.*?src="(.*?)"?[^\>]+>/ig, '[图片]') // replace image link
+    content = content.replace(/<a[^>]+?href=["']?([^"']+)["']?[^>]*>([^<]+)<\/a>/gi, '[链接]') // replace url
+    content = content.replace(/<pre><code>.*?<\/pre>/gi, '[代码]') // replace code
+    content = content.replace(/<[^>]+>/g,"") // remove html tag
+
+    if (content.length > 150) {
+      content = content.substring(0,150) + '...'
+    }
+    return content
+  }
+
+  const getComment = () => {
+    const runTwikoo = () => {
+      twikoo.getRecentComments({
+        envId: 'https://butterfly-twikoo.vercel.app',
+        region: '',
+        pageSize: 6,
+        includeReply: true
+      }).then(function (res) {
+        const twikooArray = res.map(e => {
+          return {
+            'content': changeContent(e.comment),
+            'avatar': e.avatar,
+            'nick': e.nick,
+            'url': e.url + '#' + e.id,
+            'date': new Date(e.created).toISOString()
+          }
+        })
+
+        saveToLocal.set('twikoo-newest-comments', JSON.stringify(twikooArray), 5/(60*24))
+        generateHtml(twikooArray)
+      }).catch(function (err) {
+        const $dom = document.querySelector('#card-newest-comments .aside-list')
+        $dom.innerHTML= "无法获取评论，请确认相关配置是否正确"
+      })
+    }
+
+    if (typeof twikoo === 'object') {
+      runTwikoo()
+    } else {
+      getScript('https://cdn.jsdelivr.net/npm/twikoo/dist/twikoo.all.min.js').then(runTwikoo)
+    }
+  }
+
+  const generateHtml = array => {
+    let result = ''
+
+    if (array.length) {
+      for (let i = 0; i < array.length; i++) {
+        result += '<div class=\'aside-list-item\'>'
+
+        if (true) {
+          const name = 'data-lazy-src'
+          result += `<a href='${array[i].url}' class='thumbnail'><img ${name}='${array[i].avatar}' alt='${array[i].nick}'></a>`
+        }
+        
+        result += `<div class='content'>
+        <a class='comment' href='${array[i].url}' title='${array[i].content}'>${array[i].content}</a>
+        <div class='name'><span>${array[i].nick} / </span><time datetime="${array[i].date}">${btf.diffDate(array[i].date, true)}</time></div>
+        </div></div>`
+      }
+    } else {
+      result += '没有评论'
+    }
+
+    let $dom = document.querySelector('#card-newest-comments .aside-list')
+    $dom.innerHTML= result
+    window.lazyLoadInstance && window.lazyLoadInstance.update()
+    window.pjax && window.pjax.refresh($dom)
+  }
+
+  const newestCommentInit = () => {
+    if (document.querySelector('#card-newest-comments .aside-list')) {
+      const data = saveToLocal.get('twikoo-newest-comments')
+      if (data) {
+        generateHtml(JSON.parse(data))
+      } else {
+        getComment()
+      }
+    }
+  }
+
+  newestCommentInit()
+  document.addEventListener('pjax:complete', newestCommentInit)
+})</script><script defer="defer" id="ribbon" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-ribbon.min.js" size="150" alpha="0.6" zIndex="-1" mobile="true" data-click="true"></script><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>let pjaxSelectors = ["title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"]):not([href="/talking/"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+
+  // removeEventListener scroll 
+  window.tocScrollFn && window.removeEventListener('scroll', window.tocScrollFn)
+  window.scrollCollect && window.removeEventListener('scroll', scrollCollect)
+
+  typeof preloader === 'object' && preloader.initLoading()
+  document.getElementById('rightside').style.cssText = "opacity: ''; transform: ''"
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof chatBtnFn === 'function' && chatBtnFn()
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+
+  typeof preloader === 'object' && preloader.endLoading()
+})
+
+document.addEventListener('pjax:error', (e) => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
