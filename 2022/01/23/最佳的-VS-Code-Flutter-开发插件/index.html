@@ -1,0 +1,481 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>最佳的 VS Code Flutter 开发插件 | 亮哥的博客</title><meta name="keywords" content="前端开发,Flutter, Vue, React, Javascript, UI设计"><meta name="author" content="Jason.Z"><meta name="copyright" content="Jason.Z"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="原文 https:&#x2F;&#x2F;itnext.io&#x2F;best-vs-code-extensions-for-flutter-adcc808c5204  最佳 VS Flutter 代码扩展VS 代码是目前应用最广泛的 Flutter 集成开发环境之一。但是有许多方法可以通过使用 VS 代码的扩展来提高工作效率。 Awesome Flutter SnippetsAwesome Flutter Snippet">
+<meta property="og:type" content="article">
+<meta property="og:title" content="最佳的 VS Code Flutter 开发插件">
+<meta property="og:url" content="http://example.com/2022/01/23/%E6%9C%80%E4%BD%B3%E7%9A%84-VS-Code-Flutter-%E5%BC%80%E5%8F%91%E6%8F%92%E4%BB%B6/index.html">
+<meta property="og:site_name" content="亮哥的博客">
+<meta property="og:description" content="原文 https:&#x2F;&#x2F;itnext.io&#x2F;best-vs-code-extensions-for-flutter-adcc808c5204  最佳 VS Flutter 代码扩展VS 代码是目前应用最广泛的 Flutter 集成开发环境之一。但是有许多方法可以通过使用 VS 代码的扩展来提高工作效率。 Awesome Flutter SnippetsAwesome Flutter Snippet">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://r62hc9ndh.hb-bkt.clouddn.com/20220123032218.png">
+<meta property="article:published_time" content="2022-01-22T19:20:41.000Z">
+<meta property="article:modified_time" content="2022-01-22T19:20:41.000Z">
+<meta property="article:author" content="Jason.Z">
+<meta property="article:tag" content="前端开发,Flutter, Vue, React, Javascript, UI设计">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://r62hc9ndh.hb-bkt.clouddn.com/20220123032218.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/2022/01/23/%E6%9C%80%E4%BD%B3%E7%9A%84-VS-Code-Flutter-%E5%BC%80%E5%8F%91%E6%8F%92%E4%BB%B6/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//fonts.googleapis.com" crossorigin=""/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta name="google-site-verification" content="NdIUXAOVyGnnBhcrip0ksCawbdAzT0hlBZDE9u4jx6k"/><meta name="msvalidate.01" content="567E47D75E8DCF1282B9623AD914701E"/><meta name="baidu-site-verification" content="code-pE5rnuxcfD"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" media="print" onload="this.media='all'"><script async="async" src="js/adsbygoogle.js"></script><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web&amp;display=swap" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: {"defaultEncoding":1,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":400},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: true,
+    post: true
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":150,"languages":{"author":"作者: Jason.Z","link":"链接: ","source":"来源: 亮哥的博客","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '最佳的 VS Code Flutter 开发插件',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-01-23 03:20:41'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+          if (t === undefined) {
+            if (isLightMode) activateLightMode()
+            else if (isDarkMode) activateDarkMode()
+            else if (isNotSpecified || hasNoSupport) {
+              const now = new Date()
+              const hour = now.getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><style type="text/css">.card-announcement .social-button{margin:.6rem 0 0 0;text-align:center}.card-announcement .social-button a{display:block;background-color:var(--btn-bg);color:var(--btn-color);text-align:center;line-height:2.4;margin:4px 0}.card-announcement .social-button a:hover{background-color:var(--btn-hover-color)}</style><meta name="generator" content="Hexo 6.0.0"><link rel="alternate" href="/atom.xml" title="亮哥的博客" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "/img/loading.gif" data-lazy-src="/img/avatar.webp" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data is-center"><div class="data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">7</div></a></div><div class="data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">8</div></a></div><div class="data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首頁</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);" rel="external nofollow noreferrer"><i class="fa-fw fas fa-compass"></i><span> 目錄</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 歸檔</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 標籤</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分類</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);" rel="external nofollow noreferrer"><i class="fa-fw fa fa-heartbeat"></i><span> 娛樂</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 圖庫</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 電影</span></a></li><li><a class="site-page child" href="/talking/"><i class="fa-fw fas fa-cubes"></i><span> 自言自語</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fas fa-comment-dots"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-thumbs-up"></i><span> 示例</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('http://r62hc9ndh.hb-bkt.clouddn.com/20220123032218.png')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">亮哥的博客</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首頁</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);" rel="external nofollow noreferrer"><i class="fa-fw fas fa-compass"></i><span> 目錄</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 歸檔</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 標籤</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分類</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);" rel="external nofollow noreferrer"><i class="fa-fw fa fa-heartbeat"></i><span> 娛樂</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 圖庫</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 電影</span></a></li><li><a class="site-page child" href="/talking/"><i class="fa-fw fas fa-cubes"></i><span> 自言自語</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fas fa-comment-dots"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-thumbs-up"></i><span> 示例</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">最佳的 VS Code Flutter 开发插件<a class="post-edit-link" href="https://github.com/jerryc127/butterfly.js.org/edit/main/source/_posts/最佳的-VS-Code-Flutter-开发插件.md" rel="external nofollow noreferrer" title="编辑" target="_blank"><i class="fas fa-pencil-alt"></i></a></h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="fa-fw post-meta-icon far fa-calendar-alt"></i><span class="post-meta-label">发表于</span><time datetime="2022-01-22T19:20:41.000Z" title="发表于 2022-01-23 03:20:41">2022-01-23</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">908</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>3分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="最佳的 VS Code Flutter 开发插件"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p><img src= "/img/loading.gif" data-lazy-src="http://r62hc9ndh.hb-bkt.clouddn.com/20220123032218.png"></p>
+<h2 id="原文"><a href="#原文" class="headerlink" title="原文"></a>原文</h2><blockquote>
+<p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://itnext.io/best-vs-code-extensions-for-flutter-adcc808c5204">https://itnext.io/best-vs-code-extensions-for-flutter-adcc808c5204</a></p>
+</blockquote>
+<h2 id="最佳-VS-Flutter-代码扩展"><a href="#最佳-VS-Flutter-代码扩展" class="headerlink" title="最佳 VS Flutter 代码扩展"></a>最佳 VS Flutter 代码扩展</h2><p>VS 代码是目前应用最广泛的 Flutter 集成开发环境之一。但是有许多方法可以通过使用 VS 代码的扩展来提高工作效率。</p>
+<h2 id="Awesome-Flutter-Snippets"><a href="#Awesome-Flutter-Snippets" class="headerlink" title="Awesome Flutter Snippets"></a><a target="_blank" rel="noopener external nofollow noreferrer" href="https://marketplace.visualstudio.com/items?itemName=Nash.awesome-flutter-snippets">Awesome Flutter Snippets</a></h2><p>Awesome Flutter Snippets 是一个常用 Flutter 类和方法的集合。它通过消除与创建小部件相关的大部分样板代码来提高开发速度。通过分别输入快捷键 <code>streamBldr</code> 和 <code>singleChildSV</code> ，可以创建诸如 <code>StreamBuilder</code> 和 <code>SingleChildScrollView</code> 之类的小部件。</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://ducafecat.oss-cn-beijing.aliyuncs.com/podcast/07ff26c6493594d8b267accc3efc1ea02706e02290d57daf71b2a248f2e58b08.png" alt="img"></p>
+<h2 id="Pubspec-Assist"><a href="#Pubspec-Assist" class="headerlink" title="Pubspec Assist"></a><a target="_blank" rel="noopener external nofollow noreferrer" href="https://marketplace.visualstudio.com/items?itemName=jeroen-meijer.pubspec-assist">Pubspec Assist</a></h2><p>Pubspec Assist 是一个 Visual Studio Code 扩展，它允许您轻松地添加对 <a target="_blank" rel="noopener external nofollow noreferrer" href="https://dart.dev/">Dart</a> 和 <a target="_blank" rel="noopener external nofollow noreferrer" href="https://flutter.dev/">Flutter</a> 项目的 <code>Pubspec.yaml</code> 的依赖项，而不需要离开编辑器。</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://ducafecat.oss-cn-beijing.aliyuncs.com/podcast/74d2cd032dacd440cf86c6675ed6f7e750eb7220174f6a8d4aeeaf051921ad8e.gif" alt="img"></p>
+<p><strong>注意</strong>: 在 Dart 版本 &gt; 2.5 中，这个功能是默认可用的！</p>
+<h2 id="Material-Icon-Theme"><a href="#Material-Icon-Theme" class="headerlink" title="Material Icon Theme"></a><a target="_blank" rel="noopener external nofollow noreferrer" href="https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme">Material Icon Theme</a></h2><p><code>Material Icon Theme</code> 主题是一个 Visual Studio 代码扩展，允许你改变你的文件夹和文件图标，并使它们不枯燥！</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://ducafecat.oss-cn-beijing.aliyuncs.com/podcast/09d55dcbcde4a58640416ff9e2e6bdd0d4cb0b175c0f92face872c61210d2906.png" alt="img"></p>
+<h2 id="Dart-Data-Class-Generator-Dart"><a href="#Dart-Data-Class-Generator-Dart" class="headerlink" title="Dart Data Class Generator Dart"></a><a target="_blank" rel="noopener external nofollow noreferrer" href="https://marketplace.visualstudio.com/items?itemName=BendixMa.dart-data-class-generator">Dart Data Class Generator Dart</a></h2><p>Dart 数据类生成器是一个 Visual Studio 代码扩展，它允许您轻松、快速地创建 Dart 数据类，而且不需要编写样板文件或运行代码生成。</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://ducafecat.oss-cn-beijing.aliyuncs.com/podcast/bec00afb6634a4ad9bc5753a8b19dda206aa16bb9b79cdd1fd22bd0664589aa4.gif" alt="img"></p>
+<h2 id="Todo-Tree"><a href="#Todo-Tree" class="headerlink" title="Todo Tree"></a><a target="_blank" rel="noopener external nofollow noreferrer" href="https://marketplace.visualstudio.com/items?itemName=Gruntfuggly.todo-tree">Todo Tree</a></h2><p>Dart 数据类生成器是一个 Visual Studio 代码扩展，这个扩展可以快速搜索 <code>(using [ripgrep](https://github.com/BurntSushi/ripgrep))</code> 你的工作空间中的评论标签，比如 TODO 和 FIXME，并在浏览器面板的树视图中显示它们。单击树中的 TODO 将打开文件并将光标放在包含 TODO 的行上。</p>
+<p>找到的 TODOs 也可以在打开的文件中突出显示。</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://ducafecat.oss-cn-beijing.aliyuncs.com/podcast/50b8d2b07b6fa725e67e57a4d4f439d91222931c9836c4ae2ea257e49247108f.png" alt="img"></p>
+<h2 id="Better-Comments"><a href="#Better-Comments" class="headerlink" title="Better Comments"></a><a target="_blank" rel="noopener external nofollow noreferrer" href="https://marketplace.visualstudio.com/items?itemName=aaron-bond.better-comments">Better Comments</a></h2><p>Better Comments 是 visualstudiocode 扩展，该扩展将帮助您在代码中创建更加人性化的注释。有了这个扩展，你就可以把你的注释分类为:</p>
+<ul>
+<li>Alerts</li>
+<li>Queries</li>
+<li>TODOs</li>
+<li>Highlights</li>
+<li>注释掉的代码也可以进行样式设置，以清楚地表明代码不应该出现在那里</li>
+<li>任何其他你想要的评论样式都可以在设置中指定</li>
+</ul>
+<p><img src= "/img/loading.gif" data-lazy-src="https://ducafecat.oss-cn-beijing.aliyuncs.com/podcast/bbe4504a84881813178738297dc64a95d67029eda9902280f9a5327d626b5dd9.png" alt="img"></p>
+<h2 id="Remove-Comments"><a href="#Remove-Comments" class="headerlink" title="Remove Comments"></a><a target="_blank" rel="noopener external nofollow noreferrer" href="https://marketplace.visualstudio.com/items?itemName=plibither8.remove-comments">Remove Comments</a></h2><p>删除注释是一个 visualstudio 代码扩展，这个扩展将帮助您立即从代码中删除所有注释！一次性整理和删除你的代码！</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://ducafecat.oss-cn-beijing.aliyuncs.com/podcast/d23e92c8a4ad0085f9d3c77431a3d105759546bbd7e1fd8c06d5b0622bd4ea82.gif" alt="img"></p>
+<h2 id="Image-Preview"><a href="#Image-Preview" class="headerlink" title="Image Preview"></a><a target="_blank" rel="noopener external nofollow noreferrer" href="https://marketplace.visualstudio.com/items?itemName=kisstkondoros.vscode-gutter-preview">Image Preview</a></h2><p>Image Preview 是一个 Visual Studio Code 扩展，可以在 gutter 和 hover 中显示要预览的图像。</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://ducafecat.oss-cn-beijing.aliyuncs.com/podcast/565f435b02da4cb969cedad2045afbcf62645d70a37af086a6343dfefd48cc0e.png" alt="img"></p>
+<h2 id="State-Management-Snippets"><a href="#State-Management-Snippets" class="headerlink" title="State Management Snippets"></a>State Management Snippets</h2><p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://marketplace.visualstudio.com/items?itemName=get-snippets.get-snippets"><strong>GetX Snippets</strong></a></p>
+<p>GetX Snippets 是一个 Visual Studio Code 扩展，用来加速 Flutter 开发应用程序的过程，目标是每个使用 <a target="_blank" rel="noopener external nofollow noreferrer" href="https://pub.dev/packages/get">Get</a> 包的人。</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://ducafecat.oss-cn-beijing.aliyuncs.com/podcast/47c0487960830aaa371f085271a48abbaa6630cb5a334295bafdd71931536676.jpg" alt="img"></p>
+<p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://marketplace.visualstudio.com/items?itemName=FelixAngelov.bloc"><strong>Bloc</strong></a></p>
+<p>Bloc 是一个 Visual Studio Code 扩展。这个软件包是为了方便实现 <code>BLoC</code> 设计模式(业务逻辑组件)与 Flutter 开发应用程序，目标是每个人使用 <a target="_blank" rel="noopener external nofollow noreferrer" href="https://pub.dev/packages/flutter_bloc">bloc</a> 包。</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://ducafecat.oss-cn-beijing.aliyuncs.com/podcast/6b976ab86a0c0d57682e629ff1a45e1319a6cc82c4be09c9449ec83164883c2b.gif" alt="img"></p>
+<p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://marketplace.visualstudio.com/items?itemName=robert-brunhage.flutter-riverpod-snippets"><strong>Flutter Riverpod Snippets</strong></a></p>
+<p>Flutter Riverpod Snippets 是一个 Visual Studio Code 扩展，它可以提高你使用 Riverpod 的方式。它包含不同代码段的集合，例如 provider。</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://ducafecat.oss-cn-beijing.aliyuncs.com/podcast/8d96a50c8fd50f752d8fbbe107d04440164378a1fe283f71bec47ca2c2e8bd79.gif" alt="img"></p>
+<p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://marketplace.visualstudio.com/items?itemName=Zaraclaj.flutter-provider-snippets"><strong>Provider</strong></a></p>
+<p>Flutter Provider Snippets 是一个 Visual Studio Code 扩展，它允许收集使用提供程序时常用的 Flutter 类和方法。它可以加快你的发展速度。</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://ducafecat.oss-cn-beijing.aliyuncs.com/podcast/ec60b335eaba673ba54e82f4f13205140ead67391074e97d99e0f6013f332816.gif" alt="img"></p>
+<hr>
+<h2 id="往期"><a href="#往期" class="headerlink" title="往期"></a>往期</h2><h3 id="开源"><a href="#开源" class="headerlink" title="开源"></a>开源</h3><h4 id="GetX-Quick-Start"><a href="#GetX-Quick-Start" class="headerlink" title="GetX Quick Start"></a>GetX Quick Start</h4><p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/ducafecat/getx_quick_start">https://github.com/ducafecat/getx_quick_start</a></p>
+<h4 id="新闻客户端"><a href="#新闻客户端" class="headerlink" title="新闻客户端"></a>新闻客户端</h4><p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/ducafecat/flutter_learn_news">https://github.com/ducafecat/flutter_learn_news</a></p>
+<h3 id="strapi-手册译文"><a href="#strapi-手册译文" class="headerlink" title="strapi 手册译文"></a>strapi 手册译文</h3><p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://getstrapi.cn/">https://getstrapi.cn</a></p>
+<h3 id="微信讨论群-ducafecat"><a href="#微信讨论群-ducafecat" class="headerlink" title="微信讨论群 ducafecat"></a>微信讨论群 ducafecat</h3><h3 id="系列集合"><a href="#系列集合" class="headerlink" title="系列集合"></a>系列集合</h3><h4 id="译文"><a href="#译文" class="headerlink" title="译文"></a>译文</h4><p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://ducafecat.tech/categories/%E8%AF%91%E6%96%87/">https://ducafecat.tech/categories/%E8%AF%91%E6%96%87/</a></p>
+<h4 id="开源项目"><a href="#开源项目" class="headerlink" title="开源项目"></a>开源项目</h4><p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://ducafecat.tech/categories/%E5%BC%80%E6%BA%90/">https://ducafecat.tech/categories/%E5%BC%80%E6%BA%90/</a></p>
+<h4 id="Dart-编程语言基础"><a href="#Dart-编程语言基础" class="headerlink" title="Dart 编程语言基础"></a>Dart 编程语言基础</h4><p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://space.bilibili.com/404904528/channel/detail?cid=111585">https://space.bilibili.com/404904528/channel/detail?cid=111585</a></p>
+<h4 id="Flutter-零基础入门"><a href="#Flutter-零基础入门" class="headerlink" title="Flutter 零基础入门"></a>Flutter 零基础入门</h4><p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://space.bilibili.com/404904528/channel/detail?cid=123470">https://space.bilibili.com/404904528/channel/detail?cid=123470</a></p>
+<h4 id="Flutter-实战从零开始-新闻客户端"><a href="#Flutter-实战从零开始-新闻客户端" class="headerlink" title="Flutter 实战从零开始 新闻客户端"></a>Flutter 实战从零开始 新闻客户端</h4><p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://space.bilibili.com/404904528/channel/detail?cid=106755">https://space.bilibili.com/404904528/channel/detail?cid=106755</a></p>
+<h4 id="Flutter-组件开发"><a href="#Flutter-组件开发" class="headerlink" title="Flutter 组件开发"></a>Flutter 组件开发</h4><p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://space.bilibili.com/404904528/channel/detail?cid=144262">https://space.bilibili.com/404904528/channel/detail?cid=144262</a></p>
+<h4 id="Flutter-Bloc"><a href="#Flutter-Bloc" class="headerlink" title="Flutter Bloc"></a>Flutter Bloc</h4><p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://space.bilibili.com/404904528/channel/detail?cid=177519">https://space.bilibili.com/404904528/channel/detail?cid=177519</a></p>
+<h4 id="Flutter-Getx4"><a href="#Flutter-Getx4" class="headerlink" title="Flutter Getx4"></a>Flutter Getx4</h4><p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://space.bilibili.com/404904528/channel/detail?cid=177514">https://space.bilibili.com/404904528/channel/detail?cid=177514</a></p>
+<h4 id="Docker-Yapi"><a href="#Docker-Yapi" class="headerlink" title="Docker Yapi"></a>Docker Yapi</h4><p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://space.bilibili.com/404904528/channel/detail?cid=130578">https://space.bilibili.com/404904528/channel/detail?cid=130578</a></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined" rel="external nofollow noreferrer">Jason.Z</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://example.com/2022/01/23/%E6%9C%80%E4%BD%B3%E7%9A%84-VS-Code-Flutter-%E5%BC%80%E5%8F%91%E6%8F%92%E4%BB%B6/">http://example.com/2022/01/23/%E6%9C%80%E4%BD%B3%E7%9A%84-VS-Code-Flutter-%E5%BC%80%E5%8F%91%E6%8F%92%E4%BB%B6/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow noreferrer" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://example.com" target="_blank">亮哥的博客</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="http://r62hc9ndh.hb-bkt.clouddn.com/20220123032218.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i> 打赏</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="http://r62hc9ndh.hb-bkt.clouddn.com/651642784431_.pic.jpg" rel="external nofollow noreferrer" target="_blank"><img class="post-qr-code-img" src= "/img/loading.gif" data-lazy-src="http://r62hc9ndh.hb-bkt.clouddn.com/651642784431_.pic.jpg" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="http://r62hc9ndh.hb-bkt.clouddn.com/661642784631_.pic.jpg" rel="external nofollow noreferrer" target="_blank"><img class="post-qr-code-img" src= "/img/loading.gif" data-lazy-src="http://r62hc9ndh.hb-bkt.clouddn.com/661642784631_.pic.jpg" alt="支付寶"/></a><div class="post-qr-code-desc">支付寶</div></li></ul></div></div><div class="ads-wrap"><ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-fb+5w+4e-db+86" data-ad-client="ca-pub-8919908724705274" data-ad-slot="5978969231"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/2022/01/23/Flutter-Convex-Bottom-%E5%BA%95%E9%83%A8%E5%AF%BC%E8%88%AA/"><img class="next-cover" src= "/img/loading.gif" data-lazy-src="https://ducafecat.tech/2022/01/13/2022/convex-bottom-bar-in-flutter/2022-01-13-21-34-45.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">Flutter Convex Bottom 底部导航</div></div></a></div></nav><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div><div id="comment-switch"><span class="first-comment">Twikoo</span><span class="switch-btn"></span><span class="second-comment">Disqus</span></div></div><div class="comment-wrap"><div><div id="twikoo-wrap"></div></div><div><div id="disqus_thread"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src= "/img/loading.gif" data-lazy-src="/img/avatar.webp" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Jason.Z</div><div class="author-info__description">把日常工作与学习中的各种踩过的坑记录下来...</div></div><div class="card-info-data is-center"><div class="card-info-data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">7</div></a></div><div class="card-info-data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">8</div></a></div><div class="card-info-data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div></div><a id="card-info-btn" target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/jerryc127/hexo-theme-butterfly"><i class="fab fa-github"></i><span>主題 GitHub</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="mailto:my@crazywong.com" rel="external nofollow noreferrer" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="/atom.xml" target="_blank" title="RSS"><i class="fas fa-rss"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">如果你在使用中遇到問題，請到 <a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/jerryc127/hexo-theme-butterfly/issues" style="color:#49b1f5">Github Issues</a> 或者 <a href="/messageboard/" style="color:#49b1f5">留言板</a> 進行反饋，你也可以加入 QQ 群（由於 QQ 群只能有 500 人，會定時清理潛水的人，不要同時申請 2 个 QQ 群）<div class="social-button"> <a class="button--animated" href="https://jq.qq.com/?_wv=1027&k=KU9105XR" rel="external nofollow noreferrer" target="_blank">QQ 1 群 👍</a> <a class="button--animated" href="https://jq.qq.com/?_wv=1027&k=r1nK0DQz" rel="external nofollow noreferrer" target="_blank">QQ 2 群 👍</a> <a class="button--animated" href="https://t.me/bu2fly" rel="external nofollow noreferrer" target="_blank">Telegram 👍</a> </div></div></div><div class="card-widget card-docs card-categories"><div class="item-headline"><i class="fas fa-car-side"></i><span>文檔目錄</span></div><div class="item-content"><ul class=card-category-list> <li class=card-category-list-item><a class=card-category-list-link href=/posts/21cfbf15/ >🚀 快速開始</a></li> <li class=card-category-list-item><a class=card-category-list-link href=/posts/dc584b87/ >📑 主題頁面</a></li> <li class=card-category-list-item><a class=card-category-list-link href=/posts/4aa8abbe/ >🛠 主題配置-1</a></li> <li class=card-category-list-item><a class=card-category-list-link href=/posts/ceeb73f/ >⚔️ 主題配置-2</a></li> <li class=card-category-list-item><a class=card-category-list-link href=/posts/98d20436/ >❓ 主題問答</a></li> <li class=card-category-list-item><a class=card-category-list-link href=/posts/4073eda/ >⚡️ 進階教程</a></li> <li class=card-category-list-item><a class=card-category-list-link href=/posts/198a4240/ >✨ 更新日誌</a></li> </ul></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content is-expand"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8E%9F%E6%96%87"><span class="toc-text">原文</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%80%E4%BD%B3-VS-Flutter-%E4%BB%A3%E7%A0%81%E6%89%A9%E5%B1%95"><span class="toc-text">最佳 VS Flutter 代码扩展</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Awesome-Flutter-Snippets"><span class="toc-text">Awesome Flutter Snippets</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Pubspec-Assist"><span class="toc-text">Pubspec Assist</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Material-Icon-Theme"><span class="toc-text">Material Icon Theme</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Dart-Data-Class-Generator-Dart"><span class="toc-text">Dart Data Class Generator Dart</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Todo-Tree"><span class="toc-text">Todo Tree</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Better-Comments"><span class="toc-text">Better Comments</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Remove-Comments"><span class="toc-text">Remove Comments</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Image-Preview"><span class="toc-text">Image Preview</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#State-Management-Snippets"><span class="toc-text">State Management Snippets</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BE%80%E6%9C%9F"><span class="toc-text">往期</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%80%E6%BA%90"><span class="toc-text">开源</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#GetX-Quick-Start"><span class="toc-text">GetX Quick Start</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%96%B0%E9%97%BB%E5%AE%A2%E6%88%B7%E7%AB%AF"><span class="toc-text">新闻客户端</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#strapi-%E6%89%8B%E5%86%8C%E8%AF%91%E6%96%87"><span class="toc-text">strapi 手册译文</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BE%AE%E4%BF%A1%E8%AE%A8%E8%AE%BA%E7%BE%A4-ducafecat"><span class="toc-text">微信讨论群 ducafecat</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%B3%BB%E5%88%97%E9%9B%86%E5%90%88"><span class="toc-text">系列集合</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AF%91%E6%96%87"><span class="toc-text">译文</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE"><span class="toc-text">开源项目</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Dart-%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80"><span class="toc-text">Dart 编程语言基础</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Flutter-%E9%9B%B6%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8"><span class="toc-text">Flutter 零基础入门</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Flutter-%E5%AE%9E%E6%88%98%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B-%E6%96%B0%E9%97%BB%E5%AE%A2%E6%88%B7%E7%AB%AF"><span class="toc-text">Flutter 实战从零开始 新闻客户端</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Flutter-%E7%BB%84%E4%BB%B6%E5%BC%80%E5%8F%91"><span class="toc-text">Flutter 组件开发</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Flutter-Bloc"><span class="toc-text">Flutter Bloc</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Flutter-Getx4"><span class="toc-text">Flutter Getx4</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Docker-Yapi"><span class="toc-text">Docker Yapi</span></a></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2022/01/23/%E6%9C%80%E4%BD%B3%E7%9A%84-VS-Code-Flutter-%E5%BC%80%E5%8F%91%E6%8F%92%E4%BB%B6/" title="最佳的 VS Code Flutter 开发插件"><img src= "/img/loading.gif" data-lazy-src="http://r62hc9ndh.hb-bkt.clouddn.com/20220123032218.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="最佳的 VS Code Flutter 开发插件"/></a><div class="content"><a class="title" href="/2022/01/23/%E6%9C%80%E4%BD%B3%E7%9A%84-VS-Code-Flutter-%E5%BC%80%E5%8F%91%E6%8F%92%E4%BB%B6/" title="最佳的 VS Code Flutter 开发插件">最佳的 VS Code Flutter 开发插件</a><time datetime="2022-01-22T19:20:41.000Z" title="发表于 2022-01-23 03:20:41">2022-01-23</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/01/23/Flutter-Convex-Bottom-%E5%BA%95%E9%83%A8%E5%AF%BC%E8%88%AA/" title="Flutter Convex Bottom 底部导航"><img src= "/img/loading.gif" data-lazy-src="https://ducafecat.tech/2022/01/13/2022/convex-bottom-bar-in-flutter/2022-01-13-21-34-45.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Flutter Convex Bottom 底部导航"/></a><div class="content"><a class="title" href="/2022/01/23/Flutter-Convex-Bottom-%E5%BA%95%E9%83%A8%E5%AF%BC%E8%88%AA/" title="Flutter Convex Bottom 底部导航">Flutter Convex Bottom 底部导航</a><time datetime="2022-01-22T19:07:29.000Z" title="发表于 2022-01-23 03:07:29">2022-01-23</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/01/21/Butterfly%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/" title="Butterfly 安裝文檔(二) 主題頁面"><img src= "/img/loading.gif" data-lazy-src="https://cdn.jsdelivr.net/gh/jerryc127/CDN/img/Butterfly-docs-02-cover.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Butterfly 安裝文檔(二) 主題頁面"/></a><div class="content"><a class="title" href="/2022/01/21/Butterfly%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/" title="Butterfly 安裝文檔(二) 主題頁面">Butterfly 安裝文檔(二) 主題頁面</a><time datetime="2022-01-21T14:30:12.000Z" title="发表于 2022-01-21 22:30:12">2022-01-21</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/01/21/%E5%A6%82%E4%BD%95%E9%85%8D%E7%BD%AE%E4%B8%80%E4%B8%AA%E6%BC%82%E4%BA%AE%E7%9A%84Vim%E7%BC%96%E8%BE%91%E5%99%A8/" title="如何配置一个漂亮的Vim编辑器"><img src= "/img/loading.gif" data-lazy-src="https://cdn.dribbble.com/users/15687/screenshots/17302148/media/99c5a5ec1cc72f04e2fcaaf7fc07c31f.png?compress=1&amp;resize=1600x1200&amp;vertical=top" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="如何配置一个漂亮的Vim编辑器"/></a><div class="content"><a class="title" href="/2022/01/21/%E5%A6%82%E4%BD%95%E9%85%8D%E7%BD%AE%E4%B8%80%E4%B8%AA%E6%BC%82%E4%BA%AE%E7%9A%84Vim%E7%BC%96%E8%BE%91%E5%99%A8/" title="如何配置一个漂亮的Vim编辑器">如何配置一个漂亮的Vim编辑器</a><time datetime="2022-01-21T11:30:12.000Z" title="发表于 2022-01-21 19:30:12">2022-01-21</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/01/21/Flutter%E5%90%8E%E5%8F%B0%E8%BF%90%E8%A1%8C%E4%BB%A3%E7%A0%81/" title="Flutter后台运行代码"><img src= "/img/loading.gif" data-lazy-src="http://r62hc9ndh.hb-bkt.clouddn.com/1.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Flutter后台运行代码"/></a><div class="content"><a class="title" href="/2022/01/21/Flutter%E5%90%8E%E5%8F%B0%E8%BF%90%E8%A1%8C%E4%BB%A3%E7%A0%81/" title="Flutter后台运行代码">Flutter后台运行代码</a><time datetime="2022-01-21T10:59:28.000Z" title="发表于 2022-01-21 18:59:28">2022-01-21</time></div></div></div></div><div class="card-widget ads-wrap"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8919908724705274" data-ad-slot="8108145410" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div></div></div></main><footer id="footer" style="background-image: url('http://r62hc9ndh.hb-bkt.clouddn.com/20220123032218.png')"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2022 By Jason.Z</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener external nofollow noreferrer" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="translateLink" type="button" title="简繁转换">簡</button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">本地搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="https://cdn.jsdelivr.net/npm/hexo-theme-butterfly@4.0.1/source/js/utils.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-butterfly@4.0.1/source/js/main.min.js"></script><script src="https://cdn.jsdelivr.net/gh/jerryc127/butterfly.js.org/source/selfjs/tw_cn.min.js?ver=4.0.0"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><script src="https://cdn.jsdelivr.net/gh/jerryc127/butterfly.js.org/source/selfjs/localsearch.min.js?ver=4.0.0"></script><div class="js-pjax"><script>(() => {
+  const $mermaidWrap = document.querySelectorAll('#article-container .mermaid-wrap')
+  if ($mermaidWrap.length) {
+    window.runMermaid = () => {
+      window.loadMermaid = true
+      const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'default'
+
+      Array.from($mermaidWrap).forEach((item, index) => {
+        const mermaidSrc = item.firstElementChild
+        const mermaidThemeConfig = '%%{init:{ \'theme\':\'' + theme + '\'}}%%\n'
+        const mermaidID = 'mermaid-' + index
+        const mermaidDefinition = mermaidThemeConfig + mermaidSrc.textContent
+        mermaid.mermaidAPI.render(mermaidID, mermaidDefinition, (svgCode) => {
+          mermaidSrc.insertAdjacentHTML('afterend', svgCode)
+        })
+      })
+    }
+
+    const loadMermaid = () => {
+      window.loadMermaid ? runMermaid() : getScript('https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js').then(runMermaid)
+    }
+
+    window.pjax ? loadMermaid() : document.addEventListener('DOMContentLoaded', loadMermaid)
+  }
+})()</script><script>(()=>{
+  const init = () => {
+    twikoo.init(Object.assign({
+      el: '#twikoo-wrap',
+      envId: 'https://butterfly-twikoo.vercel.app',
+      region: '',
+      onCommentLoaded: function () {
+        btf.loadLightbox(document.querySelectorAll('#twikoo .tk-content img:not(.vemoji)'))
+      }
+    }, null))
+  }
+
+  const getCount = () => {
+    twikoo.getCommentsCount({
+      envId: 'https://butterfly-twikoo.vercel.app',
+      region: '',
+      urls: [window.location.pathname],
+      includeReply: false
+    }).then(function (res) {
+      document.getElementById('twikoo-count').innerText = res[0].count
+    }).catch(function (err) {
+      console.error(err);
+    });
+  }
+
+  const runFn = () => {
+    init()
+    GLOBAL_CONFIG_SITE.isPost && getCount()
+  }
+
+  const loadTwikoo = () => {
+    if (typeof twikoo === 'object') {
+      setTimeout(runFn,0)
+      return
+    } 
+    getScript('https://cdn.jsdelivr.net/npm/twikoo/dist/twikoo.all.min.js').then(runFn)
+  }
+
+  if ('Twikoo' === 'Twikoo' || !true) {
+    if (true) btf.loadComment(document.getElementById('twikoo-wrap'), loadTwikoo)
+    else loadTwikoo()
+  } else {
+    window.loadOtherComment = () => {
+      loadTwikoo()
+    }
+  }
+})()</script><script>function loadDisqus () {
+  var disqus_config = function () {
+    this.page.url = 'http://example.com/2022/01/23/%E6%9C%80%E4%BD%B3%E7%9A%84-VS-Code-Flutter-%E5%BC%80%E5%8F%91%E6%8F%92%E4%BB%B6/'
+    this.page.identifier = '2022/01/23/最佳的-VS-Code-Flutter-开发插件/'
+    this.page.title = '最佳的 VS Code Flutter 开发插件'
+  };
+
+  window.disqusReset = () => {
+    DISQUS.reset({
+      reload: true,
+      config: disqus_config
+    })
+  }
+
+  if (window.DISQUS) disqusReset()
+  else {
+    (function() { 
+      var d = document, s = d.createElement('script');
+      s.src = 'https://demo-jerryc-me.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  }
+}
+
+if ('Twikoo' === 'Disqus' || !true) {
+  if (true) btf.loadComment(document.getElementById('disqus_thread'), loadDisqus)
+  else loadDisqus()
+} else {
+  function loadOtherComment () {
+    loadDisqus()
+  }
+}
+</script></div><script>window.addEventListener('load', () => {
+  const changeContent = (content) => {
+    if (content === '') return content
+
+    content = content.replace(/<img.*?src="(.*?)"?[^\>]+>/ig, '[图片]') // replace image link
+    content = content.replace(/<a[^>]+?href=["']?([^"']+)["']?[^>]*>([^<]+)<\/a>/gi, '[链接]') // replace url
+    content = content.replace(/<pre><code>.*?<\/pre>/gi, '[代码]') // replace code
+    content = content.replace(/<[^>]+>/g,"") // remove html tag
+
+    if (content.length > 150) {
+      content = content.substring(0,150) + '...'
+    }
+    return content
+  }
+
+  const getComment = () => {
+    const runTwikoo = () => {
+      twikoo.getRecentComments({
+        envId: 'https://butterfly-twikoo.vercel.app',
+        region: '',
+        pageSize: 6,
+        includeReply: true
+      }).then(function (res) {
+        const twikooArray = res.map(e => {
+          return {
+            'content': changeContent(e.comment),
+            'avatar': e.avatar,
+            'nick': e.nick,
+            'url': e.url + '#' + e.id,
+            'date': new Date(e.created).toISOString()
+          }
+        })
+
+        saveToLocal.set('twikoo-newest-comments', JSON.stringify(twikooArray), 5/(60*24))
+        generateHtml(twikooArray)
+      }).catch(function (err) {
+        const $dom = document.querySelector('#card-newest-comments .aside-list')
+        $dom.innerHTML= "无法获取评论，请确认相关配置是否正确"
+      })
+    }
+
+    if (typeof twikoo === 'object') {
+      runTwikoo()
+    } else {
+      getScript('https://cdn.jsdelivr.net/npm/twikoo/dist/twikoo.all.min.js').then(runTwikoo)
+    }
+  }
+
+  const generateHtml = array => {
+    let result = ''
+
+    if (array.length) {
+      for (let i = 0; i < array.length; i++) {
+        result += '<div class=\'aside-list-item\'>'
+
+        if (true) {
+          const name = 'data-lazy-src'
+          result += `<a href='${array[i].url}' class='thumbnail'><img ${name}='${array[i].avatar}' alt='${array[i].nick}'></a>`
+        }
+        
+        result += `<div class='content'>
+        <a class='comment' href='${array[i].url}' title='${array[i].content}'>${array[i].content}</a>
+        <div class='name'><span>${array[i].nick} / </span><time datetime="${array[i].date}">${btf.diffDate(array[i].date, true)}</time></div>
+        </div></div>`
+      }
+    } else {
+      result += '没有评论'
+    }
+
+    let $dom = document.querySelector('#card-newest-comments .aside-list')
+    $dom.innerHTML= result
+    window.lazyLoadInstance && window.lazyLoadInstance.update()
+    window.pjax && window.pjax.refresh($dom)
+  }
+
+  const newestCommentInit = () => {
+    if (document.querySelector('#card-newest-comments .aside-list')) {
+      const data = saveToLocal.get('twikoo-newest-comments')
+      if (data) {
+        generateHtml(JSON.parse(data))
+      } else {
+        getComment()
+      }
+    }
+  }
+
+  newestCommentInit()
+  document.addEventListener('pjax:complete', newestCommentInit)
+})</script><script defer="defer" id="ribbon" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-ribbon.min.js" size="150" alpha="0.6" zIndex="-1" mobile="true" data-click="true"></script><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>let pjaxSelectors = ["title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"]):not([href="/talking/"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+
+  // removeEventListener scroll 
+  window.tocScrollFn && window.removeEventListener('scroll', window.tocScrollFn)
+  window.scrollCollect && window.removeEventListener('scroll', scrollCollect)
+
+  typeof preloader === 'object' && preloader.initLoading()
+  document.getElementById('rightside').style.cssText = "opacity: ''; transform: ''"
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof chatBtnFn === 'function' && chatBtnFn()
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+
+  typeof preloader === 'object' && preloader.endLoading()
+})
+
+document.addEventListener('pjax:error', (e) => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
