@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://example.com/Gallery/index.html</loc>
+    
+    <lastmod>2022-01-21</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://example.com/2022/01/21/Flutter%E5%88%9B%E5%BB%BA%E5%8A%A8%E7%94%BB%E5%B1%8F%E5%B9%95/</loc>
     
     <lastmod>2022-01-21</lastmod>
@@ -76,57 +85,57 @@
 
   <url>
     <loc>http://example.com/</loc>
-    <lastmod>2022-01-21</lastmod>
+    <lastmod>2022-01-22</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
   
   <url>
+    <loc>http://example.com/tags/%E5%8A%A8%E7%94%BB/</loc>
+    <lastmod>2022-01-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>http://example.com/tags/%E6%95%99%E7%A8%8B/</loc>
-    <lastmod>2022-01-21</lastmod>
+    <lastmod>2022-01-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://example.com/tags/Hexo/</loc>
-    <lastmod>2022-01-21</lastmod>
+    <lastmod>2022-01-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://example.com/tags/%E4%B8%BB%E9%A1%8C/</loc>
-    <lastmod>2022-01-21</lastmod>
+    <lastmod>2022-01-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://example.com/tags/butterfly/</loc>
-    <lastmod>2022-01-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.com/tags/%E5%8A%A8%E7%94%BB/</loc>
-    <lastmod>2022-01-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.com/tags/%E7%BC%96%E8%BE%91%E5%99%A8-Vim/</loc>
-    <lastmod>2022-01-21</lastmod>
+    <lastmod>2022-01-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://example.com/tags/flutter/</loc>
-    <lastmod>2022-01-21</lastmod>
+    <lastmod>2022-01-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/tags/%E7%BC%96%E8%BE%91%E5%99%A8-Vim/</loc>
+    <lastmod>2022-01-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -135,14 +144,14 @@
   
   <url>
     <loc>http://example.com/categories/Docs%E6%96%87%E6%AA%94/</loc>
-    <lastmod>2022-01-21</lastmod>
+    <lastmod>2022-01-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://example.com/categories/%E5%B7%A5%E5%85%B7/</loc>
-    <lastmod>2022-01-21</lastmod>
+    <lastmod>2022-01-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
