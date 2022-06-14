@@ -1,0 +1,602 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>Flutter开源项目 - appFlowy 真的是 Notion 的替代品?! | 亮哥的博客</title><meta name="keywords" content="前端开发,Flutter, Vue, React, Javascript, UI设计"><meta name="author" content="Jason.Z"><meta name="copyright" content="Jason.Z"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="githttps:&#x2F;&#x2F;www.appflowy.io&#x2F; https:&#x2F;&#x2F;github.com&#x2F;AppFlowy-IO&#x2F;appflowy    也就 1 周 star 9.8k，我以为他是刷的。  目标&amp;特色 目标替代 Notion 数据 100% 自己管理 开源方式提供，你可以自己改 多平台支持 原生体验，估计是用了 flutter 关系  编译运行  git clone    1git">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Flutter开源项目 - appFlowy 真的是 Notion 的替代品?!">
+<meta property="og:url" content="http://example.com/2022/03/01/Flutter%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE-appFlowy-%E7%9C%9F%E7%9A%84%E6%98%AF-Notion-%E7%9A%84%E6%9B%BF%E4%BB%A3%E5%93%81/index.html">
+<meta property="og:site_name" content="亮哥的博客">
+<meta property="og:description" content="githttps:&#x2F;&#x2F;www.appflowy.io&#x2F; https:&#x2F;&#x2F;github.com&#x2F;AppFlowy-IO&#x2F;appflowy    也就 1 周 star 9.8k，我以为他是刷的。  目标&amp;特色 目标替代 Notion 数据 100% 自己管理 开源方式提供，你可以自己改 多平台支持 原生体验，估计是用了 flutter 关系  编译运行  git clone    1git">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://github.com/AppFlowy-IO/appflowy/raw/main/doc/imgs/welcome.png">
+<meta property="article:published_time" content="2022-03-01T13:08:21.000Z">
+<meta property="article:modified_time" content="2022-03-01T13:08:21.000Z">
+<meta property="article:author" content="Jason.Z">
+<meta property="article:tag" content="前端开发,Flutter, Vue, React, Javascript, UI设计">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://github.com/AppFlowy-IO/appflowy/raw/main/doc/imgs/welcome.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/2022/03/01/Flutter%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE-appFlowy-%E7%9C%9F%E7%9A%84%E6%98%AF-Notion-%E7%9A%84%E6%9B%BF%E4%BB%A3%E5%93%81/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//fonts.googleapis.com" crossorigin=""/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta name="google-site-verification" content="NdIUXAOVyGnnBhcrip0ksCawbdAzT0hlBZDE9u4jx6k"/><meta name="msvalidate.01" content="567E47D75E8DCF1282B9623AD914701E"/><meta name="baidu-site-verification" content="code-pE5rnuxcfD"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" media="print" onload="this.media='all'"><script async="async" src="js/adsbygoogle.js"></script><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web&amp;display=swap" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: {"defaultEncoding":1,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":400},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: true,
+    post: true
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":150,"languages":{"author":"作者: Jason.Z","link":"链接: ","source":"来源: 亮哥的博客","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Flutter开源项目 - appFlowy 真的是 Notion 的替代品?!',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-03-01 21:08:21'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+          if (t === undefined) {
+            if (isLightMode) activateLightMode()
+            else if (isDarkMode) activateDarkMode()
+            else if (isNotSpecified || hasNoSupport) {
+              const now = new Date()
+              const hour = now.getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><style type="text/css">.card-announcement .social-button{margin:.6rem 0 0 0;text-align:center}.card-announcement .social-button a{display:block;background-color:var(--btn-bg);color:var(--btn-color);text-align:center;line-height:2.4;margin:4px 0}.card-announcement .social-button a:hover{background-color:var(--btn-hover-color)}</style><meta name="generator" content="Hexo 6.0.0"><link rel="alternate" href="/atom.xml" title="亮哥的博客" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "/img/loading.gif" data-lazy-src="/img/avatar.webp" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data is-center"><div class="data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">12</div></a></div><div class="data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">9</div></a></div><div class="data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首頁</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);" rel="external nofollow noreferrer"><i class="fa-fw fas fa-compass"></i><span> 目錄</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 歸檔</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 標籤</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分類</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);" rel="external nofollow noreferrer"><i class="fa-fw fa fa-heartbeat"></i><span> 娛樂</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 圖庫</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 電影</span></a></li><li><a class="site-page child" href="/talking/"><i class="fa-fw fas fa-cubes"></i><span> 自言自語</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fas fa-comment-dots"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-thumbs-up"></i><span> 示例</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://github.com/AppFlowy-IO/appflowy/raw/main/doc/imgs/welcome.png')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">亮哥的博客</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首頁</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);" rel="external nofollow noreferrer"><i class="fa-fw fas fa-compass"></i><span> 目錄</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 歸檔</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 標籤</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分類</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);" rel="external nofollow noreferrer"><i class="fa-fw fa fa-heartbeat"></i><span> 娛樂</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 圖庫</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 電影</span></a></li><li><a class="site-page child" href="/talking/"><i class="fa-fw fas fa-cubes"></i><span> 自言自語</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fas fa-comment-dots"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-thumbs-up"></i><span> 示例</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">Flutter开源项目 - appFlowy 真的是 Notion 的替代品?!<a class="post-edit-link" href="https://github.com/jerryc127/butterfly.js.org/edit/main/source/_posts/Flutter开源项目-appFlowy-真的是-Notion-的替代品.md" rel="external nofollow noreferrer" title="编辑" target="_blank"><i class="fas fa-pencil-alt"></i></a></h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="fa-fw post-meta-icon far fa-calendar-alt"></i><span class="post-meta-label">发表于</span><time datetime="2022-03-01T13:08:21.000Z" title="发表于 2022-03-01 21:08:21">2022-03-01</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">879</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>4分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="Flutter开源项目 - appFlowy 真的是 Notion 的替代品?!"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h2 id="git"><a href="#git" class="headerlink" title="git"></a>git</h2><p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.appflowy.io/">https://www.appflowy.io/</a></p>
+<p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/AppFlowy-IO/appflowy">https://github.com/AppFlowy-IO/appflowy</a></p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://ducafecat.tech/2021/12/01/flutter-opensource/flutter-opensource-appflowy/2021-12-01-22-23-16.png" alt="img"></p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://ducafecat.tech/2021/12/01/flutter-opensource/flutter-opensource-appflowy/2021-12-01-22-23-59.png" alt="img"></p>
+<blockquote>
+<p>也就 1 周 star 9.8k，我以为他是刷的。</p>
+</blockquote>
+<h2 id="目标-amp-特色"><a href="#目标-amp-特色" class="headerlink" title="目标&amp;特色"></a>目标&amp;特色</h2><ul>
+<li>目标替代 Notion</li>
+<li>数据 100% 自己管理</li>
+<li>开源方式提供，你可以自己改</li>
+<li>多平台支持</li>
+<li>原生体验，估计是用了 flutter 关系</li>
+</ul>
+<h2 id="编译运行"><a href="#编译运行" class="headerlink" title="编译运行"></a>编译运行</h2><ul>
+<li><ol>
+<li>git clone</li>
+</ol>
+</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/AppFlowy-IO/appflowy.git</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><ol>
+<li>安装 rust</li>
+</ol>
+</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">cd appflowy/frontend</span><br><span class="line"></span><br><span class="line">make install_rust</span><br><span class="line"></span><br><span class="line">source $HOME/.cargo/env</span><br><span class="line"></span><br><span class="line">make install_cargo_make</span><br><span class="line"></span><br><span class="line">cargo make install_targets</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><ol>
+<li>切换 flutter dev</li>
+</ol>
+</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">flutter channel dev</span><br><span class="line"></span><br><span class="line">or</span><br><span class="line"></span><br><span class="line">fvm use dev</span><br><span class="line">fvm global dev</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><ol>
+<li>flutter 启用 desktop</li>
+</ol>
+</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># for windows</span><br><span class="line">flutter config --enable-windows-desktop</span><br><span class="line"></span><br><span class="line"># for macos</span><br><span class="line">flutter config --enable-macos-desktop</span><br><span class="line"></span><br><span class="line"># for linux</span><br><span class="line">flutter config --enable-linux-desktop</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><ol>
+<li>用 vscode 或者其它 idea 打开</li>
+</ol>
+</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">open appflowy/frontend</span><br></pre></td></tr></table></figure>
+
+<p><img src= "/img/loading.gif" data-lazy-src="https://ducafecat.tech/2021/12/01/flutter-opensource/flutter-opensource-appflowy/2021-12-01-23-31-18.png" alt="img"></p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://ducafecat.tech/2021/12/01/flutter-opensource/flutter-opensource-appflowy/2021-12-01-22-30-35.png" alt="img"></p>
+<h2 id="代码架构"><a href="#代码架构" class="headerlink" title="代码架构"></a>代码架构</h2><ul>
+<li>技术选型<ul>
+<li>flutter: 多端适配</li>
+<li>rust: ffi 平台接口、服务端</li>
+</ul>
+</li>
+<li>flutter 端 <code>frontend/app_flowy</code></li>
+</ul>
+<p><img src= "/img/loading.gif" data-lazy-src="https://ducafecat.tech/2021/12/01/flutter-opensource/flutter-opensource-appflowy/2021-12-01-22-41-01.png" alt="img"></p>
+<ul>
+<li>前端业务 rust 层 <code>frontend/rust-lib</code></li>
+</ul>
+<p><img src= "/img/loading.gif" data-lazy-src="https://ducafecat.tech/2021/12/01/flutter-opensource/flutter-opensource-appflowy/2021-12-01-22-43-09.png" alt="img"></p>
+<ul>
+<li>共享库 shared-lib <code>shared-lib</code></li>
+</ul>
+<p><img src= "/img/loading.gif" data-lazy-src="https://ducafecat.tech/2021/12/01/flutter-opensource/flutter-opensource-appflowy/2021-12-01-22-44-58.png" alt="img"></p>
+<ul>
+<li>后端 rust api <code>backend</code></li>
+</ul>
+<p><img src= "/img/loading.gif" data-lazy-src="https://ducafecat.tech/2021/12/01/flutter-opensource/flutter-opensource-appflowy/2021-12-01-22-45-48.png" alt="img"></p>
+<h2 id="参阅技术说明-doc"><a href="#参阅技术说明-doc" class="headerlink" title="参阅技术说明 doc"></a>参阅技术说明 <code>doc</code></h2><ul>
+<li>系统设计说明 <code>doc/APPFLOWY_SYSTEM_DESIGN.md</code></li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">                        Frontend                                                     FLowySDK</span><br><span class="line">                                                             │                                              ┌─────────┐</span><br><span class="line">                                                             │                                          ┌7─▶│Handler A│</span><br><span class="line">                                                             │                                          │   └─────────┘</span><br><span class="line">                                                             │                             ┌─────────┐  │   ┌─────────┐</span><br><span class="line">┌──────┐    ┌────┐    ┌──────────────┐                       │                        ┌───▶│Module A │──┼──▶│Handler B│</span><br><span class="line">│Widget│─1─▶│Bloc│─2─▶│ Repository A │─3─┐                   │                        │    └─────────┘  │   └─────────┘</span><br><span class="line">└──────┘    └────┘    └──────────────┘   │                   │                        │                 │   ┌─────────┐</span><br><span class="line">                      ┌──────────────┐   │    ┌───────┐    ┌─┴──┐     ┌───────────┐   │    ┌─────────┐  └──▶│Handler C│</span><br><span class="line">                      │ Repository B │───┼───▶│ Event │─4─▶│FFI │─5──▶│Dispatcher │─6─┼───▶│Module B │      └─────────┘</span><br><span class="line">                      └──────────────┘   │    └───────┘    └─┬──┘     └───────────┘   │    └─────────┘</span><br><span class="line">                      ┌──────────────┐   │                   │                        │</span><br><span class="line">                      │ Repository C │───┘                   │                        │    ┌─────────┐</span><br><span class="line">                      └──────────────┘                       │                        └───▶│Module C │</span><br><span class="line">                                                             │                             └─────────┘</span><br><span class="line">                                                             │</span><br><span class="line">                                                             │</span><br></pre></td></tr></table></figure>
+
+<p>Here are the event flow:</p>
+<ol>
+<li>User click on the <code>Widget</code>(The user interface) that invokes the <code>Bloc</code> actions</li>
+<li><code>Bloc</code> calls the repositories to perform additional operations to handle the actions.</li>
+<li><code>Repository</code> offers the functionalities by combining the event, defined in the <code>FlowySDK</code>.</li>
+<li><code>Events</code> will be passed in the <code>FlowySDK</code> through the <a target="_blank" rel="noopener external nofollow noreferrer" href="https://en.wikipedia.org/wiki/Foreign_function_interface">FFI</a> interface.</li>
+<li><code>Dispatcher</code> parses the event and generates the specific action scheduled in the <code>FlowySDK</code> runtime.</li>
+<li><code>Dispatcher</code> find the event handler declared by the modules.</li>
+<li><code>Handler</code> consumes the event and generates the response. The response will be returned to the widget through the <code>FFI</code>.</li>
+</ol>
+<p>The event flow will be discussed in two parts: the frontend implemented in flutter and the FlowySDK implemented in Rust.</p>
+<ul>
+<li>linux 编译说明 <code>doc/BUILD_ON_LINUX.md</code></li>
+<li>windows 编译说明 <code>doc/BUILD_ON_WINDOWS.md</code></li>
+<li>贡献参与说明 <code>doc/CONTRIBUTING.md</code></li>
+<li>DDD 设计说明 <code>doc/DOMAIN_DRIVEN_DESIGN.md</code></li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">┌──────────────────────────────────────────────────┐         ─────────▶</span><br><span class="line">│                Presentation Layer                │──┐      Dependency</span><br><span class="line">└──────────────────────────────────────────────────┘  │</span><br><span class="line">                          │                           │</span><br><span class="line">                          ▼                           │</span><br><span class="line">┌──────────────────────────────────────────────────┐  │</span><br><span class="line">│                Application Layer                 │  │</span><br><span class="line">└──────────────────────────────────────────────────┘  │</span><br><span class="line">                          │                           │</span><br><span class="line">                          ▼                           │</span><br><span class="line">┌──────────────────────────────────────────────────┐  │</span><br><span class="line">│                   Domain Layer                   │◀─┘</span><br><span class="line">└──────────────────────────────────────────────────┘</span><br><span class="line">                          ▲</span><br><span class="line">                          │</span><br><span class="line">┌──────────────────────────────────────────────────┐</span><br><span class="line">│               Infrastructure Layer               │</span><br><span class="line">└──────────────────────────────────────────────────┘</span><br></pre></td></tr></table></figure>
+
+<p><strong>Presentation Layer</strong>:</p>
+<ul>
+<li>Responsible for presenting information to the user and interpreting user commands.</li>
+<li>Consists of Widgets and also the state of the Widgets.</li>
+</ul>
+<p><strong>Application Layer</strong>:</p>
+<ul>
+<li>Defines the jobs the software is supposed to do. (Shouldn’t find any UI code or network code)</li>
+<li>Coordinates the application activity and delegates work to the next layer down.</li>
+<li>It doesn’t contain any complex business logic but the basic validation on the user input before<br>passing to the other layer.</li>
+</ul>
+<p><strong>Domain Layer</strong>:</p>
+<ul>
+<li>Responsible for representing concepts of the business.</li>
+<li>Manages the business state or delegated to the infrastructure layer.</li>
+<li>Self contained and it doesn’t depend on any other layers. Domain should be well isolated from the<br>other layers.</li>
+</ul>
+<p><strong>Infrastructure Layer</strong>:</p>
+<ul>
+<li><p>Provides generic technical capabilities that support the higher layers. It deals with APIs, persistence and network, etc.</p>
+</li>
+<li><p>Implements the repository interface and hiding the complexity of the Domain layer.</p>
+</li>
+<li><p>编辑器 <code>doc/EDITOR.md</code></p>
+</li>
+<li><p>roadmap</p>
+</li>
+</ul>
+<p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://trello.com/b/NCyXCXXh/appflowy-roadmap">https://trello.com/b/NCyXCXXh/appflowy-roadmap</a></p>
+<h2 id="看看本地文件在哪里"><a href="#看看本地文件在哪里" class="headerlink" title="看看本地文件在哪里"></a>看看本地文件在哪里</h2><ul>
+<li>找到 sqlite</li>
+</ul>
+<p><img src= "/img/loading.gif" data-lazy-src="https://ducafecat.tech/2021/12/01/flutter-opensource/flutter-opensource-appflowy/2021-12-01-22-58-59.png" alt="img"></p>
+<ul>
+<li>搜索本地</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">find ~ -iname &#x27;flowy-database.db&#x27;</span><br><span class="line"></span><br><span class="line">~/Library/Containers/com.appflowy.macos/Data/Documents/flowy/fd3ada7d-7653-4196-90e1-7de0019627bc/flowy-database.db</span><br></pre></td></tr></table></figure>
+
+<h2 id="flutter-插件"><a href="#flutter-插件" class="headerlink" title="flutter 插件"></a>flutter 插件</h2><ul>
+<li>flutter-quill</li>
+</ul>
+<p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/singerdmx/flutter-quill">https://github.com/singerdmx/flutter-quill</a></p>
+<p>富文本编辑器</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://ducafecat.tech/2021/12/01/flutter-opensource/flutter-opensource-appflowy/2021-12-01-23-27-48.png" alt="img"></p>
+<ul>
+<li>freezed</li>
+</ul>
+<p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://pub.flutter-io.cn/packages/freezed">https://pub.flutter-io.cn/packages/freezed</a></p>
+<p>数据 model 生成器，支持注解方式</p>
+<ul>
+<li>flutter_colorpicker</li>
+</ul>
+<p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://pub.flutter-io.cn/packages/flutter_colorpicker">https://pub.flutter-io.cn/packages/flutter_colorpicker</a></p>
+<p>颜色选取工具</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://ducafecat.tech/2021/12/01/flutter-opensource/flutter-opensource-appflowy/2021-12-01-23-11-05.png" alt="img"></p>
+<ul>
+<li>styled_widget</li>
+</ul>
+<p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://pub.flutter-io.cn/packages/styled_widget">https://pub.flutter-io.cn/packages/styled_widget</a></p>
+<p>简化小组件定义</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://ducafecat.tech/2021/12/01/flutter-opensource/flutter-opensource-appflowy/2021-12-01-23-14-32.png" alt="img"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">Icon(OMIcons.home, color: Colors.white)</span><br><span class="line">  .padding(all: 10)</span><br><span class="line">  .decorated(color: Color(0xff7AC1E7), shape: BoxShape.circle)</span><br><span class="line">  .padding(all: 15)</span><br><span class="line">  .decorated(color: Color(0xffE8F2F7), shape: BoxShape.circle)</span><br><span class="line">  .padding(all: 20)</span><br><span class="line">  .card(</span><br><span class="line">    elevation: 10,</span><br><span class="line">    shape: RoundedRectangleBorder(</span><br><span class="line">      borderRadius: BorderRadius.circular(20),</span><br><span class="line">    ),</span><br><span class="line">  )</span><br><span class="line">  .alignment(Alignment.center)</span><br><span class="line">  .backgroundColor(Color(0xffEBECF1));</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>get_it</li>
+</ul>
+<p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://pub.flutter-io.cn/packages/get_it">https://pub.flutter-io.cn/packages/get_it</a></p>
+<p>全局访问你的业务对象，你可以拆分业务和 UI</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">// 定义</span><br><span class="line"></span><br><span class="line">final getIt = GetIt.instance;</span><br><span class="line"></span><br><span class="line">void setup() &#123;</span><br><span class="line">  getIt.registerSingleton&lt;AppModel&gt;(AppModel());</span><br><span class="line"></span><br><span class="line">// Alternatively you could write it if you don&#x27;t like global variables</span><br><span class="line">  GetIt.I.registerSingleton&lt;AppModel&gt;(AppModel());</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 使用</span><br><span class="line"></span><br><span class="line">MaterialButton(</span><br><span class="line">  child: Text(&quot;Update&quot;),</span><br><span class="line">  onPressed: getIt&lt;AppModel&gt;().update   // given that your AppModel has a method update</span><br><span class="line">),</span><br></pre></td></tr></table></figure>
+
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ul>
+<li>看到人家的架构，感觉自己弱爆了，我还是先领域分层设计做做干净</li>
+<li>flutter bloc , rust ffi web protobuf 感觉还是成熟的选择</li>
+<li>如果持续更新的话，我也很想看看架构的演变</li>
+<li>现阶段估计还是在测试架构设计，应该不会上很多功能</li>
+</ul>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined" rel="external nofollow noreferrer">Jason.Z</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://example.com/2022/03/01/Flutter%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE-appFlowy-%E7%9C%9F%E7%9A%84%E6%98%AF-Notion-%E7%9A%84%E6%9B%BF%E4%BB%A3%E5%93%81/">http://example.com/2022/03/01/Flutter%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE-appFlowy-%E7%9C%9F%E7%9A%84%E6%98%AF-Notion-%E7%9A%84%E6%9B%BF%E4%BB%A3%E5%93%81/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow noreferrer" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://example.com" target="_blank">亮哥的博客</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="https://github.com/AppFlowy-IO/appflowy/raw/main/doc/imgs/welcome.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i> 打赏</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="http://r62hc9ndh.hb-bkt.clouddn.com/651642784431_.pic.jpg" rel="external nofollow noreferrer" target="_blank"><img class="post-qr-code-img" src= "/img/loading.gif" data-lazy-src="http://r62hc9ndh.hb-bkt.clouddn.com/651642784431_.pic.jpg" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="http://r62hc9ndh.hb-bkt.clouddn.com/661642784631_.pic.jpg" rel="external nofollow noreferrer" target="_blank"><img class="post-qr-code-img" src= "/img/loading.gif" data-lazy-src="http://r62hc9ndh.hb-bkt.clouddn.com/661642784631_.pic.jpg" alt="支付寶"/></a><div class="post-qr-code-desc">支付寶</div></li></ul></div></div><div class="ads-wrap"><ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-fb+5w+4e-db+86" data-ad-client="ca-pub-8919908724705274" data-ad-slot="5978969231"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/2022/03/01/Flutter-GetX-Material-Design-3-Theme-%E6%A0%B7%E5%BC%8F%E8%87%AA%E5%AE%9A%E4%B9%89/"><img class="next-cover" src= "/img/loading.gif" data-lazy-src="https://ducafecat.oss-cn-beijing.aliyuncs.com/podcast/tips-getx-material-design3.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">Flutter GetX + Material Design 3 Theme 样式自定义</div></div></a></div></nav><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div><div id="comment-switch"><span class="first-comment">Twikoo</span><span class="switch-btn"></span><span class="second-comment">Disqus</span></div></div><div class="comment-wrap"><div><div id="twikoo-wrap"></div></div><div><div id="disqus_thread"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src= "/img/loading.gif" data-lazy-src="/img/avatar.webp" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Jason.Z</div><div class="author-info__description">把日常工作与学习中的各种踩过的坑记录下来...</div></div><div class="card-info-data is-center"><div class="card-info-data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">12</div></a></div><div class="card-info-data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">9</div></a></div><div class="card-info-data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div></div><a id="card-info-btn" target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/jerryc127/hexo-theme-butterfly"><i class="fab fa-github"></i><span>主題 GitHub</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="mailto:my@crazywong.com" rel="external nofollow noreferrer" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="/atom.xml" target="_blank" title="RSS"><i class="fas fa-rss"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">如果你在使用中遇到問題，請到 <a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/jerryc127/hexo-theme-butterfly/issues" style="color:#49b1f5">Github Issues</a> 或者 <a href="/messageboard/" style="color:#49b1f5">留言板</a> 進行反饋，你也可以加入 QQ 群（由於 QQ 群只能有 500 人，會定時清理潛水的人，不要同時申請 2 个 QQ 群）<div class="social-button"> <a class="button--animated" href="https://jq.qq.com/?_wv=1027&k=KU9105XR" rel="external nofollow noreferrer" target="_blank">QQ 1 群 👍</a> <a class="button--animated" href="https://jq.qq.com/?_wv=1027&k=r1nK0DQz" rel="external nofollow noreferrer" target="_blank">QQ 2 群 👍</a> <a class="button--animated" href="https://t.me/bu2fly" rel="external nofollow noreferrer" target="_blank">Telegram 👍</a> </div></div></div><div class="card-widget card-docs card-categories"><div class="item-headline"><i class="fas fa-car-side"></i><span>文檔目錄</span></div><div class="item-content"><ul class=card-category-list> <li class=card-category-list-item><a class=card-category-list-link href=/posts/21cfbf15/ >🚀 快速開始</a></li> <li class=card-category-list-item><a class=card-category-list-link href=/posts/dc584b87/ >📑 主題頁面</a></li> <li class=card-category-list-item><a class=card-category-list-link href=/posts/4aa8abbe/ >🛠 主題配置-1</a></li> <li class=card-category-list-item><a class=card-category-list-link href=/posts/ceeb73f/ >⚔️ 主題配置-2</a></li> <li class=card-category-list-item><a class=card-category-list-link href=/posts/98d20436/ >❓ 主題問答</a></li> <li class=card-category-list-item><a class=card-category-list-link href=/posts/4073eda/ >⚡️ 進階教程</a></li> <li class=card-category-list-item><a class=card-category-list-link href=/posts/198a4240/ >✨ 更新日誌</a></li> </ul></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content is-expand"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#git"><span class="toc-text">git</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9B%AE%E6%A0%87-amp-%E7%89%B9%E8%89%B2"><span class="toc-text">目标&amp;特色</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BC%96%E8%AF%91%E8%BF%90%E8%A1%8C"><span class="toc-text">编译运行</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81%E6%9E%B6%E6%9E%84"><span class="toc-text">代码架构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%82%E9%98%85%E6%8A%80%E6%9C%AF%E8%AF%B4%E6%98%8E-doc"><span class="toc-text">参阅技术说明 doc</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9C%8B%E7%9C%8B%E6%9C%AC%E5%9C%B0%E6%96%87%E4%BB%B6%E5%9C%A8%E5%93%AA%E9%87%8C"><span class="toc-text">看看本地文件在哪里</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#flutter-%E6%8F%92%E4%BB%B6"><span class="toc-text">flutter 插件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-text">总结</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2022/03/01/Flutter%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE-appFlowy-%E7%9C%9F%E7%9A%84%E6%98%AF-Notion-%E7%9A%84%E6%9B%BF%E4%BB%A3%E5%93%81/" title="Flutter开源项目 - appFlowy 真的是 Notion 的替代品?!"><img src= "/img/loading.gif" data-lazy-src="https://github.com/AppFlowy-IO/appflowy/raw/main/doc/imgs/welcome.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Flutter开源项目 - appFlowy 真的是 Notion 的替代品?!"/></a><div class="content"><a class="title" href="/2022/03/01/Flutter%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE-appFlowy-%E7%9C%9F%E7%9A%84%E6%98%AF-Notion-%E7%9A%84%E6%9B%BF%E4%BB%A3%E5%93%81/" title="Flutter开源项目 - appFlowy 真的是 Notion 的替代品?!">Flutter开源项目 - appFlowy 真的是 Notion 的替代品?!</a><time datetime="2022-03-01T13:08:21.000Z" title="发表于 2022-03-01 21:08:21">2022-03-01</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/03/01/Flutter-GetX-Material-Design-3-Theme-%E6%A0%B7%E5%BC%8F%E8%87%AA%E5%AE%9A%E4%B9%89/" title="Flutter GetX + Material Design 3 Theme 样式自定义"><img src= "/img/loading.gif" data-lazy-src="https://ducafecat.oss-cn-beijing.aliyuncs.com/podcast/tips-getx-material-design3.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Flutter GetX + Material Design 3 Theme 样式自定义"/></a><div class="content"><a class="title" href="/2022/03/01/Flutter-GetX-Material-Design-3-Theme-%E6%A0%B7%E5%BC%8F%E8%87%AA%E5%AE%9A%E4%B9%89/" title="Flutter GetX + Material Design 3 Theme 样式自定义">Flutter GetX + Material Design 3 Theme 样式自定义</a><time datetime="2022-03-01T11:09:07.000Z" title="发表于 2022-03-01 19:09:07">2022-03-01</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/01/29/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E5%9C%A8Mac%E9%87%8C%E8%A3%85%E9%82%A3%E4%BA%9B%E8%BD%AF%E4%BB%B6/" title="前端开发在Mac里装那些软件"><img src= "/img/loading.gif" data-lazy-src="https://ducafecat.tech/2020/10/12/flutter-daily/macbook-pro-16-tools-2020/2020-10-12-14-22-43.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="前端开发在Mac里装那些软件"/></a><div class="content"><a class="title" href="/2022/01/29/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E5%9C%A8Mac%E9%87%8C%E8%A3%85%E9%82%A3%E4%BA%9B%E8%BD%AF%E4%BB%B6/" title="前端开发在Mac里装那些软件">前端开发在Mac里装那些软件</a><time datetime="2022-01-29T09:42:39.000Z" title="发表于 2022-01-29 17:42:39">2022-01-29</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/01/28/%E5%B8%B8%E7%94%A8%E7%9A%84Flutter%20Widgets%E5%92%8C%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/" title="35个好用的Flutter插件"><img src= "/img/loading.gif" data-lazy-src="https://cdn.jsdelivr.net/gh/jerryc127/CDN/img/material-5.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="35个好用的Flutter插件"/></a><div class="content"><a class="title" href="/2022/01/28/%E5%B8%B8%E7%94%A8%E7%9A%84Flutter%20Widgets%E5%92%8C%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/" title="35个好用的Flutter插件">35个好用的Flutter插件</a><time datetime="2022-01-28T15:11:49.000Z" title="发表于 2022-01-28 23:11:49">2022-01-28</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/01/25/Flutter2.8%E6%96%B0%E5%8A%9F%E8%83%BD/" title="Flutter 2.8有哪些变化"><img src= "/img/loading.gif" data-lazy-src="http://r62hc9ndh.hb-bkt.clouddn.com/20220123192036.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Flutter 2.8有哪些变化"/></a><div class="content"><a class="title" href="/2022/01/25/Flutter2.8%E6%96%B0%E5%8A%9F%E8%83%BD/" title="Flutter 2.8有哪些变化">Flutter 2.8有哪些变化</a><time datetime="2022-01-25T04:53:12.000Z" title="发表于 2022-01-25 12:53:12">2022-01-25</time></div></div></div></div><div class="card-widget ads-wrap"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8919908724705274" data-ad-slot="8108145410" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div></div></div></main><footer id="footer" style="background-image: url('https://github.com/AppFlowy-IO/appflowy/raw/main/doc/imgs/welcome.png')"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2022 By Jason.Z</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener external nofollow noreferrer" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="translateLink" type="button" title="简繁转换">簡</button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">本地搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="https://cdn.jsdelivr.net/npm/hexo-theme-butterfly@4.0.1/source/js/utils.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-butterfly@4.0.1/source/js/main.min.js"></script><script src="https://cdn.jsdelivr.net/gh/jerryc127/butterfly.js.org/source/selfjs/tw_cn.min.js?ver=4.0.0"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><script src="https://cdn.jsdelivr.net/gh/jerryc127/butterfly.js.org/source/selfjs/localsearch.min.js?ver=4.0.0"></script><div class="js-pjax"><script>(() => {
+  const $mermaidWrap = document.querySelectorAll('#article-container .mermaid-wrap')
+  if ($mermaidWrap.length) {
+    window.runMermaid = () => {
+      window.loadMermaid = true
+      const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'default'
+
+      Array.from($mermaidWrap).forEach((item, index) => {
+        const mermaidSrc = item.firstElementChild
+        const mermaidThemeConfig = '%%{init:{ \'theme\':\'' + theme + '\'}}%%\n'
+        const mermaidID = 'mermaid-' + index
+        const mermaidDefinition = mermaidThemeConfig + mermaidSrc.textContent
+        mermaid.mermaidAPI.render(mermaidID, mermaidDefinition, (svgCode) => {
+          mermaidSrc.insertAdjacentHTML('afterend', svgCode)
+        })
+      })
+    }
+
+    const loadMermaid = () => {
+      window.loadMermaid ? runMermaid() : getScript('https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js').then(runMermaid)
+    }
+
+    window.pjax ? loadMermaid() : document.addEventListener('DOMContentLoaded', loadMermaid)
+  }
+})()</script><script>(()=>{
+  const init = () => {
+    twikoo.init(Object.assign({
+      el: '#twikoo-wrap',
+      envId: 'https://butterfly-twikoo.vercel.app',
+      region: '',
+      onCommentLoaded: function () {
+        btf.loadLightbox(document.querySelectorAll('#twikoo .tk-content img:not(.vemoji)'))
+      }
+    }, null))
+  }
+
+  const getCount = () => {
+    twikoo.getCommentsCount({
+      envId: 'https://butterfly-twikoo.vercel.app',
+      region: '',
+      urls: [window.location.pathname],
+      includeReply: false
+    }).then(function (res) {
+      document.getElementById('twikoo-count').innerText = res[0].count
+    }).catch(function (err) {
+      console.error(err);
+    });
+  }
+
+  const runFn = () => {
+    init()
+    GLOBAL_CONFIG_SITE.isPost && getCount()
+  }
+
+  const loadTwikoo = () => {
+    if (typeof twikoo === 'object') {
+      setTimeout(runFn,0)
+      return
+    } 
+    getScript('https://cdn.jsdelivr.net/npm/twikoo/dist/twikoo.all.min.js').then(runFn)
+  }
+
+  if ('Twikoo' === 'Twikoo' || !true) {
+    if (true) btf.loadComment(document.getElementById('twikoo-wrap'), loadTwikoo)
+    else loadTwikoo()
+  } else {
+    window.loadOtherComment = () => {
+      loadTwikoo()
+    }
+  }
+})()</script><script>function loadDisqus () {
+  var disqus_config = function () {
+    this.page.url = 'http://example.com/2022/03/01/Flutter%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE-appFlowy-%E7%9C%9F%E7%9A%84%E6%98%AF-Notion-%E7%9A%84%E6%9B%BF%E4%BB%A3%E5%93%81/'
+    this.page.identifier = '2022/03/01/Flutter开源项目-appFlowy-真的是-Notion-的替代品/'
+    this.page.title = 'Flutter开源项目 - appFlowy 真的是 Notion 的替代品?!'
+  };
+
+  window.disqusReset = () => {
+    DISQUS.reset({
+      reload: true,
+      config: disqus_config
+    })
+  }
+
+  if (window.DISQUS) disqusReset()
+  else {
+    (function() { 
+      var d = document, s = d.createElement('script');
+      s.src = 'https://demo-jerryc-me.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  }
+}
+
+if ('Twikoo' === 'Disqus' || !true) {
+  if (true) btf.loadComment(document.getElementById('disqus_thread'), loadDisqus)
+  else loadDisqus()
+} else {
+  function loadOtherComment () {
+    loadDisqus()
+  }
+}
+</script></div><script>window.addEventListener('load', () => {
+  const changeContent = (content) => {
+    if (content === '') return content
+
+    content = content.replace(/<img.*?src="(.*?)"?[^\>]+>/ig, '[图片]') // replace image link
+    content = content.replace(/<a[^>]+?href=["']?([^"']+)["']?[^>]*>([^<]+)<\/a>/gi, '[链接]') // replace url
+    content = content.replace(/<pre><code>.*?<\/pre>/gi, '[代码]') // replace code
+    content = content.replace(/<[^>]+>/g,"") // remove html tag
+
+    if (content.length > 150) {
+      content = content.substring(0,150) + '...'
+    }
+    return content
+  }
+
+  const getComment = () => {
+    const runTwikoo = () => {
+      twikoo.getRecentComments({
+        envId: 'https://butterfly-twikoo.vercel.app',
+        region: '',
+        pageSize: 6,
+        includeReply: true
+      }).then(function (res) {
+        const twikooArray = res.map(e => {
+          return {
+            'content': changeContent(e.comment),
+            'avatar': e.avatar,
+            'nick': e.nick,
+            'url': e.url + '#' + e.id,
+            'date': new Date(e.created).toISOString()
+          }
+        })
+
+        saveToLocal.set('twikoo-newest-comments', JSON.stringify(twikooArray), 5/(60*24))
+        generateHtml(twikooArray)
+      }).catch(function (err) {
+        const $dom = document.querySelector('#card-newest-comments .aside-list')
+        $dom.innerHTML= "无法获取评论，请确认相关配置是否正确"
+      })
+    }
+
+    if (typeof twikoo === 'object') {
+      runTwikoo()
+    } else {
+      getScript('https://cdn.jsdelivr.net/npm/twikoo/dist/twikoo.all.min.js').then(runTwikoo)
+    }
+  }
+
+  const generateHtml = array => {
+    let result = ''
+
+    if (array.length) {
+      for (let i = 0; i < array.length; i++) {
+        result += '<div class=\'aside-list-item\'>'
+
+        if (true) {
+          const name = 'data-lazy-src'
+          result += `<a href='${array[i].url}' class='thumbnail'><img ${name}='${array[i].avatar}' alt='${array[i].nick}'></a>`
+        }
+        
+        result += `<div class='content'>
+        <a class='comment' href='${array[i].url}' title='${array[i].content}'>${array[i].content}</a>
+        <div class='name'><span>${array[i].nick} / </span><time datetime="${array[i].date}">${btf.diffDate(array[i].date, true)}</time></div>
+        </div></div>`
+      }
+    } else {
+      result += '没有评论'
+    }
+
+    let $dom = document.querySelector('#card-newest-comments .aside-list')
+    $dom.innerHTML= result
+    window.lazyLoadInstance && window.lazyLoadInstance.update()
+    window.pjax && window.pjax.refresh($dom)
+  }
+
+  const newestCommentInit = () => {
+    if (document.querySelector('#card-newest-comments .aside-list')) {
+      const data = saveToLocal.get('twikoo-newest-comments')
+      if (data) {
+        generateHtml(JSON.parse(data))
+      } else {
+        getComment()
+      }
+    }
+  }
+
+  newestCommentInit()
+  document.addEventListener('pjax:complete', newestCommentInit)
+})</script><script defer="defer" id="ribbon" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-ribbon.min.js" size="150" alpha="0.6" zIndex="-1" mobile="true" data-click="true"></script><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>let pjaxSelectors = ["title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"]):not([href="/talking/"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+
+  // removeEventListener scroll 
+  window.tocScrollFn && window.removeEventListener('scroll', window.tocScrollFn)
+  window.scrollCollect && window.removeEventListener('scroll', scrollCollect)
+
+  typeof preloader === 'object' && preloader.initLoading()
+  document.getElementById('rightside').style.cssText = "opacity: ''; transform: ''"
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof chatBtnFn === 'function' && chatBtnFn()
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+
+  typeof preloader === 'object' && preloader.endLoading()
+})
+
+document.addEventListener('pjax:error', (e) => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
